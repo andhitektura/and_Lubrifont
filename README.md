@@ -34,6 +34,7 @@ Latin:
 - [Adobe Latin 1](http://adobe-type-tools.github.io/adobe-latin-charsets/adobe-latin-1.html)
 - [GF Latin Core](https://github.com/googlefonts/gftools/blob/main/Lib/gftools/encodings/GF%20Glyph%20Sets/GF-latin-core_unique-glyphs.nam)
 - Croatian, Bosnian, Serbian Latin (`ĆćČčĐđ`)
+- Polish, Czech, Slovak, Romanian, Turkish (`ĄąĘęŚśŹźŻż ĎďŘřŤťŮů ĹĺĽľŔŕ ȘșȚțŞşŢţ ĞğİĖė`)
 
 Cyrillic:
 - Russian, Ukrainian, Belarusian, Macedonian, Serbian (`А–я Ёё ЂђЃѓЄєЅѕІіЇїЈјЉљЊњЋћЌќЎўЏџ ҐґЀѐЍѝ`)

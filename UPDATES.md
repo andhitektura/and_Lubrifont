@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Added Polish, Czech, Slovak, Romanian and Turkish letters: `ĄąĘęŚśŹźŻż ĎďŘřŤťŮů ĹĺĽľŔŕ ȘșȚțŞşŢţ ĞğİĖė` (Ď ď Ľ ľ ť with the apostrophe-style caron, Ș ș Ț ț with comma below and Ş ş Ţ ţ with cedilla), with mark anchors and kerning (`sources/add_central_european.py`)
+
 - Opened up the overall letter spacing of Latin, Greek and Cyrillic letters, digits and Western punctuation by 12 units on each side (24 units between two letters; the word space grows by the same amount). CJK characters and full-width forms are unchanged (`sources/track.py`)
 
 ## Ver 2.300; 20261023
