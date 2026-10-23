@@ -4,6 +4,10 @@
 
 ## Unreleased
 
+- 西里尔字母及 `ĆćČčĐđ` 加入 `mark` 定位，组合重音符（如 `е́ о́ и́`）正确显示于字母上方  
+西里爾字母及 `ĆćČčĐđ` 加入 `mark` 定位，組合重音符（如 `е́ о́ и́`）正確顯示於字母上方  
+Added `mark` anchors to Cyrillic letters and `ĆćČčĐđ` so combining stress accents (e.g. `е́ о́ и́`) sit above the letter (`sources/add_mark_anchors.py`)
+
 - 数字 `7` 改为全宽斜笔造型，避免与 `1`、`Г` 混淆（亦适用于 `７⁷₇⅞`）  
 數字 `7` 改爲全寬斜筆造型，避免與 `1`、`Г` 混淆（亦適用於 `７⁷₇⅞`）  
 Redesigned `7` with a full-width diagonal stem so it no longer reads as `1` or a mirrored `Г` (also `７⁷₇⅞`; `sources/diagonal_seven.py`)
