@@ -1,4 +1,4 @@
-# Give the zeros of WD-XL Lubrifont a centre dot so that 0 cannot be
+# Give the zeros of and_Lubrifont a centre dot so that 0 cannot be
 # mistaken for O / О (in this design they were otherwise near-identical).
 #
 # Applies to 0, ⁰, ₀ and fullwidth ０. The dot is a rounded bar centred in the

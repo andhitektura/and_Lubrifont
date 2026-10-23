@@ -13,10 +13,10 @@ for sub_dir in ["WOFF", "WOFF2"]:
         os.makedirs(parent_dir / sub_dir, exist_ok=True)
 
 files = [
-    "WD-XLLubrifontSC-Regular.otf",
-    "WD-XLLubrifontTC-Regular.otf",
-    "WD-XLLubrifontJPS-Regular.otf",
-    "WD-XLLubrifontJPN-Regular.otf",
+    "and_LubrifontSC-Regular.otf",
+    "and_LubrifontTC-Regular.otf",
+    "and_LubrifontJPS-Regular.otf",
+    "and_LubrifontJPN-Regular.otf",
 ]
 
 print("Conversion started")

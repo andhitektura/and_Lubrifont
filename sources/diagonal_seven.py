@@ -1,4 +1,4 @@
-# Replace the narrow right-angled 7 of WD-XL Lubrifont (it read like a
+# Replace the narrow right-angled 7 of and_Lubrifont (it read like a
 # mirrored Г / a 1) with a full-width 7 with a diagonal stem.
 #
 # The diagonal (about 73°) sits between the slants of N/И and A/V. The new 7

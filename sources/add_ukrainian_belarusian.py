@@ -1,5 +1,5 @@
 # Add the Cyrillic letters needed for Ukrainian (Є є І і Ї ї Ґ ґ) and
-# Belarusian (Ў ў, plus І і) to WD-XL Lubrifont.
+# Belarusian (Ў ў, plus І і) to and_Lubrifont.
 #
 # Works like add_extra_glyphs.py (and reuses its machinery): every new glyph
 # is constructed from glyphs already in the font, so the script can be run on

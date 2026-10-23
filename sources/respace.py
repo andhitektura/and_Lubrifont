@@ -1,4 +1,4 @@
-# Respace the Latin and Cyrillic letters of WD-XL Lubrifont.
+# Respace the Latin and Cyrillic letters of and_Lubrifont.
 #
 # The spacing (side bearings) of the original font was uneven: diagonal and
 # open capitals (А Ж Х У A X Z ...) and several lowercase letters (д т f t s
