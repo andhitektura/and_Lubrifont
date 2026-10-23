@@ -230,6 +230,8 @@ Run them in this order (requires `fonttools` and `skia-pathops`):
 4. `diagonal_seven.py` — diagonal seven `7７⁷₇⅞`
 5. `add_mark_anchors.py` — `mark` anchors for Cyrillic letters and `ĆćČčĐđ`
 6. `add_ukrainian_belarusian.py` — Ukrainian and Belarusian `ЄєІіЇїҐґЎў` (added after v2.200; run `add_mark_anchors.py` again afterwards)
+7. `respace.py` — corrects the side bearings of Latin and Cyrillic letters (accented letters follow their base, mark anchors move with the outlines)
+8. `autokern.py` — kerning: `py autokern.py measure ../fonts/OTF/WD-XLLubrifontTC-Regular.otf kerning.txt` measures the outlines and writes `kerning.txt` (classes, class pairs, exceptions); `py autokern.py apply kerning.txt <fonts>` adds it to the release fonts as a `kern` feature. It also needs `freetype-py` and `uharfbuzz`. The kerning is not added to the TrueType source, because the full build generates GPOS from the feature files; after a full rebuild, run `apply` on the built fonts.
 
 ```
 cd sources
@@ -237,5 +239,12 @@ py add_macedonian_cyrillic.py WD-XLLubrifont-Regular.ttf ../fonts/OTF/*.otf ../f
 (repeat for the other scripts)
 otf2otc -t "CFF =0" -o ../fonts/WD-XLLubrifont.ttc ../fonts/OTF/WD-XLLubrifontSC-Regular.otf ../fonts/OTF/WD-XLLubrifontTC-Regular.otf ../fonts/OTF/WD-XLLubrifontJPS-Regular.otf ../fonts/OTF/WD-XLLubrifontJPN-Regular.otf
 ```
+
+### How the spacing and kerning were measured
+
+Each glyph is rendered at 1 unit = 1 pixel, and its left and right profiles (the distance from the edge of the advance box to the ink) are taken every few units of height.
+
+* **Spacing (`respace.py`):** the average white space at each side over the letter body is compared with the straight letters (н п и, Н П И H N U); 70% of the difference is applied, open sides are not taken below 10 units, and differences under 5 units are ignored.
+* **Kerning (`autokern.py`):** for each pair, the white gap over the heights where both glyphs have ink is compared with that of нн; 60% of the difference is applied, but no two shapes come closer than 40 units at any height, accents included. Values below 20 units are dropped. Base letters with similar kerning share a class, accented letters join their base letter's class, and pairs that differ from their class (usually an accent that would clash) get exceptions.
 
 > Note: if the full merge process is run again later, `WD-XLLubrifont-Regular.ttf` already contains the new glyphs, but CIDs will be renumbered, so the feature code must be regenerated as described above.
