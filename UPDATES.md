@@ -2,6 +2,12 @@
 
 # 更新日志 Updates 更新日誌
 
+## Unreleased
+
+- 新增马其顿语西里尔字母：`ЃѓЅѕЈјЉљЊњЌќЏџ`，及带重音符的 `ЀѐЍѝ`  
+新增馬其頓語西里爾字母：`ЃѓЅѕЈјЉљЊњЌќЏџ`，及帶重音符的 `ЀѐЍѝ`  
+Added Macedonian Cyrillic letters `ЃѓЅѕЈјЉљЊњЌќЏџ` and the stressed `ЀѐЍѝ` (built from existing glyphs with `sources/add_macedonian_cyrillic.py`)
+
 ## Ver 2.100; 20250331
 
 - <details>

@@ -43,6 +43,9 @@ Latin:
 - [Adobe Latin 1](http://adobe-type-tools.github.io/adobe-latin-charsets/adobe-latin-1.html)
 - [GF Latin Core](https://github.com/googlefonts/gftools/blob/main/Lib/gftools/encodings/GF%20Glyph%20Sets/GF-latin-core_unique-glyphs.nam)
 
+Cyrillic:
+- 俄语、马其顿语 Russian, Macedonian 俄語、馬其頓語 (`А–я Ёё ЃѓЅѕЈјЉљЊњЌќЏџ ЀѐЍѝ`)
+
 汉字/漢字：
 - 原版 Original：[GB/T 2312（6763 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/encoding/gb_t_2312.txt)，[汉仪简繁字表（9169 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/foundry/hanyi_jianfan.txt)
 - [现代汉语常用字表（3500 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/standard/xiandai_changyong.txt)，[现代汉语通用字表（7000 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/standard/xiandai_tongyong.txt)
