@@ -4,7 +4,7 @@ This is the public repository for **WD-XL Lubrifont**. Source files and history 
 
 ## Target
 
-This font is based on [ZCOOL QingKe HuangYou](https://www.github.com/googlefonts/zcool-qingke-huangyou) and further expanded for Chinese (Traditional) such that this font may be used in Chinese (Traditional) environment in a suitable manner, and also expanded with the required symbols and punctuations for daily Chinese typesetting. The font supports the common characters of Simplified Chinese, Traditional Chinese, Taiwanese, Hakka and Cantonese, as well as Pe̍h-ōe-jī and Tâi-lô romanisation. Latin glyphs in this font are expanded to Adobe Latin 1 and GF Latin Core, and Cyrillic covers Russian, Macedonian and Serbian. Currently also testing Japanese typesetting usage.
+This font is based on [ZCOOL QingKe HuangYou](https://www.github.com/googlefonts/zcool-qingke-huangyou) and further expanded for Chinese (Traditional) such that this font may be used in Chinese (Traditional) environment in a suitable manner, and also expanded with the required symbols and punctuations for daily Chinese typesetting. The font supports the common characters of Simplified Chinese, Traditional Chinese, Taiwanese, Hakka and Cantonese, as well as Pe̍h-ōe-jī and Tâi-lô romanisation. Latin glyphs in this font are expanded to Adobe Latin 1 and GF Latin Core, and Cyrillic covers Russian, Ukrainian, Belarusian, Macedonian and Serbian. Currently also testing Japanese typesetting usage.
 
 ## Download
 
@@ -36,7 +36,7 @@ Latin:
 - Croatian, Bosnian, Serbian Latin (`ĆćČčĐđ`)
 
 Cyrillic:
-- Russian, Macedonian, Serbian (`А–я Ёё ЂђЃѓЅѕЈјЉљЊњЋћЌќЏџ ЀѐЍѝ`)
+- Russian, Ukrainian, Belarusian, Macedonian, Serbian (`А–я Ёё ЂђЃѓЄєЅѕІіЇїЈјЉљЊњЋћЌќЎўЏџ ҐґЀѐЍѝ`)
 
 Symbols:
 - `⌀∅∆ ↔↕↖↗↘↙⇐⇒⇔ ✓✗▼▽ ⁰–⁹ ⁺⁻ ₀–₉ ⅓⅔⅛⅜⅝⅞`

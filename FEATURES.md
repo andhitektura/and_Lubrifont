@@ -29,7 +29,7 @@ This feature is turned on automatically; users do not need to set anything up.
 
 ## `mark` / `mkmk` — Mark Positioning
 
-Combining accents (U+0300–U+036F) are positioned above Latin letters and, since v2.200, above all Cyrillic letters and `ĆćČčĐđ`. This lets stress marks typed as a letter followed by a combining accent, such as Macedonian or Russian `е́ о́ и́`, sit correctly above the letter.
+Combining accents (U+0300–U+036F) are positioned above Latin letters and, since v2.200, above all Cyrillic letters (including `Ґґ`) and `ĆćČčĐđ`. This lets stress marks typed as a letter followed by a combining accent, such as Macedonian or Russian `е́ о́ и́`, sit correctly above the letter.
 
 This feature is turned on automatically.
 

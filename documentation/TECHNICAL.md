@@ -220,7 +220,7 @@ This step merges the font files into one TTC font file. As the largest table (`C
 
 ## Patch scripts (v2.200)
 
-The characters and glyph changes added in v2.200 did not go through the merge process above; they were made by Python scripts in `sources/` that edit the font files directly. Every new glyph is constructed from glyphs already in the font (e.g. Ѓ = Г + acute), so the scripts work both on the TrueType source (named glyphs) and on the CID-keyed OTF/TTF release files (new glyphs are appended as CID 18082–18148; existing CIDs and OpenType features are unchanged). All scripts are safe to re-run: files that are already patched are skipped.
+The characters and glyph changes added in v2.200 did not go through the merge process above; they were made by Python scripts in `sources/` that edit the font files directly. Every new glyph is constructed from glyphs already in the font (e.g. Ѓ = Г + acute), so the scripts work both on the TrueType source (named glyphs) and on the CID-keyed OTF/TTF release files (new glyphs are appended as CID 18082 onwards; existing CIDs and OpenType features are unchanged). All scripts are safe to re-run: files that are already patched are skipped.
 
 Run them in this order (requires `fonttools` and `skia-pathops`):
 
@@ -229,6 +229,7 @@ Run them in this order (requires `fonttools` and `skia-pathops`):
 3. `dotted_zero.py` — dotted zero `0⁰₀０`
 4. `diagonal_seven.py` — diagonal seven `7７⁷₇⅞`
 5. `add_mark_anchors.py` — `mark` anchors for Cyrillic letters and `ĆćČčĐđ`
+6. `add_ukrainian_belarusian.py` — Ukrainian and Belarusian `ЄєІіЇїҐґЎў` (added after v2.200; run `add_mark_anchors.py` again afterwards)
 
 ```
 cd sources

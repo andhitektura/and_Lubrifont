@@ -2,6 +2,10 @@
 
 # Updates
 
+## Unreleased
+
+- Added Ukrainian `ЄєІіЇїҐґ` and Belarusian `Ўў` Cyrillic letters, with `mark` anchors for combining accents (`sources/add_ukrainian_belarusian.py`)
+
 ## Ver 2.200; 20261023
 
 - Added `mark` anchors to Cyrillic letters and `ĆćČčĐđ` so combining stress accents (e.g. `е́ о́ и́`) sit above the letter (`sources/add_mark_anchors.py`)

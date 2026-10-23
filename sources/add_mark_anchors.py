@@ -14,7 +14,7 @@ from fontTools.ttLib import TTFont
 from fontTools.ttLib.tables import otTables
 from fontTools.pens.boundsPen import BoundsPen
 
-TARGETS = list(range(0x0400, 0x0460)) + [0x0106, 0x0107, 0x010C, 0x010D, 0x0110, 0x0111]
+TARGETS = list(range(0x0400, 0x0460)) + [0x0490, 0x0491, 0x0106, 0x0107, 0x010C, 0x010D, 0x0110, 0x0111]
 
 
 def mark_base_subtables(font):
