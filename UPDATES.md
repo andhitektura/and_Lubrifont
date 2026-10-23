@@ -2,6 +2,14 @@
 
 # Updates
 
+## Unreleased
+
+- Respaced the Latin and Cyrillic letters: diagonal and open capitals (`А Ж Х У Ф A X Z L` …) and loose lowercase (`д т f t s` …) tightened, `Я` and `ї ï` loosened on their tight side, and Latin/Cyrillic straight letters made consistent; accented letters follow their base letter (`sources/respace.py`)
+
+- Added kerning (`kern`) for Latin and Cyrillic letters and punctuation, e.g. `Та Гл ГА LT AV Yo P.` (`sources/autokern.py`, values in `sources/kerning.txt`)
+
+- Added Ukrainian `ЄєІіЇїҐґ` and Belarusian `Ўў` Cyrillic letters, with `mark` anchors for combining accents (`sources/add_ukrainian_belarusian.py`)
+
 ## Ver 2.200; 20261023
 
 - Added `mark` anchors to Cyrillic letters and `ĆćČčĐđ` so combining stress accents (e.g. `е́ о́ и́`) sit above the letter (`sources/add_mark_anchors.py`)

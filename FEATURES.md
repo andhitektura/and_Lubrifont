@@ -27,9 +27,15 @@ This font also auto-composes the Chinese dash with `ccmp`. Chinese dashes should
 
 This feature is turned on automatically; users do not need to set anything up.
 
+## `kern` — Kerning
+
+Added after v2.200 (not yet in a release): Latin and Cyrillic letters and the common punctuation are kerned, so pairs such as `Та`, `Гл`, `ГА`, `LT`, `AV`, `Yo` and `P.` close up. Kerning applies within each script (Latin with Latin, Cyrillic with Cyrillic) and with punctuation; digits are not kerned, so numbers stay aligned in tables and drawings.
+
+This feature is on by default in most software (Affinity, Adobe apps, Rhino, browsers). In Microsoft Word it must be turned on: select the text, open **Font → Advanced** and tick **Kerning for fonts**. AutoCAD's text engine does not apply kerning; there the even letter spacing of the font itself applies.
+
 ## `mark` / `mkmk` — Mark Positioning
 
-Combining accents (U+0300–U+036F) are positioned above Latin letters and, since v2.200, above all Cyrillic letters and `ĆćČčĐđ`. This lets stress marks typed as a letter followed by a combining accent, such as Macedonian or Russian `е́ о́ и́`, sit correctly above the letter.
+Combining accents (U+0300–U+036F) are positioned above Latin letters and, since v2.200, above all Cyrillic letters (including `Ґґ`) and `ĆćČčĐđ`. This lets stress marks typed as a letter followed by a combining accent, such as Macedonian or Russian `е́ о́ и́`, sit correctly above the letter.
 
 This feature is turned on automatically.
 
