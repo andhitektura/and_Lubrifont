@@ -4,6 +4,10 @@
 
 ## Unreleased
 
+- 数字 `7` 改为全宽斜笔造型，避免与 `1`、`Г` 混淆（亦适用于 `７⁷₇⅞`）  
+數字 `7` 改爲全寬斜筆造型，避免與 `1`、`Г` 混淆（亦適用於 `７⁷₇⅞`）  
+Redesigned `7` with a full-width diagonal stem so it no longer reads as `1` or a mirrored `Г` (also `７⁷₇⅞`; `sources/diagonal_seven.py`)
+
 - 数字 `0` 加上中点，以便与字母 `O`/`О` 区分（亦适用于 `⁰₀０`）  
 數字 `0` 加上中點，以便與字母 `O`/`О` 區分（亦適用於 `⁰₀０`）  
 Zero now has a centre dot so it cannot be confused with the letter `O`/`О` (also `⁰₀０`; `sources/dotted_zero.py`)
