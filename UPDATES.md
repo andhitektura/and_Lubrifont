@@ -2,7 +2,7 @@
 
 # Updates
 
-## Unreleased
+## Ver 2.400; 20261023
 
 - Added Polish, Czech, Slovak, Romanian and Turkish letters: `ĄąĘęŚśŹźŻż ĎďŘřŤťŮů ĹĺĽľŔŕ ȘșȚțŞşŢţ ĞğİĖė` (Ď ď Ľ ľ ť with the apostrophe-style caron, Ș ș Ț ț with comma below and Ş ş Ţ ţ with cedilla), with mark anchors and kerning (`sources/add_central_european.py`)
 

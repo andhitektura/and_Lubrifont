@@ -218,9 +218,9 @@ This step merges the font files into one TTC font file. As the largest table (`C
 * `convert_webfonts.py` — generates web fonts.
 * `unicodedata2.py` — reference database for `AI0_HuaYou.txt` (source: https://github.com/fonttools/unicodedata2).
 
-## Patch scripts (v2.200, v2.300)
+## Patch scripts (v2.200–v2.400)
 
-The characters and glyph changes added in v2.200 and v2.300 did not go through the merge process above; they were made by Python scripts in `sources/` that edit the font files directly. Every new glyph is constructed from glyphs already in the font (e.g. Ѓ = Г + acute), so the scripts work both on the TrueType source (named glyphs) and on the CID-keyed OTF/TTF release files (new glyphs are appended as CID 18082 onwards; existing CIDs and OpenType features are unchanged). All scripts are safe to re-run: files that are already patched are skipped.
+The characters and glyph changes added in v2.200–v2.400 did not go through the merge process above; they were made by Python scripts in `sources/` that edit the font files directly. Every new glyph is constructed from glyphs already in the font (e.g. Ѓ = Г + acute), so the scripts work both on the TrueType source (named glyphs) and on the CID-keyed OTF/TTF release files (new glyphs are appended as CID 18082 onwards; existing CIDs and OpenType features are unchanged). All scripts are safe to re-run: files that are already patched are skipped.
 
 Run them in this order (requires `fonttools` and `skia-pathops`):
 
@@ -232,7 +232,7 @@ Run them in this order (requires `fonttools` and `skia-pathops`):
 6. `add_ukrainian_belarusian.py` — Ukrainian and Belarusian `ЄєІіЇїҐґЎў` (v2.300; run `add_mark_anchors.py` again afterwards)
 7. `respace.py` — corrects the side bearings of Latin and Cyrillic letters (accented letters follow their base, mark anchors move with the outlines)
 8. `autokern.py` — kerning: `py autokern.py measure ../fonts/OTF/WD-XLLubrifontTC-Regular.otf kerning.txt` measures the outlines and writes `kerning.txt` (classes, class pairs, exceptions); `py autokern.py apply kerning.txt <fonts>` adds it to the release fonts as a `kern` feature. It also needs `freetype-py` and `uharfbuzz`. The kerning is not added to the TrueType source, because the full build generates GPOS from the feature files; after a full rebuild, run `apply` on the built fonts.
-9. `track.py` — opens up the overall letter spacing: `py track.py 12 <fonts>` adds 12 units to both sides of Western letters, digits and punctuation (and 24 to the word space); CJK and full-width glyphs are not touched. Applied after v2.300.
+9. `track.py` — opens up the overall letter spacing: `py track.py 12 <fonts>` adds 12 units to both sides of Western letters, digits and punctuation (and 24 to the word space); CJK and full-width glyphs are not touched. Applied in v2.400.
 10. `add_central_european.py` — Polish, Czech, Slovak, Romanian and Turkish letters `ĄąĘęŚśŹźŻżĎďŘřŤťŮůĹĺĽľŔŕȘșȚțŞşŢţĞğİĖė`; afterwards run `add_mark_anchors.py`, then `autokern.py measure` and `autokern.py replace kerning.txt <fonts>` to re-kern with the new letters (`autokern.py` measures as if `track.py`'s spacing were absent, so existing kerning values stay the same).
 
 ```
