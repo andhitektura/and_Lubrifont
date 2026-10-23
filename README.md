@@ -15,7 +15,7 @@ This font is based on [ZCOOL QingKe HuangYou](https://www.github.com/googlefonts
 **JPS** : Japanese (JIS90 glyphs, same as Adobe Std)  
 **JPN** : Japanese (JIS2004 glyphs, same as Adobe StdN)
 
-Please visit the **[Release page](https://github.com/andhitektura/and_WD-XL-font/releases)** to download the latest version of and_Lubrifont, or take the files from the [`fonts`](./fonts) folder:
+Please visit the **[Release page](https://github.com/andhitektura/and_Lubrifont/releases)** to download the latest version of and_Lubrifont, or take the files from the [`fonts`](./fonts) folder:
 
 | File | Installs as |
 | --- | --- |
