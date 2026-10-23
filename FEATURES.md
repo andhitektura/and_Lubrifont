@@ -7,9 +7,9 @@ WD-XL Lubrifont has set up multiple OpenType features, which are listed as follo
 WD-XL 滑油字已經設置 OpenType 功能，下面列出部分本字型所設置的功能。
 
 > [!NOTE] 
-> 此文件所描述的字体文件为 v2.100（20250331）。  
-> The version of font for this document is v2.100 (20250331).  
-> 此文件所描述的字型文件爲 v2.100（20250331）。
+> 此文件所描述的字体文件为 v2.200（20261023）。  
+> The version of font for this document is v2.200 (20261023).  
+> 此文件所描述的字型文件爲 v2.200（20261023）。
 
 ## `vert` / `vrt2` — Vertical Alternates
 
