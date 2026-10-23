@@ -1,6 +1,12 @@
-**WD-XL Lubrifont**
+**and_Lubrifont**
 
 # Updates
+
+## Unreleased
+
+- Renamed the fonts to **and_Lubrifont** (and_Lubrifont SC / TC / JP S / JP N; files `and_Lubrifont*.otf/.ttf` and `and_Lubrifont.ttc`), so they no longer clash with the original WD-XL Lubrifont; the copyright and credits of the original project are kept (`sources/rename_family.py`)
+
+- Shortened the version string to `Version 2.400` (it previously also listed the build tools)
 
 ## Ver 2.400; 20261023
 

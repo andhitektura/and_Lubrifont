@@ -1,5 +1,5 @@
 # Add Croatian / Bosnian / Serbian Latin letters, Serbian Cyrillic letters and
-# a set of technical symbols to WD-XL Lubrifont.
+# a set of technical symbols to and_Lubrifont.
 #
 # Works like add_macedonian_cyrillic.py (and reuses its machinery): every new
 # glyph is constructed from glyphs already in the font, so the script can be

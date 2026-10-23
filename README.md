@@ -1,6 +1,8 @@
-# WD-XL Lubrifont
+# and_Lubrifont
 
-This is the public repository for **WD-XL Lubrifont**. Source files and history records are kept here.
+This is the repository for **and_Lubrifont**, Studio ANDhitektura's edition of [WD-XL Lubrifont](https://github.com/NightFurySL2001/WD-XL-font) by NightFurySL2001. Source files and history records are kept here.
+
+The fonts are named **and_Lubrifont** (previously WD-XL Lubrifont), so they can be installed next to the original without clashing.
 
 ## Target
 
@@ -13,9 +15,19 @@ This font is based on [ZCOOL QingKe HuangYou](https://www.github.com/googlefonts
 **JPS** : Japanese (JIS90 glyphs, same as Adobe Std)  
 **JPN** : Japanese (JIS2004 glyphs, same as Adobe StdN)
 
-Please visit the **[Release page](https://github.com/andhitektura/and_WD-XL-font/releases)** to download the latest version of WD-XL Lubrifont, or take the files from the [`fonts`](./fonts) folder.
+Please visit the **[Release page](https://github.com/andhitektura/and_WD-XL-font/releases)** to download the latest version of and_Lubrifont, or take the files from the [`fonts`](./fonts) folder:
 
-Please visit the **[old releases branch](https://github.com/NightFurySL2001/WD-XL-font/tree/old-releases)** of the original project to download past versions of WD-XL Lubrifont.
+| File | Installs as |
+| --- | --- |
+| `fonts/OTF/and_LubrifontSC-Regular.otf` (or `fonts/TTF/…`) | and_Lubrifont SC |
+| `fonts/OTF/and_LubrifontTC-Regular.otf` | and_Lubrifont TC |
+| `fonts/OTF/and_LubrifontJPS-Regular.otf` | and_Lubrifont JP S |
+| `fonts/OTF/and_LubrifontJPN-Regular.otf` | and_Lubrifont JP N |
+| `fonts/and_Lubrifont.ttc` | all four of the above |
+
+The four versions differ only in their Chinese and Japanese character forms; for Latin and Cyrillic text one of them (e.g. SC) is enough.
+
+Please visit the **[old releases branch](https://github.com/NightFurySL2001/WD-XL-font/tree/old-releases)** of the original project to download past versions of the original WD-XL Lubrifont.
 
 ## Webfont
 
@@ -135,4 +147,4 @@ https://paypal.me/nightfurysl2001
 
 ## Display page
 
-[WD-XL Lubrifont](https://nightfurysl2001.github.io/WD-XL/)
+[WD-XL Lubrifont (original project)](https://nightfurysl2001.github.io/WD-XL/)

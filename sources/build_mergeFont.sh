@@ -5,7 +5,7 @@
 Help()
 {
   # Display Help
-  echo "Build WD-XL Lubrifont."
+  echo "Build and_Lubrifont."
   echo
   echo "Syntax: build_mergeFont.sh [-h|b|c|s|r]"
   echo "options:"
@@ -115,11 +115,11 @@ makeotf -f cidfont-JPN.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPN.fea -
 
 if [ "$collection" == "y" ]; then
     echo "Building TTC"
-    otf2otc -t "CFF=0" -o $startdir/WD-XLLubrifont.ttc $startdir/OTF/WD-XLLubrifontSC-Regular.otf $startdir/OTF/WD-XLLubrifontTC-Regular.otf $startdir/OTF/WD-XLLubrifontJPS-Regular.otf $startdir/OTF/WD-XLLubrifontJPN-Regular.otf
+    otf2otc -t "CFF=0" -o $startdir/and_Lubrifont.ttc $startdir/OTF/and_LubrifontSC-Regular.otf $startdir/OTF/and_LubrifontTC-Regular.otf $startdir/OTF/and_LubrifontJPS-Regular.otf $startdir/OTF/and_LubrifontJPN-Regular.otf
 fi
 
 # Process files
-for f in WD-XLLubrifontSC-Regular.otf WD-XLLubrifontTC-Regular.otf WD-XLLubrifontJPS-Regular.otf WD-XLLubrifontJPN-Regular.otf; do
+for f in and_LubrifontSC-Regular.otf and_LubrifontTC-Regular.otf and_LubrifontJPS-Regular.otf and_LubrifontJPN-Regular.otf; do
     echo "Processing file: $f"
     sfntedit -d DSIG "$f"
     python add_design_language.py "$f"

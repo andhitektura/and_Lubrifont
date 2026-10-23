@@ -70,19 +70,19 @@ makeotf -f cidfont-JPN.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPN.fea -
 :: backtick escape space for CFF  only works in PowerShell
 if "%collection%" == "y" (
 echo "Building TTC"
-otf2otc -t "CFF "=0 -o "%startdir%\WD-XLLubrifont.ttc" "%startdir%\OTF\WD-XLLubrifontSC-Regular.otf" "%startdir%\OTF\WD-XLLubrifontTC-Regular.otf" "%startdir%\OTF\WD-XLLubrifontJPS-Regular.otf" "%startdir%\OTF\WD-XLLubrifontJPN-Regular.otf"
+otf2otc -t "CFF "=0 -o "%startdir%\and_Lubrifont.ttc" "%startdir%\OTF\and_LubrifontSC-Regular.otf" "%startdir%\OTF\and_LubrifontTC-Regular.otf" "%startdir%\OTF\and_LubrifontJPS-Regular.otf" "%startdir%\OTF\and_LubrifontJPN-Regular.otf"
 )
 
 ::echo "Start check"
-::fontbakery check-universal --html check-SC.html WD-XLLubrifontSC-Regular.otf
-::fontbakery check-universal --html check-TC.html WD-XLLubrifontTC-Regular.otf
-::fontbakery check-universal --html check-TTC.html WD-XLLubrifont.ttc
+::fontbakery check-universal --html check-SC.html and_LubrifontSC-Regular.otf
+::fontbakery check-universal --html check-TC.html and_LubrifontTC-Regular.otf
+::fontbakery check-universal --html check-TTC.html and_Lubrifont.ttc
 
 for %%f in (
-WD-XLLubrifontSC-Regular.otf
-WD-XLLubrifontTC-Regular.otf
-WD-XLLubrifontJPS-Regular.otf
-WD-XLLubrifontJPN-Regular.otf
+and_LubrifontSC-Regular.otf
+and_LubrifontTC-Regular.otf
+and_LubrifontJPS-Regular.otf
+and_LubrifontJPN-Regular.otf
 ) do (
     echo Processing file: "%startdir%\OTF\%%f"
     sfntedit -d DSIG "%startdir%\OTF\%%f"

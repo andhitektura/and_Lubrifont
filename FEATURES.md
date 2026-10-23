@@ -1,8 +1,8 @@
-**WD-XL Lubrifont**
+**and_Lubrifont**
 
 # OpenType features
 
-WD-XL Lubrifont has set up multiple OpenType features, which are listed as follows.
+and_Lubrifont has set up multiple OpenType features, which are listed as follows.
 
 > [!NOTE] 
 > The version of font for this document is v2.400 (20261023).
@@ -66,7 +66,7 @@ The font has reserved `ss18` for Western punctuation. This feature provides West
 
 ## `ss19` — Stylistic Set 19 (Cornered/SC Punctuation)
 
-Starting from version 2.000, WD-XL Lubrifont merges the SC and TC versions into one `.ttc` font file, and some glyphs are shared between these fonts. The font has reserved `ss19` for the cornered (bottom-left) punctuation style used in Simplified Chinese in mainland China. This feature changes the following punctuation:
+Starting from version 2.000, the font merges the SC and TC versions into one `.ttc` font file, and some glyphs are shared between these fonts. The font has reserved `ss19` for the cornered (bottom-left) punctuation style used in Simplified Chinese in mainland China. This feature changes the following punctuation:
 
 * 、 `U+3001 IDEOGRAPHIC COMMA`
 * 。 `U+3002 IDEOGRAPHIC FULL STOP`

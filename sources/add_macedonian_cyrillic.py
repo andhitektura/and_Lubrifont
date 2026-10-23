@@ -1,5 +1,5 @@
 # Add the Cyrillic letters required for Macedonian (plus the stressed
-# Ѐ ѐ Ѝ ѝ used in Macedonian/Serbian/Bulgarian) to WD-XL Lubrifont.
+# Ѐ ѐ Ѝ ѝ used in Macedonian/Serbian/Bulgarian) to and_Lubrifont.
 #
 # All new glyphs are constructed from glyphs already present in each font,
 # so the same script works on the TrueType sources (named glyphs) as well as

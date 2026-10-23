@@ -1,4 +1,4 @@
-**WD-XL Lubrifont**
+**and_Lubrifont**
 
 # Technical Tidbits
 
@@ -192,7 +192,7 @@ The settings used in this step:
 * `-osbOn 6`: turn on bit 6 of OS/2.fsSelection, marking the Regular weight.
 * `-r`: release mode.
 
-5. `sfntedit -d DSIG .\WD-XLLubrifontSC-Regular.otf`
+5. `sfntedit -d DSIG .\and_LubrifontSC-Regular.otf`
 
 This step removes the digital signature (`DSIG`) from the font. Word 2016 and later do not require a digital signature to use OTF fonts, and Google Fonts advises against adding one (even an empty one), so the signature is deleted.
 
@@ -208,7 +208,7 @@ The font is now packaged.
 
 ## Merge to TTC font
 
-`otf2otc -t CFF`` =0 -o WD-XLLubrifont.ttc WD-XLLubrifontSC-Regular.otf WD-XLLubrifontTC-Regular.otf`
+`otf2otc -t CFF`` =0 -o and_Lubrifont.ttc and_LubrifontSC-Regular.otf and_LubrifontTC-Regular.otf`
 
 This step merges the font files into one TTC font file. As the largest table (`CFF `) differs slightly between the fonts, sharing of that table has to be forced. Note that there is a space after `CFF `, and `otf2otc` currently does not support quotation marks (see https://github.com/adobe-type-tools/afdko/issues/1442), so in Windows PowerShell a backtick (\`) is needed to escape the space.
 
@@ -231,15 +231,16 @@ Run them in this order (requires `fonttools` and `skia-pathops`):
 5. `add_mark_anchors.py` — `mark` anchors for Cyrillic letters and `ĆćČčĐđ`
 6. `add_ukrainian_belarusian.py` — Ukrainian and Belarusian `ЄєІіЇїҐґЎў` (v2.300; run `add_mark_anchors.py` again afterwards)
 7. `respace.py` — corrects the side bearings of Latin and Cyrillic letters (accented letters follow their base, mark anchors move with the outlines)
-8. `autokern.py` — kerning: `py autokern.py measure ../fonts/OTF/WD-XLLubrifontTC-Regular.otf kerning.txt` measures the outlines and writes `kerning.txt` (classes, class pairs, exceptions); `py autokern.py apply kerning.txt <fonts>` adds it to the release fonts as a `kern` feature. It also needs `freetype-py` and `uharfbuzz`. The kerning is not added to the TrueType source, because the full build generates GPOS from the feature files; after a full rebuild, run `apply` on the built fonts.
+8. `autokern.py` — kerning: `py autokern.py measure ../fonts/OTF/and_LubrifontTC-Regular.otf kerning.txt` measures the outlines and writes `kerning.txt` (classes, class pairs, exceptions); `py autokern.py apply kerning.txt <fonts>` adds it to the release fonts as a `kern` feature. It also needs `freetype-py` and `uharfbuzz`. The kerning is not added to the TrueType source, because the full build generates GPOS from the feature files; after a full rebuild, run `apply` on the built fonts.
 9. `track.py` — opens up the overall letter spacing: `py track.py 12 <fonts>` adds 12 units to both sides of Western letters, digits and punctuation (and 24 to the word space); CJK and full-width glyphs are not touched. Applied in v2.400.
 10. `add_central_european.py` — Polish, Czech, Slovak, Romanian and Turkish letters `ĄąĘęŚśŹźŻżĎďŘřŤťŮůĹĺĽľŔŕȘșȚțŞşŢţĞğİĖė`; afterwards run `add_mark_anchors.py`, then `autokern.py measure` and `autokern.py replace kerning.txt <fonts>` to re-kern with the new letters (`autokern.py` measures as if `track.py`'s spacing were absent, so existing kerning values stay the same).
+11. `rename_family.py` — renames the family to and_Lubrifont (name IDs 1, 3, 4, 6 in all languages, CFF names) and shortens the version string to "Version X.XXX"; the copyright and designer credits are kept. The build sources (`cidfontinfo-*`, `FontMenuNameDB`, `feature_shared_meta.fea`) carry the new names too. Run it after the version bump.
 
 ```
 cd sources
 py add_macedonian_cyrillic.py WD-XLLubrifont-Regular.ttf ../fonts/OTF/*.otf ../fonts/TTF/*.ttf
 (repeat for the other scripts)
-otf2otc -t "CFF =0" -o ../fonts/WD-XLLubrifont.ttc ../fonts/OTF/WD-XLLubrifontSC-Regular.otf ../fonts/OTF/WD-XLLubrifontTC-Regular.otf ../fonts/OTF/WD-XLLubrifontJPS-Regular.otf ../fonts/OTF/WD-XLLubrifontJPN-Regular.otf
+otf2otc -t "CFF =0" -o ../fonts/and_Lubrifont.ttc ../fonts/OTF/and_LubrifontSC-Regular.otf ../fonts/OTF/and_LubrifontTC-Regular.otf ../fonts/OTF/and_LubrifontJPS-Regular.otf ../fonts/OTF/and_LubrifontJPN-Regular.otf
 ```
 
 ### How the spacing and kerning were measured

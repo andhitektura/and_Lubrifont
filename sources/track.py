@@ -1,5 +1,5 @@
 # Open up the overall letter spacing (tracking) of the Western text in
-# WD-XL Lubrifont by adding the same amount of space to both sides of every
+# and_Lubrifont by adding the same amount of space to both sides of every
 # Latin, Greek and Cyrillic letter, digit and Western punctuation mark (and
 # twice that to the word space), so the kerning stays valid.
 #

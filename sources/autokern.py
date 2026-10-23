@@ -1,11 +1,11 @@
-# Kerning for the Latin and Cyrillic letters of WD-XL Lubrifont.
+# Kerning for the Latin and Cyrillic letters of and_Lubrifont.
 #
 # The original font has no kern feature, so pairs such as Та, Гл, LT, AV, Yo,
 # P. or r, show large gaps. This script measures the outlines and writes the
 # kerning to a text file, and applies that file to font files as a `kern`
 # feature (a new GPOS lookup; existing GPOS lookups are untouched).
 #
-#   py autokern.py measure ../fonts/OTF/WD-XLLubrifontTC-Regular.otf kerning.txt
+#   py autokern.py measure ../fonts/OTF/and_LubrifontTC-Regular.otf kerning.txt
 #   py autokern.py apply kerning.txt font1.otf [font2.ttf ...]
 #   py autokern.py replace kerning.txt font1.otf [...]   (replaces an existing kern)
 #
