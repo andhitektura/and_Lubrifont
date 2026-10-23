@@ -5,7 +5,7 @@
 WD-XL Lubrifont has set up multiple OpenType features, which are listed as follows.
 
 > [!NOTE] 
-> The version of font for this document is v2.200 (20261023).
+> The version of font for this document is v2.300 (20261023).
 
 ## `vert` / `vrt2` — Vertical Alternates
 
@@ -29,7 +29,7 @@ This feature is turned on automatically; users do not need to set anything up.
 
 ## `kern` — Kerning
 
-Added after v2.200 (not yet in a release): Latin and Cyrillic letters and the common punctuation are kerned, so pairs such as `Та`, `Гл`, `ГА`, `LT`, `AV`, `Yo` and `P.` close up. Kerning applies within each script (Latin with Latin, Cyrillic with Cyrillic) and with punctuation; digits are not kerned, so numbers stay aligned in tables and drawings.
+Since v2.300, Latin and Cyrillic letters and the common punctuation are kerned, so pairs such as `Та`, `Гл`, `ГА`, `LT`, `AV`, `Yo` and `P.` close up. Kerning applies within each script (Latin with Latin, Cyrillic with Cyrillic) and with punctuation; digits are not kerned, so numbers stay aligned in tables and drawings.
 
 This feature is on by default in most software (Affinity, Adobe apps, Rhino, browsers). In Microsoft Word it must be turned on: select the text, open **Font → Advanced** and tick **Kerning for fonts**. AutoCAD's text engine does not apply kerning; there the even letter spacing of the font itself applies.
 

@@ -2,7 +2,7 @@
 
 # Updates
 
-## Unreleased
+## Ver 2.300; 20261023
 
 - Respaced the Latin and Cyrillic letters: diagonal and open capitals (`А Ж Х У Ф A X Z L` …) and loose lowercase (`д т f t s` …) tightened, `Я` and `ї ï` loosened on their tight side, and Latin/Cyrillic straight letters made consistent; accented letters follow their base letter (`sources/respace.py`)
 
