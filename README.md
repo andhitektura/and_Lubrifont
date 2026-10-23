@@ -26,7 +26,7 @@ You may use the following webfont services to use this font in webpages:
 | Google Fonts | [SC](https://fonts.google.com/specimen/WDXL+Lubrifont+SC) · [TC](https://fonts.google.com/specimen/WDXL+Lubrifont+TC) · [Japanese JIS2004 JPN](https://fonts.google.com/specimen/WDXL+Lubrifont+JP+N) |
 | ZeoSeven Fonts | [SC · TC · Japanese JIS90 JPS · Japanese JIS2004 JPN](https://fonts.zeoseven.com/items/138/) |
 
-> These services host the original project's fonts, which do not yet include the additions of v2.200 and v2.300 (Macedonian, Serbian, Croatian, Ukrainian and Belarusian letters, technical symbols, dotted zero, new 7, improved spacing and kerning).
+> These services host the original project's fonts, which do not yet include the additions of v2.200–v2.400 (Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Romanian and Turkish letters, technical symbols, dotted zero, new 7, improved spacing and kerning, wider letter spacing).
 
 ## Character set
 
@@ -34,6 +34,7 @@ Latin:
 - [Adobe Latin 1](http://adobe-type-tools.github.io/adobe-latin-charsets/adobe-latin-1.html)
 - [GF Latin Core](https://github.com/googlefonts/gftools/blob/main/Lib/gftools/encodings/GF%20Glyph%20Sets/GF-latin-core_unique-glyphs.nam)
 - Croatian, Bosnian, Serbian Latin (`ĆćČčĐđ`)
+- Polish, Czech, Slovak, Romanian, Turkish (`ĄąĘęŚśŹźŻż ĎďŘřŤťŮů ĹĺĽľŔŕ ȘșȚțŞşŢţ ĞğİĖė`)
 
 Cyrillic:
 - Russian, Ukrainian, Belarusian, Macedonian, Serbian (`А–я Ёё ЂђЃѓЄєЅѕІіЇїЈјЉљЊњЋћЌќЎўЏџ ҐґЀѐЍѝ`)
@@ -102,7 +103,7 @@ pip3 install afdko fonttools gftools
 
 The build script `build_mergeFont.bat`/`build_mergeFont.sh` is included under `/sources/`; running it will produce the fonts. More detail can be read in [`build_commands_mergeFonts.txt`](./sources/build_commands_mergeFonts.txt) or the [technical tidbits](./documentation/TECHNICAL.md).
 
-The additions of v2.200 and v2.300 were made with patch scripts in `/sources/` (they also need `skia-pathops`); see [Patch scripts (v2.200)](./documentation/TECHNICAL.md#patch-scripts-v2200-v2300).
+The additions of v2.200–v2.400 were made with patch scripts in `/sources/` (they also need `skia-pathops`); see [Patch scripts (v2.200)](./documentation/TECHNICAL.md#patch-scripts-v2200v2400).
 
 ## Contribution
 

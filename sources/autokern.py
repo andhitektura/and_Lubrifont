@@ -7,6 +7,7 @@
 #
 #   py autokern.py measure ../fonts/OTF/WD-XLLubrifontTC-Regular.otf kerning.txt
 #   py autokern.py apply kerning.txt font1.otf [font2.ttf ...]
+#   py autokern.py replace kerning.txt font1.otf [...]   (replaces an existing kern)
 #
 # Punctuation is measured and kerned in the form it takes in Latin/Cyrillic
 # text: the SC fonts switch ‘ ’ “ ” to their proportional forms there, which
@@ -48,6 +49,8 @@ MIN_KERN = 10
 KEEP = 20           # adjustments below this are not kept
 CLASS_TOL = 10      # base letters within this of each other share a class
 EXCEPTION_TOL = 15  # a pair further than this from its class gets its own value
+TRACKING = 12       # space added to each side by track.py; measured as if absent,
+                    # so the kerning is the same as before tracking was added
 REFERENCE = "нн"   # нн
 
 PUNCT = [ord(c) for c in ".,:;'\"‘’“”‚„«»‹›-–—()[]/?!ʼ"]
@@ -127,7 +130,7 @@ def profiles(path, unis):
 
 
 def pair_kern(right_of_first, left_of_second, ref):
-    gap = right_of_first + left_of_second
+    gap = right_of_first + left_of_second - 2 * TRACKING
     both = ~np.isnan(gap)
     if not both.any():
         return 0
@@ -170,7 +173,7 @@ def measure(font_path, out_path):
     prof = profiles(font_path, glyphs)
     n = ord(REFERENCE[0])
     ref_prof = profiles(font_path, [n])[n]
-    ref = np.nanmean(ref_prof[1] + ref_prof[0])
+    ref = np.nanmean(ref_prof[1] + ref_prof[0]) - 2 * TRACKING
 
     # every pair, measured glyph by glyph
     unis = sorted(glyphs)
@@ -266,7 +269,33 @@ def read_kerning(path):
     return classes, class_pairs, exceptions, advances
 
 
-def apply(kern_path, font_paths):
+def remove_kern(font):
+    """remove the kern feature added by apply() (its lookup is the last one)"""
+    gpos = font["GPOS"].table
+    records = gpos.FeatureList.FeatureRecord
+    kern_idx = [i for i, r in enumerate(records) if r.FeatureTag == "kern"]
+    if not kern_idx:
+        return
+    lookups = {l for i in kern_idx for l in records[i].Feature.LookupListIndex}
+    last = len(gpos.LookupList.Lookup) - 1
+    assert lookups == {last}, "kern lookup is not the last lookup; not touching it"
+    remap = {}
+    for i in range(len(records)):
+        if i not in kern_idx:
+            remap[i] = len(remap)
+    for srec in gpos.ScriptList.ScriptRecord:
+        langsyses = ([srec.Script.DefaultLangSys] if srec.Script.DefaultLangSys else []) + \
+            [l.LangSys for l in srec.Script.LangSysRecord]
+        for ls in langsyses:
+            ls.FeatureIndex = [remap[i] for i in ls.FeatureIndex if i in remap]
+            ls.FeatureCount = len(ls.FeatureIndex)
+    gpos.FeatureList.FeatureRecord = [r for i, r in enumerate(records) if i not in kern_idx]
+    gpos.FeatureList.FeatureCount = len(gpos.FeatureList.FeatureRecord)
+    del gpos.LookupList.Lookup[last]
+    gpos.LookupList.LookupCount = len(gpos.LookupList.Lookup)
+
+
+def apply(kern_path, font_paths, replace=False):
     from fontTools.ttLib import TTFont
     from fontTools.ttLib.tables import otTables
     from fontTools.otlLib.builder import (buildPairPosGlyphsSubtable,
@@ -276,6 +305,8 @@ def apply(kern_path, font_paths):
     all_unis = {u for v in classes.values() for u in v}
     for path in font_paths:
         font = TTFont(path)
+        if replace:
+            remove_kern(font)
         gpos = font["GPOS"].table
         if any(r.FeatureTag == "kern" for r in gpos.FeatureList.FeatureRecord):
             print(f"{path}: already has kern")
@@ -338,3 +369,5 @@ if __name__ == "__main__":
         measure(sys.argv[2], sys.argv[3])
     elif sys.argv[1] == "apply":
         apply(sys.argv[2], sys.argv[3:])
+    elif sys.argv[1] == "replace":
+        apply(sys.argv[2], sys.argv[3:], replace=True)

@@ -5,7 +5,7 @@
 WD-XL Lubrifont has set up multiple OpenType features, which are listed as follows.
 
 > [!NOTE] 
-> The version of font for this document is v2.300 (20261023).
+> The version of font for this document is v2.400 (20261023).
 
 ## `vert` / `vrt2` — Vertical Alternates
 
