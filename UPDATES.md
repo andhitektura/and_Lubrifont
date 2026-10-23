@@ -29,7 +29,7 @@ Added Croatian/Bosnian/Serbian Latin `ĆćČčĐđ` and Serbian Cyrillic `ЂђЋ
 ## Ver 2.100; 20250331
 
 - <details>
-    <summary>新增 1718 汉字，补全通用规范汉字表、现代汉语通用字表、<a href="https://github.com/ichitenfont/suppchara">常用香港外字表 第1.8版</a> 列出的全部汉字、<a href="https://github.com/justfont/jf7000">jf7000 当务字集 0.9版</a>列出的全部汉字及<a href="https://github.com/ichitenfont/https://github.com/NightFurySL2001/cjktables/blob/master/china/foundry/fangzheng_jianfan.txt">方正字库简繁字表</a><br>新增 1718 漢字，補全通用規範漢字表、現代漢語通用字表、<a href="https://github.com/ichitenfont/suppchara">常用香港外字表 第1.8版</a> 列出的全部漢字、<a href="https://github.com/justfont/jf7000">jf7000 當務字集 0.9版</a>列出的全部漢字及<a href="https://github.com/ichitenfont/https://github.com/NightFurySL2001/cjktables/blob/master/china/foundry/fangzheng_jianfan.txt">方正字庫簡繁字表</a></summary>
+    <summary>新增 1718 汉字，补全通用规范汉字表、现代汉语通用字表、<a href="https://github.com/ichitenfont/suppchara">常用香港外字表 第1.8版</a> 列出的全部汉字、<a href="https://github.com/justfont/jf7000">jf7000 当务字集 0.9版</a>列出的全部汉字及<a href="https://github.com/ichitenfont/https://github.com/NightFurySL2001/cjktables/blob/master/china/foundry/fangzheng_jianfan.txt">方正字库简繁字表</a><br>新增 1718 漢字，補全通用規範漢字表、現代漢語通用字表、<a href="https://github.com/ichitenfont/suppchara">常用香港外字表 第1.8版</a> 列出的全部漢字、<a href="https://github.com/justfont/jf7000">jf7000 當務字集 0.9版</a>列出的全部漢字及<a href="https://github.com/ichitenfont/https://github.com/NightFurySL2001/cjktables/blob/master/china/foundry/fangzheng_jianfan.txt">方正字庫簡繁字表</a><br>Added 1718 hanzi, completing all hanzi in the Table of General Standard Chinese Characters, the Modern Chinese General Character List, the <a href="https://github.com/ichitenfont/suppchara">Hong Kong Supplementary Character List v1.8</a>, the <a href="https://github.com/justfont/jf7000">jf7000 Core Character Set v0.9</a> and the <a href="https://github.com/NightFurySL2001/cjktables/blob/master/china/foundry/fangzheng_jianfan.txt">Founder Simplified–Traditional list</a></summary>
     <p>
 
     - `丏匜厾玕玙㧐芼旸牤沨纴玡玭玠玦拤㧟茓茀杻呣䏝𬉼㤘垱挦柈𠳐眊饸饹疭闿羑浕恓牁珰琤栟眬鸮䥽盉牂埵棁秾鸻馃郿琫揳塆靰靸雱睄嵖媭鲀颎湉愔祾翚跐鹐滫滃滪璈摽靿僰豨䁖嘡魆鋆踒𥻗熜璠縠嚄螠䦃膙澥璪鞡鞬罽鳀鞧鹮霨㸆臜瓘齉𠙶毌邘圢冮汈𬣙圲圫𨙸屼癿邠𬇕汋䜣讻𬣞𬘓玒玓玘玚刬𫭟扽𫭢坋扺㧑苉芠𫇭杕杄轪𫐄坒旴旵㕮𫵷岠呇觃伾㑇伭佁飏汧𣲘𣲗沄𬇙汭㳇沇忳忺𬣡祃诇邲诐𫸩岊䢺妧妘𨚕纮驲𫘜𬘘𫘝纼玤玞玱邽邿坰坬坽弆䢼𦭜㭎枍𬨂𬀩𬀪旿昄昒昈咉岞峂㟃𬬩钖牥侁佸㑊侂佽郈舠攽肸狉狝饳炌泂泃泇峃祋祊𫍣𬣳𬩽鸤弢弨陑𬮿陎𬯀妭姈𫰛叕𬳵𬳶䌹𫠊㛃玶珇珋珌玿韨垚垯垙垍耇鿍垎垟垏荁荙茽荄𬜬荓𦰡㭕柷栐柖郚剅䴓砆耏䶮昺𪾢昽盷咡咺昳昣昫昡昪虷虸哃峘峛𪨰峗峧帡钘𬬮𬬱俫俙垕衎侴鸧𦙶胈胣飐饻庤炟㶲洭洓洿㳚洑洢洈洺洨㳘洴洣恔宬扂袆祏叚娀姞姱姤姽枲绖骃𬘡𬳽𬘩𫄧珛珹玼𪟝珦珫𬍤珢珕珝𫭼垾垿埌茝𬜯鄀莝䓖莙栻𬂩梴栒𫠆砵砫硁翃郪𨐈辀𬌗剕晊唝冔晐畖蚄蚆𫑡峿𪨶帨崀𬬸𬬹𬬿𬭁甡倻倴倕𫢸倓倧衃虒舥朓虓鱽峱𫗧竘羖烠烔烶烻𬊈涍浭涄涢涐浰浟浛涘悈悢𬒈宧窅窊窎扅扆袯隺堲疍𨺙砮㛚翂剟𬳿𫄨绤骍𬘫䂮琎琄琈琀堎堐埫堌𫮃㙍萚䓫勚菂菍菼䓨菉梽桲梾桯梣梌桹硔鿎硊硍勔䴕龁逴翈㫰蛃蚲𬟽啴䎃崒崌崡铏𫓯𫟹铚牻笯偡偁㿠鄅偓舲鸼悆鄃瓻䝙脟鱾猇𠅤庱庼痓䴔羕焆焌𬇹淟淜淴湴涴𬍡㥄惛惔悰惙寁𬤇𫍯祲𬤊𫍲谞弶𬯎婞婼媖婳婍婌婫婤婘𬘬𬘭𬴂𫘦𫟅𬘯骕𫘧珷琡琟琔琭堾堼揕㙘堧堨塅𪣻𡎚惎萳靬葴鄚蓇葰鄑葖萹棤棽棫椓椑𬃊椆棓棬棪𬷕酦奡皕詟𫐐辌棐龂𬹼睎晫晪晱𧿹斝崶嵁𫶇嵅崿嵚翙𫖮圌圐赒𨱇𫓶𬭎颋稌筀筜傃傉翛傒脿䐃腒𬱟鲃猰𫛭㺄馉凓𫷷廆鄌遆旐𬮱焞𬊤欻𣸣溁湝渰㴔溠溇湑溞敩棨扊婻媆媞㛹媓媂矞𬴃𫘨缐骙瑃瑓瑅瑆䴖瑖瑝瑔𤧛瑂嶅瑑赪摛塝搒蒱蒨蓏蓢蓂榃楒楩椸歅𬪩碃碏𬒔碈䃅鄠辒𬨎𫐓䣘暕鹍㬊暅跱蜐蜎嵲赗𫓹锧𬭚稑䅟𬕂筼筶筦筤艅谼貆腨腯鲉鲌䲟𬶋𬶍鲏猺飔觟𦝼馌裛鹒鄜麀阘𫔶煁煃煋煟煓溍溹滆溦溵漷滧滍愭慆𫌀禋禘禒鹔𫖳嫄戣𫘪𫘬缞耤瑧𫞩瑨瑱斠摏墕墈墐摴𡐓𪤗靽蔈蔊榰槚𣗋槜疐𬸘碶䃎𬒗碨𥔲𫚖䴗鹖㬎幖嶍圙𨱏𬭤镃鹙箖僔㙦𫚕鲖鲗鲘𬶐𬶏𩽾飗𬸚凘廙鲝鄫漹潩漼漴㽏漈漋漻慬㮾𬤝隩嫕嫭𬙂㻬璆墣墡蔃鼒槱鹝磏殣霅暵暶踦䗖蝘噇噀嶲嶓㠇嶟嶒镈镋𬭩䴘艎𩾃鲪觭鹠熛潖㵐澛瑬潽潾潏憭憕𬸣戭褯禤𫍽嫽𬴊璥璲璒薳黇𬞟薢橞橑𥕢磜豮𫟦𬺈𫠜虤曌㬚蹅踶䗛疁㠓幪𪩘嶦𬭬𨱑𬭯穄篯簉衠鲯𫗴亸𬸦羱燚燏濋澽澭澼翯𫄷璱𤩽璬璮髽擿薿櫆檞醨繄磹磻瞫蟏㘎𫔍𬭸𨱔𬭼𫔎矰穙穜穟簕簃儦魋斶𬸪䲠𬶟鲾𬶠鲿鳂鳈鳉䗪襚𬶨螱嬥𦈡𫄸瓀鬶爇鞮𬟁藟藦藨鹲礌𥖨蹢蹜蟫䗴嚚髃酂馧簠簝簰鼫鼩䲢鳑鳒鹯𦒍旞翷䎖瀔瀍瀌襜䴙𬙊嚭㰀鬷蠋翾儴𬶭𩾌鳚鳛麖彟鬒蘘欂甗𨟠巇酅犨𬶮𨭉㸌爔瀱瀼襫骦𬙋耰𤫉𬺓鼱鳠鳡鳣爟爚灈韂糵礵鹴皭鳤亹𫚭玃醾齇觿朘塃葓湨塈塮檵礳耲㗒㗳㞗㦸㧸㨃㩜㷧䁓䁥䂻䉵䒷䗩䚎䜇䟴䭾䰄䰻䰾䱋䱗俲俽傦僙刟剗剠剨劚勑勡匬匲厪厫呩咹唨啳嗻嘑嘠嘷嚞圕坆坧埦堦塳墰妷婣峑嵆嵗嶎帒彍徤徺悞惽慜憜懢戹拕捬擪斅斆昷晈朌朥枬柹椬椾槀槩橒橺檝檲櫊欵歒毺泎洤涹湏濚炁烕焴煱煶牐牕猂猨獱琹畺瘇皡盌眫磓磘礮秌秔稭窻竉笟箣籂籑籝籰粆粦粬糚絍緵耝聛聣聦脃脌臯臶舚苐苽莾蒀蒕蘐蝱螌螥螩蟁蟖蠭袠覉覔覼詧詾譃讁贘赥趦踁踨蹵蹷躧辠遌酑酙酧酼醎醻釾鍫閗阸陁隁隖霃霡霱靝靟鞟鞺頟頮顇顖顦颴飦餹餻駚騌騐骽髗髿鬂鬉鮌鮍鰃鰟鰧鱂鱏鱓鱤鱥鴂鴓鸜麄麐麘麞麨鼂鼧齅齓齚齩龎龥𠜎𠱓𠳔𠳕𠴕𠵿𠸎𠸏𠹷𠻺𠼻𠾴𠾼𠽾𠾐𡁯𡁵𡃉𡂫𡇙𡝭𡷑𡼏𢆡𢔛𢝵𢞵𢫕𢴈𢺳𣜿𤃒𤍤𤶀𥁕𥟇𦤎𦸅𧍱𧒆𧦠𧬪𨋍𨍽𨎊𨸹𩷓𩺬𩼰𩽈𩽰𪂺𪇡𪙊𫒢𫬷𭉝𰇛鿽俋傜呯咈唎喎囍妏姵媗媜屭巿彣掯搥旂旼暐枒櫫氂澔灩焢犽瘖瘜瘝礡禕翬胇芛蠵褔譭躕辵魟鯓鯷鷴㕣梲虪媯媿巂徯怗怹挜敠朆槅槑槥溈㐂㖞㭴㾦䃚䇲䌷䎬䖬䜩䥺䦆僜刲勷匽咵哣唡唻啯垇垽夆焮牷犗痎瘄瘈皶盝眜砢硵碔稖穞窾篰篲罥聤肐胔胾菑葇蚃蜰襆觍诪谉貐踄踖踧輶銶锠闬阓阛霂颒颣饤饾馂鬐魌鯃鹓𠉂𠚤𠮟𠸁𢙐𢽾𣱝𤆢𤟯𤻊𥄨𥆧𦎓𦨭𦭌𦶟𦻘𧮪𨰾𨱍𨱎𨱓𩨂𩽼𩾇𱱿㚬㛄㛢㨗㶈㷍㼈䕒䭲亷仱侞俁倛偟傛儫咅咘喭嘒嘪圡坣妡妦姁姃姎姳娪娳婗媁媃媐嫃嫆嫈嫙嫥嬃嬑嬣嬨嬫孋孍宭寗寯峮嵵庒憓敻斳晛晸暟暻曏曣椉椲楀楟榤槶檥汘泑浿涒淂湋溎潓潣澐煚熀熲猋玅玗玴珆珓珳琁琣瑈瑒瑮瑲瑺瑽璊璵璸璻瓈瓌瓛畇硘硦祤禑秜秝笭筎箂綝綪緁茿荺莯萲蒍蒝蕥薆薾褘詅諪諴譔豑赮辳逤鈅鈜鈤鈱鈵鉌鉯銍鋊鋑錤錩錪錱鍌鍏鍱鍹鎛鎡鐈鐏鐤鑶闓顒馡騂騋驒鱻鵟鷰龘𡟚𡩋𤧟𧃽𩻸悮䒐䒏俹簁`
@@ -38,65 +38,84 @@ Added Croatian/Bosnian/Serbian Latin `ĆćČčĐđ` and Serbian Cyrillic `ЂђЋ
 </details>
 
 - <details>
-    <summary>修补 7 汉字<br>修补 7 漢字</summary>
+    <summary>修补 7 汉字<br>修补 7 漢字<br>Fixed 7 hanzi</summary>
     <p>
 
     - `彳爿豸𡠍槨氍繏`
 
     - 被转移去正确码位的错字：`𡣐𭯪橔`  
-    被轉移去正確碼位的錯字：`𡣐𭯪橔`
+    被轉移去正確碼位的錯字：`𡣐𭯪橔`  
+    Characters moved to their correct code points: `𡣐𭯪橔`
 
     </p>
 </details>
 
 - 新增希腊文完整支援：`ΆΈΉΊΌΎΏΐΪΫάέήίΰϊϋόύώ΄΅`，调整 `χ` 造型  
-新增希臘文完整支援：`ΆΈΉΊΌΎΏΐΪΫάέήίΰϊϋόύώ΄΅`，調整 `χ` 造型
+新增希臘文完整支援：`ΆΈΉΊΌΎΏΐΪΫάέήίΰϊϋόύώ΄΅`，調整 `χ` 造型  
+Added full Greek support: `ΆΈΉΊΌΎΏΐΪΫάέήίΰϊϋόύώ΄΅`, and redesigned `χ`
 
 > 感谢 ZERO 子 ([@Skr-ZERO](https://github.com/Skr-ZERO)) 为本字体进行上述修补工作。  
-> 感謝 ZERO 子 ([@Skr-ZERO](https://github.com/Skr-ZERO)) 爲本字型進行上述修補工作。
+> 感謝 ZERO 子 ([@Skr-ZERO](https://github.com/Skr-ZERO)) 爲本字型進行上述修補工作。  
+> Thanks to ZERO子 ([@Skr-ZERO](https://github.com/Skr-ZERO)) for the fixes above.
 
 - 补齐注音符号扩展区段（U+31A0..U+31BF）及方音符号音调  
-補齊注音符號擴展區段（U+31A0..U+31BF）及方音符號音調
+補齊注音符號擴展區段（U+31A0..U+31BF）及方音符號音調  
+Completed the Bopomofo Extended block (U+31A0..U+31BF) and the tone marks of the Taiwanese Phonetic Symbols
 
 - 补齐新增的表意文字描述字符：`⿼⿽⿾⿿㇯`  
-補齊新增的表意文字描述字符：`⿼⿽⿾⿿㇯`
+補齊新增的表意文字描述字符：`⿼⿽⿾⿿㇯`  
+Added the newly encoded Ideographic Description Characters: `⿼⿽⿾⿿㇯`
 
-- 更新部分 OpenType 功能 (`vert`, `locl`)
+- 更新部分 OpenType 功能 (`vert`, `locl`)  
+Updated some OpenType features (`vert`, `locl`)
 
 - 移除破折号的 `liga` 功能，改由 `ccmp` 处理以便竖排排版替换  
-移除破折號的 `liga` 功能，改由 `ccmp` 處理以便豎排排版替換
+移除破折號的 `liga` 功能，改由 `ccmp` 處理以便豎排排版替換  
+Removed the `liga` feature for dashes; dashes are now handled by `ccmp` so they are also substituted in vertical text
 
-- 新增 OpenType 功能 (`halt`, `vhal`, `chws`, `vchw`)
+- 新增 OpenType 功能 (`halt`, `vhal`, `chws`, `vchw`)  
+Added OpenType features (`halt`, `vhal`, `chws`, `vchw`)
 
-- 新增 TTF 版字型文件
+- 新增 TTF 版字型文件  
+Added TTF font files
 
 - 依据 [Google Fonts 更新后的指引](https://github.com/googlefonts/googlefonts.github.io/pull/159) 调整行高参数，并新增文种基线表 (`BASE`)  
-依據 [Google Fonts 更新後的指引](https://github.com/googlefonts/googlefonts.github.io/pull/159) 調整行高參數，並新增文種基綫表 (`BASE`)
+依據 [Google Fonts 更新後的指引](https://github.com/googlefonts/googlefonts.github.io/pull/159) 調整行高參數，並新增文種基綫表 (`BASE`)  
+Adjusted the line-height metrics following the [updated Google Fonts guidelines](https://github.com/googlefonts/googlefonts.github.io/pull/159), and added a baseline table (`BASE`)
 
 > P/S: 開齋節快樂！ Selamat Hari Raya Aidilfitri!
 
 ## Ver 2.001; 20220201
 
 - 正式完全转换制作流程使用 [AFDKO](https://github.com/adobe-type-tools/afdko)，即替换合并代码使用`mergeFonts`  
-正式完全轉換製作流程使用 [AFDKO](https://github.com/adobe-type-tools/afdko)，卽替換合併代碼使用`mergeFonts`
+正式完全轉換製作流程使用 [AFDKO](https://github.com/adobe-type-tools/afdko)，卽替換合併代碼使用`mergeFonts`  
+Fully switched the build process to [AFDKO](https://github.com/adobe-type-tools/afdko); the merge code now uses `mergeFonts`
 
 - 增加基本日文支援（分流 JPS/JPN 分別代表 /StdN）  
+Added basic Japanese support (separate JPS/JPN builds for Std/StdN)
 
-    - 分流 JPS 代表 Std 版（JIS X 0208:1990，使用 JIS90 字形）
-    - 分流 JPN 代表 StdN 版（JIS X 0213:2004，使用 JIS2004 字形）
+    - 分流 JPS 代表 Std 版（JIS X 0208:1990，使用 JIS90 字形）  
+    JPS is the Std build (JIS X 0208:1990, JIS90 glyphs)
+    - 分流 JPN 代表 StdN 版（JIS X 0213:2004，使用 JIS2004 字形）  
+    JPN is the StdN build (JIS X 0213:2004, JIS2004 glyphs)
 
 > 感谢 ZERO 子 ([@Skr-ZERO](https://github.com/Skr-ZERO)) 为本字体提供日文版制作流程和检查。  
-> 感謝 ZERO 子 ([@Skr-ZERO](https://github.com/Skr-ZERO)) 爲本字型提供日文版製作流程和檢查。
+> 感謝 ZERO 子 ([@Skr-ZERO](https://github.com/Skr-ZERO)) 爲本字型提供日文版製作流程和檢查。  
+> Thanks to ZERO子 ([@Skr-ZERO](https://github.com/Skr-ZERO)) for the Japanese build process and proofreading.
 
-> 注：2.000 版加入的日文字形是 JIS83 版本字形，已完成配置。
+> 注：2.000 版加入的日文字形是 JIS83 版本字形，已完成配置。  
+> Note: the Japanese glyphs added in v2.000 are JIS83 forms, and are now fully mapped.
 
 - 增加日文小写假名竖排功能，包括对应的竖排资讯 (`vmtx`)  
-增加日文小寫假名豎排功能，包括對應的豎排資訊 (`vmtx`)
+增加日文小寫假名豎排功能，包括對應的豎排資訊 (`vmtx`)  
+Added vertical forms for Japanese small kana, with the corresponding vertical metrics (`vmtx`)
 
 - 添加日文字形切换 OpenType 功能 (`jp83`, `jp90`, `jp04`)  
-添加日文字形切換 OpenType 功能 (`jp83`, `jp90`, `jp04`)
+添加日文字形切換 OpenType 功能 (`jp83`, `jp90`, `jp04`)  
+Added OpenType features for switching Japanese glyph forms (`jp83`, `jp90`, `jp04`)
 
-- 更新部分 OpenType 功能 (`ss19`, `ss20`, `vert`, `locl`)
+- 更新部分 OpenType 功能 (`ss19`, `ss20`, `vert`, `locl`)  
+Updated some OpenType features (`ss19`, `ss20`, `vert`, `locl`)
 
 - 移除 SIL OFL 的保留字型名 (Reserved Font Name, RFN)  
 *Removed RFN in SIL OFL for Google Fonts preparation*
@@ -106,10 +125,11 @@ Added Croatian/Bosnian/Serbian Latin `ĆćČčĐđ` and Serbian Cyrillic `ЂђЋ
 ## Ver 2.000; 20211225
 
 - 正式转换发布字体成 OTF 格式，制作流程转用 [AFDKO](https://github.com/adobe-type-tools/afdko)  
-正式轉換發佈字型成 OTF 格式，製作流程轉用 [AFDKO](https://github.com/adobe-type-tools/afdko)
+正式轉換發佈字型成 OTF 格式，製作流程轉用 [AFDKO](https://github.com/adobe-type-tools/afdko)  
+Release fonts are now in OTF format; the build process switched to [AFDKO](https://github.com/adobe-type-tools/afdko)
 
 - <details>
-    <summary>新增 1883 汉字，补全台湾闽南语、客家语常用词辞典的汉字、<a href="https://github.com/ichitenfont/suppchara">常用香港外字表</a> 列出的常用香港字 5 级字、GB/T 12345、 <a href="https://kanji.jitenon.jp/cat/jisdai2.html">JIS 第 2 水准</a>汉字及 IBM 32 扩展字<br>新增 1883 漢字，補全臺灣閩南語、客家語常用詞辭典的漢字、<a href="https://github.com/ichitenfont/suppchara">常用香港外字表</a> 列出的常用香港字 5 級字、GB/T 12345、 <a href="https://kanji.jitenon.jp/cat/jisdai2.html">JIS 第 2 水準</a>漢字及 IBM 32 擴展字</summary>
+    <summary>新增 1883 汉字，补全台湾闽南语、客家语常用词辞典的汉字、<a href="https://github.com/ichitenfont/suppchara">常用香港外字表</a> 列出的常用香港字 5 级字、GB/T 12345、 <a href="https://kanji.jitenon.jp/cat/jisdai2.html">JIS 第 2 水准</a>汉字及 IBM 32 扩展字<br>新增 1883 漢字，補全臺灣閩南語、客家語常用詞辭典的漢字、<a href="https://github.com/ichitenfont/suppchara">常用香港外字表</a> 列出的常用香港字 5 級字、GB/T 12345、 <a href="https://kanji.jitenon.jp/cat/jisdai2.html">JIS 第 2 水準</a>漢字及 IBM 32 擴展字<br>Added 1883 hanzi, completing the hanzi in the dictionaries of frequently used Taiwanese Hokkien and Hakka words, level-5 Hong Kong common characters in the <a href="https://github.com/ichitenfont/suppchara">Hong Kong Supplementary Character List</a>, GB/T 12345, <a href="https://kanji.jitenon.jp/cat/jisdai2.html">JIS level 2</a> kanji and the IBM 32 extension characters</summary>
     <p>
 
     - `㐁㑁㑑㓟㓾㔂㕱㕸㖅㖸㗘㗱㘔㘛㘝㘭㜮㜷㜺㝗㝩㤉㤕㧁㧌㧎㧒㧡㧣㧻㧾㨂㨑㨨㨪㨻㩆㩗㩧㩮㪐㰵㴘㴙㷛㷮㸐㸰㼆㼓㽎㾀㾊㿭㿸㿺䀐䀯䀴䀹䁅䁯䃗䃟䆀䇶䈄䉂䌈䏡䏲䓛䓝䓪䓬䖙䖳䗁䗆䗐䘆䘥䘼䞚䟓䟘䟩䠡䢂䢍䢢䥑䦉䪴䫌䯋䰳䱛䲁䲅䲗䳍䴈䴉丱丼乂乕乢亅亊亰亶亼仭伀伃伜伡伣伨伹伻佖侊侒侘侚侫侹俉俍俔俛俤俥俶俿倅倈倢倯倲偀偂偝偰傔傪傱僊僘僫僴儁儑儖儱兊兤冏冐冓冝冦冩冾凃凅凊凖凟凩凬凴凾刄刋刐刓刔刕刜刣刦刧剉剏剱剳剺剾劄劒劔劜劦劯劼勀勠勥勼匇匤匧匳匸匼卆卌卲厓厖厰叆叇叝叺叾吂呟呧呰呴呾呿咊咜咢咥哘哢哯哱哹唅唊唌唥唩唭唶唹啀啌啹喌喐喓喞喢喤喥喨嗋嗙嗹嗺嘓噐噒噭噷嚉嚊嚔嚠嚤嚱嚵嚹嚾囃囎囓囥囮囷圀圦圷圸坉坔坙坥坱坵坺坿垈垉垞垪垬垰垳垺埀埆埇埈埓埖埣埪堽塠塰塲墘墫墲墸墹墺壗壜壥壸壻壼夊夐夘夛夬奅奒奓奛奝奣妛妺姙姼娗娚娵婬婸媌媱嫋嫐嬶嬾孅寀寃寉寘尞尠尨尪屃屓屧屶屻岦岶岺岻岼岾峅峇峣峵峺崄崋崕崘崟崠嵂嵎嵒嵓嵙嵜嵭嵳嵶嶌嶐嶢嶬嶮嶹巐巵帋幇幎幤幵庰廍廏廕廩廰廱廹弇弉弌弍弖弡弴弸彁彅彑彔彜徃徛徧忞忟忰怐怺恅恊恟恠恷悁悊悋悗悤悧悳悾悿惓惗惞惪惷愃愐愑愖愡愨愬愰愽慂慒慓慙慥慭慯慱慴慽憇憖憘憙憢憺懃懆懞懴懽戉戓戞扐扚扞扠扡扨扴扷抂抃抅抐抝抾拁拏拑拵拹挃挌挐挓挔挕挧挩挱挳挵挶挷挼捀捒捔捘捙捝捥捾掔掜掝掞掫掵揇揋揌揑揙揜揢揫揬揰揵揻搇搉搙搝搟搢搤搧搨搩摃摎摖摝摠摵撆撋撍撏撘撝撨撴擉擛擣擶擽攅攋攎攑攕攷敆敋敧敨敱斈旙旛旡昉昜昞昮昻昿晄晙晥晧晬晳暃暎暙暠暲暼暿曁曚曵曺曻朎朏朒朖朞朳朷朸朿杁杙杣杤杦杮枅枌枡枦枩枹枻柀柆柎柤柧柫柮栁栫栱栿桍桒桙桮桱桸桾梍梛梠梹梺棆棈棊棏棑棔棡棢棯椄椈椊椌椚椡椢椣椥椦椨椪椶楙楜楪楬楴楻楾榁榅榑榖榠榲榼榾槇槝槞槢槫槹槺樌樒樔樛樠樢樮樰樶橂橆橦橲橳橸檍檨檪櫁櫑櫢櫤櫼欅欉欟欱欶歁歔歕歛殀殕殗殱毟氿汢汫汯汳沊沕沚沺泙泚泝泧洘洟浡浤浱浲涖涬淏淕淰淲渕渟渧渮渹渼湜湠湢湳湶湼溂溓溚溡溿滒滮漑漖漦潗澁澂澑澣澵濔濳濵濶瀁瀇瀳灇炣烋烌烝烰烱烳焄焏焠焫焿煇煏煠煡煴煻熁熅熇熈熕熝熥熰熻燖燗燵爁爌爕爧爼牋牚牸犂犅犇犱狆狌狢猄猌猤猯獏玽珎珒珖珣珱珵珸琩琲瑢璢瓅瓧瓩瓰瓱瓲瓸甁甃甅甎甞甼畄畆畉畍畓畤畩畭畯疂疉疕疧疶疺痀痌痚痟痡痾癈癎癗癠癨癶皀皃皛皜皞皦皷皹盦盻眛眡眤眥睆睭瞆瞖瞨瞶瞹矺矻矼砄砈砛砡硓硙硞硩硴硺碆碖碪碫碯碵磆磑磟磳礆礇礑礒礰禔禝秄秡秥秪秬秮稘稙稴稾穃穉穽窞窵竍竏竑竒竓竕竚竝竡竢竧竫竰竳竵竸竻笂笐笒笘笵笶筊筥筬筰筴筺箒箘箙箚箞箟篏篶簓簔簗籏籔籖籗籘籵粃粄粅粐粡粨粩粫粭粿糀糂糋糒糘糬糺紩紵絅絈絋絏絖絙絚絜絣絪絭絽綛綟綯綷緕緖緜緟緤緪縅縒縖縡縢縺繏繐繖繝繧繷繻繿纃纉纎纐纒纻绹罇罉罍罎罠罧罶罸羂羃羇羓羮羴翆翍翸耎耞耡聟聢聨聬肨肬胐胘胠胮胿脢脥脧脽腍腘腟膁膃膋膎膓膕膤膥膭膰膵膸臈臑臙臽舦舩艀艝艢艪艸苙苝苳苺茋茖茘茣荅荍荖荢荳荵荿莀莇莚莟莵莿菎菣菶菷菻萓萠萢萣萪葈葢葮葯葹蒄蒟蒭蒻蓙蓚蓜蓪蓴蔕蕀蕋蕚蕣蕫蕰蕳薀薁薐薸藃藠藾蘂蘓蘯蘰虘蚫蚻蛬蛯蜅蜑蜺蝒蝛蝝蝟蝪蝲蝹螔螕螛螷螿蟇蟐蟧蟳蟷蠇蠎蠘蠧衂衊衒衖衵袓袗袙袚袰袵袿裃裄裈裌裖裲裵褄褌褜褝褞襀襌襍襕襭襴襷襾覂覈覊覕覥覩觝觧觱訄訒訚訷詏誂誐誾諚諟諠諡謌謴謼譀譓譛譱譿讌讙讱谺豍豼貎貛貭貮賍賰贇贌贒贔赑趒趖跁跂跈跍跔跕跙跿踈踜踰蹏蹐蹓蹔蹘蹛蹠蹧蹳蹽躄躘躙躰躱躼躽躾軁軅軆軈軣輌輙輹輼轀轌轗轜轣辧辷迌迒迚迯迵逎逧逩遉遖遧遯遰遶遹邉郤鄕酇酖酘酜酳酺醂醡醹釖釚釛釞釟釡釥釮釶釼釿鈂鈃鈆鈗鈩鈬鈼鉎鉐鉔鉙鉝鉧鉨鉮鉲鉳鉷銈銕銛銧銾鋂鋉鋐鋓鋕鋗鋙鋠鋧鋩鋹鋺鋻鋿錀錂錏錑錝錞錣錥錺錻錼鍄鍅鍈鍖鍗鍜鍠鍮鍼鎓鎝鎤鎶鎹鏀鏆鏐鏥鏸鐇鐚鐡鐱鐶鐽鑀鑁鑅鑈鑚鑞鑢鑱鑵钁铓铔铦铻锜锳锽镠镮镴镵閇閊閕閖閙閠閧闍阇阨阯陏陦隝隯隲雺霙霳霻靃靆靉靍靏靕靗靤靫靱靹鞁鞆鞐鞜鞳韈韡韲頔頕顋顗颪飃飜飮餔餝餠餤餧餬餲饂饍饐饝馝馞馦馼駮駲駸駻驎驩驫骉骎骭骿髎髜髞髢髣髱髴髷鬖鬘鬞鬪鬭魠魩魬魲魵魽鮄鮊鮏鮓鮕鮖鮗鮘鮟鮠鮡鮢鮣鮨鮰鮱鮴鮸鮹鮻鯆鯏鯑鯒鯗鯣鯮鯱鯲鰀鰄鰆鰇鰊鰌鰏鰔鰕鰗鰛鰡鰤鰮鰰鰺鱆鱇鱙鱚鱠鱰鱶鲊鲙鲬鲹鳁鳫鳬鳰鴈鴞鴪鴴鴾鵁鵄鵆鵈鵐鵙鵤鵫鵰鵺鵻鵾鶖鶤鶫鶲鶺鶿鷁鷆鷉鷏鷝鷭鷽鸊鸙鸰鸴鹀鹟鹡鹢麁麌麑麕麭麶黗黡黶鼡鼦齁齆齎齖齴齶齻龝鿏鿔鿫鿬鿭朗隆﨎﨏塚﨑晴﨓﨔凞猪益礼神祥福靖精羽﨟蘒﨡諸﨣﨤逸都﨧﨨﨩飯飼館鶴𠊎𠎷𠕆𠕇𠖄𠗻𠜱𠞩𠞭𠠃𠠝𠢕𠤎𠯗𠲿𠻗𠻘𠼮𡀔𡁶𡟓𡠍𡢃𡰪𡲢𡳞𢎙𢓜𢪱𢫏𢫦𢯭𢯾𢱋𢱤𢲴𢲸𢳆𢳪𢶀𢼌𢼛𣁳𣁴𣍐𣚺𣛮𣮈𣲩𣻸𣼎𤆬𤉙𤊶𤌍𤍒𤐙𤐰𤘅𤞚𤲍𤶃𤸁𤸱𤺅𤺪𥅾𥉌𥌚𥍉𥐵𥑮𥯟𥯥𥰔𥴊𥺆𦁄𦉎𦊓𦜆𦟪𦢊𧉟𧊅𧌄𧟰𧩣𧮙𧻴𧿁𧿬𧿳𨂾𨂿𨃩𨃰𨅔𨑨𨒇𨖕𨢑𨧀𨨏𨭆𨭎𨻶𩑝𩑾𩚨𩛩𩜄𩜰𩵱𩸙𩸶𩼧𪁎𪐞𪖐𪘒𪜶𪹚𫓧𫖯𫝏𫝘𫝛𫝺𫝻𫞼𫟂𫟧𫟷𫟼𫠛𫣆𬍛𬎆𬠖𬦰𬬭𬬻𬭊𬭛𬭳𬭶𬱖𮧵𰣻𰹬`
@@ -118,7 +138,7 @@ Added Croatian/Bosnian/Serbian Latin `ĆćČčĐđ` and Serbian Cyrillic `ЂђЋ
 </details>
 
 - <details>
-    <summary>修补 5 汉字<br>修补 5 漢字</summary>
+    <summary>修补 5 汉字<br>修补 5 漢字<br>Fixed 5 hanzi</summary>
     <p>
 
     - `賬溽縟蓐褥`
@@ -127,28 +147,35 @@ Added Croatian/Bosnian/Serbian Latin `ĆćČčĐđ` and Serbian Cyrillic `ЂђЋ
 </details>
 
 - 补全 GB/T 2312 收录的标点符号  
-補全 GB/T 2312 收錄的標點符號
+補全 GB/T 2312 收錄的標點符號  
+Completed the punctuation marks included in GB/T 2312
 
 - 增加日文半宽假名  
-增加日文半寬假名
+增加日文半寬假名  
+Added Japanese half-width kana
 
 - 修改漏网之鱼（斜切角）  
-修改漏網之魚（斜切角）
+修改漏網之魚（斜切角）  
+Fixed glyphs missed in earlier passes (chamfered corners)
 
-- 更新部分 OpenType 功能 (`smpl`, `trad`, `ss18`, `mark`)
+- 更新部分 OpenType 功能 (`smpl`, `trad`, `ss18`, `mark`)  
+Updated some OpenType features (`smpl`, `trad`, `ss18`, `mark`)
 
 - 添加中文标点标点符号 OpenType 功能 (`ss19` 及 `ss20`)  
-添加中文標點符號 OpenType 功能 (`ss19` 及 `ss20`)
+添加中文標點符號 OpenType 功能 (`ss19` 及 `ss20`)  
+Added OpenType features for Chinese punctuation (`ss19` and `ss20`)
 
 - 添加简繁地域字形切换 OpenType 功能 (`locl`)  
-添加簡繁地域字形切換 OpenType 功能 (`locl`)
+添加簡繁地域字形切換 OpenType 功能 (`locl`)  
+Added an OpenType feature for switching between Simplified and Traditional regional glyphs (`locl`)
 
-- 添加部分日文字形（未使用）
+- 添加部分日文字形（未使用）  
+Added some Japanese glyphs (not used yet)
 
 ## Ver 1.200; 20210831
 
 - <details>
-    <summary>新增 528 汉字，补全<a href="https://github.com/ichitenfont/suppchara">常用香港外字表</a>列出的五大码 A 级至 C 级字、常用香港字 1 级至 4 级字及 <a href="https://kanji.jitenon.jp/cat/jisdai1.html">JIS 第 1 水准</a>汉字<br>新增 528 漢字，補全<a href="https://github.com/ichitenfont/suppchara">常用香港外字表</a>列出的五大碼 A 級至 C 級字、常用香港字 1 級至 4 級字及 <a href="https://kanji.jitenon.jp/cat/jisdai1.html">JIS 第 1 水準</a>漢字</summary>
+    <summary>新增 528 汉字，补全<a href="https://github.com/ichitenfont/suppchara">常用香港外字表</a>列出的五大码 A 级至 C 级字、常用香港字 1 级至 4 级字及 <a href="https://kanji.jitenon.jp/cat/jisdai1.html">JIS 第 1 水准</a>汉字<br>新增 528 漢字，補全<a href="https://github.com/ichitenfont/suppchara">常用香港外字表</a>列出的五大碼 A 級至 C 級字、常用香港字 1 級至 4 級字及 <a href="https://kanji.jitenon.jp/cat/jisdai1.html">JIS 第 1 水準</a>漢字<br>Added 528 hanzi, completing Big5 levels A–C and Hong Kong common characters levels 1–4 listed in the <a href="https://github.com/ichitenfont/suppchara">Hong Kong Supplementary Character List</a>, and <a href="https://kanji.jitenon.jp/cat/jisdai1.html">JIS level 1</a> kanji</summary>
     <p>
 
     - `㓤㖡㖭㖿㗎㗾㧬㨘㩒㬷㬹㷫㹴䁪䐁䡍䱽乗乪乸亀仮価侭侲俵倞倹偸傌僆働兎兪円冚冧冨処凧凪剣剤剰劏劖労効勅勧勲匁匂単厳吪呉呍呑呪咇咓哋唂唓唖唚唞啅啝啩啱喛喩喰営喼嗗嗞嗱嘥噂噃噉噏噚噛噺嚡嚢嚿囲図圏圧埜埞埲埼塀塁塙塩壆壌壱壷奨妬姉姫姶姸娯婾媮嫲嬬孭孲孻宍尐尭岨峠崚嶋巌巓巣帯帰庁廃廸廻廼弐弾彞従徴悩悪惣愼戙戦戯戸戻払扤扱扲抌抜択抦拃拠拡挙挿捗捜捽掗掟掲掹掻揃揈揤揦揺揼搣搲摀摂摙摱摷撃撠撹擝擳擸攞攰斉晩暁暦曱杢杧枠柊査柾栂栃栄栞栴桝桟梖梶梼椀椙椛検楕楡楢楯楳榊榎様槙槻樖権樫橿欝歓歯歳歴毘気氷浄涙涜淥渇済渉渓溌滉滙滝潅瀄瀞瀡瀦烚焔焼煀煕熚燂燋燶燿犠狛猟獴珽瑠瑳甮甴畠畬畳畷痩癦癪発皐睘睩瞏瞓矋砕砿硏硲碕礐稲穂穏穐穣窓窰竃竜笹筈筳箆篭籙籾粁粂粋粍粛糎糭紘紬経絵継続総縁縦繊繋繍繑罫羗翫翶聡肶脇脗脳脷膉膶臓舎舗舮苅荘菫萩葎蔀蔴蔵蕗薗薫薬蛍蛽蝋蝿螆蠄衞袪袴裇覇覗覚覧訳詑読諌譲讃讐豊豖賎賛趯趷踎踭蹾躀躝軚軽輋辺辻込辿迋逓遅遡郷酔醗醤醸釈鈪鉱鉾銭鋲鋳錬鎅鎌鎭鑓鑛閪闘陥険隃隠隣隷雫雰霊鞄韮頚頬頴頼顕顚餸駅駆駈騒験騨骾髄髧髪鮋鯭鯵鰯鱲鴎鴫鴬鵞鶏鹸麯麺麿黐黙齢龬𠝹𠱁𠱸𠲖𠳏𠵝𠵱𠶧𠹶𠺘𠺝𠺢𠻹𠼭𠽌𠿪𡁜𡁻𡃁𡃶𡅅𡥼𡪲𢃇𢭃𢯊𢱑𢱕𢱢𢳂𢵌𢵧𣲷𤓓𤞭𤶸𤷪𤺧𥄫𥅈𥹉𦉘𦙅𦟌𦧲𦧺𨅝𨈇𨋢𨳊𨳍𨳒𨶙𩓥𩶘𭕫𰹲𰽣`
@@ -157,41 +184,49 @@ Added Croatian/Bosnian/Serbian Latin `ĆćČčĐđ` and Serbian Cyrillic `ЂђЋ
 </details>
 
 - <details>
-    <summary>修改部分错别字<br>修改部分錯別字</summary> 
+    <summary>修改部分错别字<br>修改部分錯別字<br>Fixed some incorrect characters</summary> 
     <p>
 
     - `犧壺恙慶孺鲈贯満潺瓞踽燹`
 
     - 被转移去正确码位的错字：`鋼嗳胪舻睏矧薛軼畲屣筵豕豚翺`  
-    被轉移去正確碼位的錯字：`鋼嗳胪舻睏矧薛軼畲屣筵豕豚翺`
+    被轉移去正確碼位的錯字：`鋼嗳胪舻睏矧薛軼畲屣筵豕豚翺`  
+    Characters moved to their correct code points: `鋼嗳胪舻睏矧薛軼畲屣筵豕豚翺`
 
     </p>
 </details>
 
 - 增加日文假名  
-增加日文假名
+增加日文假名  
+Added Japanese kana
 
 - 完整补全 [Adobe Latin 1](https://adobe-type-tools.github.io/adobe-latin-charsets/adobe-latin-1.html) 及 [GF Latin Core](https://github.com/googlefonts/gftools/blob/main/Lib/gftools/encodings/GF%20Glyph%20Sets/GF-latin-core_unique-glyphs.nam) 西文字符  
-完整補全 [Adobe Latin 1](https://adobe-type-tools.github.io/adobe-latin-charsets/adobe-latin-1.html) 及 [GF Latin Core](https://github.com/googlefonts/gftools/blob/main/Lib/gftools/encodings/GF%20Glyph%20Sets/GF-latin-core_unique-glyphs.nam) 西文字符
+完整補全 [Adobe Latin 1](https://adobe-type-tools.github.io/adobe-latin-charsets/adobe-latin-1.html) 及 [GF Latin Core](https://github.com/googlefonts/gftools/blob/main/Lib/gftools/encodings/GF%20Glyph%20Sets/GF-latin-core_unique-glyphs.nam) 西文字符  
+Completed full [Adobe Latin 1](https://adobe-type-tools.github.io/adobe-latin-charsets/adobe-latin-1.html) and [GF Latin Core](https://github.com/googlefonts/gftools/blob/main/Lib/gftools/encodings/GF%20Glyph%20Sets/GF-latin-core_unique-glyphs.nam) Latin coverage
 
 - 优化部分字形（https://github.com/NightFurySL2001/WD-XL-font/issues/1）  
-優化部分字形（https://github.com/NightFurySL2001/WD-XL-font/issues/1）
+優化部分字形（https://github.com/NightFurySL2001/WD-XL-font/issues/1）  
+Refined some glyphs (https://github.com/NightFurySL2001/WD-XL-font/issues/1)
 
 - 修改漏网之鱼（斜切角）  
-修改漏網之魚（斜切角）
+修改漏網之魚（斜切角）  
+Fixed glyphs missed in earlier passes (chamfered corners)
 
 - 移除 `name` 表内的条目 16/17（SC/TC）以避免部分 Adobe 软件无法调用字体  
-移除 `name` 表內的條目 16/17（SC/TC）以避免部分 Adobe 軟體無法調用字體
+移除 `name` 表內的條目 16/17（SC/TC）以避免部分 Adobe 軟體無法調用字體  
+Removed `name` table entries 16/17 (SC/TC) so that some Adobe software can load the font
 
 - 补上样式集名称  
-補上文體集名稱
+補上文體集名稱  
+Added stylistic set names
 
-- 更新部分 OpenType 功能 (`smpl`, `trad`)
+- 更新部分 OpenType 功能 (`smpl`, `trad`)  
+Updated some OpenType features (`smpl`, `trad`)
 
 ## Ver 1.110; 20210101
 
 - <details>
-    <summary>新增 1 汉字<br>新增 1 漢字</summary>
+    <summary>新增 1 汉字<br>新增 1 漢字<br>Added 1 hanzi</summary>
     <p>
 
     - `廐`
@@ -200,7 +235,7 @@ Added Croatian/Bosnian/Serbian Latin `ĆćČčĐđ` and Serbian Cyrillic `ЂђЋ
 </details>
 
 - <details>
-    <summary>修补 6 汉字<br>修补 6 漢字</summary>
+    <summary>修补 6 汉字<br>修补 6 漢字<br>Fixed 6 hanzi</summary>
     <p>
 
     - `廄舉擧譽櫸遺`
@@ -209,14 +244,16 @@ Added Croatian/Bosnian/Serbian Latin `ĆćČčĐđ` and Serbian Cyrillic `ЂђЋ
 </details>
 
 - 修改漏网之鱼  
-修改漏網之魚
+修改漏網之魚  
+Fixed glyphs missed in earlier passes
 
-- 更新部分 OpenType 功能 (`smpl`, `trad`)
+- 更新部分 OpenType 功能 (`smpl`, `trad`)  
+Updated some OpenType features (`smpl`, `trad`)
 
 ## Ver 1.100; 20201231
 
 - <details>
-    <summary>新增 4 汉字<br>新增 4 漢字</summary>
+    <summary>新增 4 汉字<br>新增 4 漢字<br>Added 4 hanzi</summary>
     <p>
 
     - `逹簒噁𫫇`
@@ -225,7 +262,7 @@ Added Croatian/Bosnian/Serbian Latin `ĆćČčĐđ` and Serbian Cyrillic `ЂђЋ
 </details>
 
 - <details>
-    <summary>修补 27 汉字<br>修补 27 漢字</summary>
+    <summary>修补 27 汉字<br>修补 27 漢字<br>Fixed 27 hanzi</summary>
     <p>
 
     - `港巷起熵達噠撻躂鄉薌既厩嘅慨暨概溉即唧櫛癤節鯽鲫嚼爝爵`
@@ -234,12 +271,15 @@ Added Croatian/Bosnian/Serbian Latin `ĆćČčĐđ` and Serbian Cyrillic `ЂђЋ
 </details>
 
 - 修改及统一字形（斜切角）  
-修改及統一字形（斜切角）
+修改及統一字形（斜切角）  
+Revised and unified glyphs (chamfered corners)
 
-- 更新部分 OpenType 功能 (`smpl`, `trad`, `dlig`)
+- 更新部分 OpenType 功能 (`smpl`, `trad`, `dlig`)  
+Updated some OpenType features (`smpl`, `trad`, `dlig`)
 
 - 添加西文省略号及间隔号至西文标点符号 (`ss18` —— `ss19` 及 `ss20` 预留给中文标点符号)  
-添加西文省略號及間隔號至西文標點符號 (`ss18` —— `ss19` 及 `ss20` 預留給中文標點符號)
+添加西文省略號及間隔號至西文標點符號 (`ss18` —— `ss19` 及 `ss20` 預留給中文標點符號)  
+Added the Western ellipsis and middle dot to the Western punctuation set (`ss18`; `ss19` and `ss20` are reserved for Chinese punctuation)
 
 ## Ver 1.000; 20201225
 
@@ -248,7 +288,7 @@ Official release of WD-XL Lubrifont SC/TC.
 正式發佈 WD-XL 滑油字 SC/TC。  
 
 - <details>
-    <summary>新增 589 汉字<br>新增 589 漢字</summary>
+    <summary>新增 589 汉字<br>新增 589 漢字<br>Added 589 hanzi</summary>
     <p>
 
     - `䆁丟並亙仼伋伕佈佔佮併佺侶侷係倖倣値倶偭偯偺偽傑傢傯僇僎僣僩僱儅儘儳儸兇兌兗內冊冑冪凈凜別刪剋剎剝剷劻勗勣勦勳勻卬卹卻吋吳吶吿呂呎咍咾唸啗啟啣喚喫嘐噓噹嚥嚮囉囌囪堉塡塭塽墦壎夠奐奧奭姅姍姦姪娛媠媼嫺嬝嬤孃孆宂宮屆屘屜屝峩峯崁崙崢嶔嶽巉巖帟廁廂廄廈廚廝弒弔強彆彊彙彥彫彿徬忼怱恆恥恵悅悽愒慄慇慍慼懍戩戶抆拋捨捲掙掛採換揹搆搖搾撐撚撢擡擧擭攜敍敎敔敘昐昤晅晉晞暍暘暱暸曆朮杗枏枓枱枴柵柺栘桿梂梔梡梱梿棄棲棻楛榣榦槓槤槨樑橫橾檮檯櫂櫈櫥櫺欐歎歜歿殼毀毚毬氊氳氾汍汎汙汚決沍沒沖沘沬況泏泜洩洶洸浥浬涊涼淒淚淨淯淸渙減湊湣湧湩湲準溫溼滷滾潛潟潠潥澦澴濩濬瀋瀰災為煆煙煥燄燉燐燬燸燻爭牀牆牴犛犾猙獎玆玨珮琯琺瑤瑯璘璿瓖甕產甦甽畧異疊疎疢痠痲痳痺瘉瘓瘺癡癥皰盜盪眾睏睜睪瞇瞋矇矓砠砲硃硿祐祕祿禇禿秈稅稈稜稟穇穋穠穫窯筍箄箇箏箠篛篠簑簷籐籣籤籥籲粵粺糉糢糰絃絕絛絰綑綠綵線緻緼縕縯縴縿繃繈繙繡繦繫纔缊缽罈罣罵羋羨羶翺耑聴脈脣脤脩脫脰腳臟臢臥艶芣茲荊菴蒞蓆蔆蔔蔥薑薶藷蘊蘗虛虯蛻蝨蠍蠏蠔衹袊袞袮裡裯製複褕褟褽襃襬覜觔觼訏訑託訢註証詖詠詨詻誌誧說謠譁譆譌譟讚谿豎豔豬豭貍貓賸贓贗跡跦跼踡踫蹚蹟蹤躂躭軏軗輓輭迆迴迺週遊遙遝郃鄗鄘醃醜醞醱釆釐釦釭鈇鉋鉤鉼銲銳錄錡錶鍊鍚鎔鎗鏽鐫鑑鑤鑪閒閤閱闆阬陜陞隄隻雊雋雞霑霤靜靦靭鞦韁韆韹韻頫頹顏颱颳颺飢餚餵餽騵髮鬆鬍鬚鬨鬱鯈鱷鴃鴒鶸鹹麪麫麵麹麼黃黴鼇鼈鼕鼴齣齧𤂽𧬨`
@@ -257,46 +297,52 @@ Official release of WD-XL Lubrifont SC/TC.
 </details>
 
 - <details>
-    <summary>修改 <a href="https://www.github.com/googlefonts/zcool-qingke-huangyou">站酷庆科黄油体</a> 内的部分错别字<br>修改 <a href="https://www.github.com/googlefonts/zcool-qingke-huangyou">站酷慶科黃油體</a> 內的部分錯別字</summary> 
+    <summary>修改 <a href="https://www.github.com/googlefonts/zcool-qingke-huangyou">站酷庆科黄油体</a> 内的部分错别字<br>修改 <a href="https://www.github.com/googlefonts/zcool-qingke-huangyou">站酷慶科黃油體</a> 內的部分錯別字<br>Fixed some incorrect characters in <a href="https://www.github.com/googlefonts/zcool-qingke-huangyou">ZCOOL QingKe HuangYou</a></summary> 
     <p>
 
-    - `盧鷳癇轂濕巔癲縧勖帽瑁冒冕竪夂曰勘載狀瘳禛醛蹒祇暢溧篥擊睞嘜麥麩麴褻戇賜類槔縣懸聽繈譏陝懣滿瞞蟎蹣顢偬與鹧颧鈰鬧衿軎` （摘录）
+    - `盧鷳癇轂濕巔癲縧勖帽瑁冒冕竪夂曰勘載狀瘳禛醛蹒祇暢溧篥擊睞嘜麥麩麴褻戇賜類槔縣懸聽繈譏陝懣滿瞞蟎蹣顢偬與鹧颧鈰鬧衿軎` （摘录 excerpt）
 
     - 部分有对应正式码位的字被转移去正确码位  
-    部分有對應正式碼位的字被轉移去正確碼位
+    部分有對應正式碼位的字被轉移去正確碼位  
+    Characters that have a proper Unicode code point were moved to it
 
     </p>
 </details>
 
 - <details>
-    <summary>统一繁体字字面框及汉字设计<br>統一繁體字字面框及漢字設計</summary> 
+    <summary>统一繁体字字面框及汉字设计<br>統一繁體字字面框及漢字設計<br>Unified the character face box and hanzi design of Traditional characters</summary> 
     <p>
 
-    - `仏厷頁` （摘录）
+    - `仏厷頁` （摘录 excerpt）
 
     </p>
 </details>
 
 - <details>
-    <summary>修复部分反白字<br>修復部分反白字</summary> 
+    <summary>修复部分反白字<br>修復部分反白字<br>Fixed some glyphs that rendered inverted (filled and hollow areas swapped)</summary> 
     <p>
 
-    - `蜱镛癫箸铟靥` （摘录）
+    - `蜱镛癫箸铟靥` （摘录 excerpt）
 
     </p>
 </details>
 
 - 增加标点符号及对应直排标点设置  
-增加標點符號及對應直排標點設置
+增加標點符號及對應直排標點設置  
+Added punctuation marks and their vertical typesetting settings
 
 - 增加注音符号及对应音标  
-增加注音符號及對應音標
+增加注音符號及對應音標  
+Added Bopomofo and the corresponding tone marks
 
 - 增加汉语拼音、台罗拼音及白话字支援  
-增加臺羅拼音、白話字及漢語拼音支援
+增加臺羅拼音、白話字及漢語拼音支援  
+Added Hanyu Pinyin, Tâi-lô and Pe̍h-ōe-jī support
 
 - 为繁体/TC 版适配[传承字形](https://github.com/ichitenfont/inheritedglyphs)及置中式标点符号  
-爲繁體/TC 版適配[傳承字形](https://github.com/ichitenfont/inheritedglyphs)及置中式標點符號
+爲繁體/TC 版適配[傳承字形](https://github.com/ichitenfont/inheritedglyphs)及置中式標點符號  
+Adapted the Traditional/TC version to [inherited glyph forms](https://github.com/ichitenfont/inheritedglyphs) and centred punctuation
 
 - 增加西里尔字母及希腊字母  
-增加西里爾字母及希臘字母
+增加西里爾字母及希臘字母  
+Added Cyrillic and Greek letters

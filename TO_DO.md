@@ -2,6 +2,6 @@
 
 # 待办事项 To-Do 待辦事項
 
-- [/] 合并 SC/TC 成一个 OTC
-- [/] 测试 CID 技术
-- [/] 制作基本 JP 版
+- [/] 合并 SC/TC 成一个 OTC — Merge SC/TC into one OTC
+- [/] 测试 CID 技术 — Test CID-keyed font technology
+- [/] 制作基本 JP 版 — Make a basic JP version

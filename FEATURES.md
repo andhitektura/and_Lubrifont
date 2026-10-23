@@ -17,8 +17,8 @@ WD-XL 滑油字已經設置 OpenType 功能，下面列出部分本字型所設�
 This font has designed and set up vertical typesetting punctuations including:  
 本字型爲豎式排版設計和設置了標點轉換功能，其中包括：
 
-SC/TC 共享：`–—―‥…〈〉《》「」『』【】〓〔〕〖〗（）－＝［］｛｝～`  
-仅 SC 版：`、。‘’“”！，：；？ㄧ`
+SC/TC 共享 Shared by SC/TC：`–—―‥…〈〉《》「」『』【】〓〔〕〖〗（）－＝［］｛｝～`  
+仅 SC 版 SC only：`、。‘’“”！，：；？ㄧ`
 
 ## `ccmp` — Glyph Composition/Decomposition
 
@@ -95,16 +95,18 @@ Starting from version 2.000, WD-XL Lubrifont merges SC and TC version into one `
 * ” `U+201D RIGHT DOUBLE QUOTATION MARK` (fullwidth) 右蝌蚪双引号（汉字宽度）
 
 > ． `U+FF0E FULLWIDTH FULL STOP` 全宽西文句号因为排版原因不提供置中版本，因此没有切换需求。  
-> ． `U+FF0E FULLWIDTH FULL STOP` 全寬西文句號因爲排版原因不提供置中版本，因此沒有切換需求。
+> ． `U+FF0E FULLWIDTH FULL STOP` 全寬西文句號因爲排版原因不提供置中版本，因此沒有切換需求。  
+> > ． `U+FF0E FULLWIDTH FULL STOP` has no centred form for typesetting reasons, so it does not need to be switched.
 
 另外，以下字符是中国与台湾区分使用的部分标点，分别收录在 SC 版和 TC 版中，因此本功能也会切换以下符号：  
-另外，以下字符是中國與臺灣區分使用的部分標點，分別收錄在 SC 版和 TC 版中，因此本功能也會切換以下符號：
+另外，以下字符是中國與臺灣區分使用的部分標點，分別收錄在 SC 版和 TC 版中，因此本功能也會切換以下符號：  
+In addition, the following characters are punctuation marks that are used differently in mainland China and Taiwan and are stored separately in the SC and TC versions, so this feature switches them as well:
 
-* ˉ `U+02C9 MODIFIER LETTER MACRON` 注音一声
-* ˊ `U+02CA MODIFIER LETTER ACUTE ACCENT` 注音二声
-* ˇ `U+02C7 CARON` 注音三声
-* ˋ `U+02CB MODIFIER LETTER GRAVE ACCENT` 注音四声
-* ˙ `U+02D9 DOT ABOVE` 注音轻声
+* ˉ `U+02C9 MODIFIER LETTER MACRON` 注音一声 Bopomofo 1st tone
+* ˊ `U+02CA MODIFIER LETTER ACUTE ACCENT` 注音二声 Bopomofo 2nd tone
+* ˇ `U+02C7 CARON` 注音三声 Bopomofo 3rd tone
+* ˋ `U+02CB MODIFIER LETTER GRAVE ACCENT` 注音四声 Bopomofo 4th tone
+* ˙ `U+02D9 DOT ABOVE` 注音轻声 Bopomofo neutral tone
 
 
 ## `ss20` — Stylistic Set 20 (Centered/TC Punctuation)
@@ -127,16 +129,18 @@ The font has reserved `ss20` for Taiwan Traditional Chinese centered style punct
 * ” `U+201D RIGHT DOUBLE QUOTATION MARK` (proportional width) 右蝌蚪双引号（比例宽度）
 
 > ． `U+FF0E FULLWIDTH FULL STOP` 全宽西文句号因为排版原因不提供置中版本，因此没有收录。  
-> ． `U+FF0E FULLWIDTH FULL STOP` 全寬西文句號因爲排版原因不提供置中版本，因此沒有收錄。
+> ． `U+FF0E FULLWIDTH FULL STOP` 全寬西文句號因爲排版原因不提供置中版本，因此沒有收錄。  
+> > ． `U+FF0E FULLWIDTH FULL STOP` has no centred form for typesetting reasons, so it is not included.
 
 另外，以下字符是中国与台湾区分使用的部分标点，分别收录在 SC 版和 TC 版中，因此本功能也会切换以下符号：  
-另外，以下字符是中國與臺灣區分使用的部分標點，分別收錄在 SC 版和 TC 版中，因此本功能也會切換以下符號：
+另外，以下字符是中國與臺灣區分使用的部分標點，分別收錄在 SC 版和 TC 版中，因此本功能也會切換以下符號：  
+In addition, the following characters are punctuation marks that are used differently in mainland China and Taiwan and are stored separately in the SC and TC versions, so this feature switches them as well:
 
-* ˉ `U+02C9 MODIFIER LETTER MACRON` 注音一声
-* ˊ `U+02CA MODIFIER LETTER ACUTE ACCENT` 注音二声
-* ˇ `U+02C7 CARON` 注音三声
-* ˋ `U+02CB MODIFIER LETTER GRAVE ACCENT` 注音四声
-* ˙ `U+02D9 DOT ABOVE` 注音轻声
+* ˉ `U+02C9 MODIFIER LETTER MACRON` 注音一声 Bopomofo 1st tone
+* ˊ `U+02CA MODIFIER LETTER ACUTE ACCENT` 注音二声 Bopomofo 2nd tone
+* ˇ `U+02C7 CARON` 注音三声 Bopomofo 3rd tone
+* ˋ `U+02CB MODIFIER LETTER GRAVE ACCENT` 注音四声 Bopomofo 4th tone
+* ˙ `U+02D9 DOT ABOVE` 注音轻声 Bopomofo neutral tone
 
 
 ## `liga` — Ligatures

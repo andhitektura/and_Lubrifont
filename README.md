@@ -50,21 +50,21 @@ Cyrillic:
 Symbols:
 - `⌀∅∆ ↔↕↖↗↘↙⇐⇒⇔ ✓✗▼▽ ⁰–⁹ ⁺⁻ ₀–₉ ⅓⅔⅛⅜⅝⅞`
 
-汉字/漢字：
-- 原版 Original：[GB/T 2312（6763 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/encoding/gb_t_2312.txt)，[汉仪简繁字表（9169 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/foundry/hanyi_jianfan.txt)
-- [现代汉语常用字表（3500 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/standard/xiandai_changyong.txt)，[现代汉语通用字表（7000 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/standard/xiandai_tongyong.txt)
-- [通用规范汉字表（8105 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/standard/tongyong_guifan.txt)
-- [方正简繁字表（9664 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/foundry/fangzheng_jianfan.txt)
-- [國字標準常用漢字表（4808 字）](https://github.com/NightFurySL2001/cjktables/blob/master/taiwan/standard/edu_standard_1.txt)
-- [五大碼常用字（5401 字）](https://github.com/NightFurySL2001/cjktables/blob/master/taiwan/encoding/big5_changyong.txt)
-- [常用字字形表（4824 字）](https://github.com/NightFurySL2001/cjktables/blob/master/hong_kong/hk-changyong.txt)
-- [臺灣閩南語常用詞辭典（4509 字）](https://github.com/NightFurySL2001/cjktables/blob/master/taiwan/standard/han_taiyu.txt)
-- [臺灣客家語常用詞辭典（4153 字）](https://github.com/NightFurySL2001/cjktables/blob/master/taiwan/standard/han_keyu.txt)
-- [jf7000 當務字集 0.9版 「基本包」與「擴充包」所有漢字（8349 字）](https://github.com/justfont/jf7000)
-- [常用香港外字表 第1.8版 所有漢字（1102 字）](https://github.com/ichitenfont/suppchara)
+汉字 Chinese characters 漢字：
+- 原版 Original：[GB/T 2312（6763 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/encoding/gb_t_2312.txt)，[汉仪简繁字表（9169 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/foundry/hanyi_jianfan.txt) — GB/T 2312 (6763 characters), Hanyi Simplified–Traditional list (9169 characters)
+- [现代汉语常用字表（3500 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/standard/xiandai_changyong.txt)，[现代汉语通用字表（7000 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/standard/xiandai_tongyong.txt) — List of Frequently Used Characters in Modern Chinese (3500), List of Commonly Used Characters in Modern Chinese (7000)
+- [通用规范汉字表（8105 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/standard/tongyong_guifan.txt) — Table of General Standard Chinese Characters (8105)
+- [方正简繁字表（9664 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/foundry/fangzheng_jianfan.txt) — Founder Simplified–Traditional list (9664)
+- [國字標準常用漢字表（4808 字）](https://github.com/NightFurySL2001/cjktables/blob/master/taiwan/standard/edu_standard_1.txt) — Taiwan Chart of Standard Forms of Common National Characters (4808)
+- [五大碼常用字（5401 字）](https://github.com/NightFurySL2001/cjktables/blob/master/taiwan/encoding/big5_changyong.txt) — Big5 common characters (5401)
+- [常用字字形表（4824 字）](https://github.com/NightFurySL2001/cjktables/blob/master/hong_kong/hk-changyong.txt) — Hong Kong List of Graphemes of Commonly-Used Chinese Characters (4824)
+- [臺灣閩南語常用詞辭典（4509 字）](https://github.com/NightFurySL2001/cjktables/blob/master/taiwan/standard/han_taiyu.txt) — Dictionary of Frequently-Used Taiwan Minnan, hanzi (4509)
+- [臺灣客家語常用詞辭典（4153 字）](https://github.com/NightFurySL2001/cjktables/blob/master/taiwan/standard/han_keyu.txt) — Dictionary of Frequently-Used Taiwan Hakka, hanzi (4153)
+- [jf7000 當務字集 0.9版 「基本包」與「擴充包」所有漢字（8349 字）](https://github.com/justfont/jf7000) — all hanzi of the jf7000 Core Character Set v0.9, Basic and Extended packs (8349)
+- [常用香港外字表 第1.8版 所有漢字（1102 字）](https://github.com/ichitenfont/suppchara) — all hanzi of the Hong Kong Supplementary Character List v1.8 (1102)
 - [GB/T 12345](https://github.com/NightFurySL2001/cjktables/blob/master/china/encoding/gb_t_12345.txt)
-- JIS [第 1](https://kanji.jitenon.jp/cat/jisdai1.html)、[第 2](https://kanji.jitenon.jp/cat/jisdai2.html) 水準漢字
-- [IBM 32 拡展字（兼容区 U+FA0E..U+FA2D，32 字）](https://zh.wikipedia.org/wiki/%E4%B8%AD%E6%97%A5%E9%9F%93%E7%9B%B8%E5%AE%B9%E8%A1%A8%E6%84%8F%E6%96%87%E5%AD%97)
+- JIS [第 1](https://kanji.jitenon.jp/cat/jisdai1.html)、[第 2](https://kanji.jitenon.jp/cat/jisdai2.html) 水準漢字 — JIS level 1 and level 2 kanji
+- [IBM 32 拡展字（兼容区 U+FA0E..U+FA2D，32 字）](https://zh.wikipedia.org/wiki/%E4%B8%AD%E6%97%A5%E9%9F%93%E7%9B%B8%E5%AE%B9%E8%A1%A8%E6%84%8F%E6%96%87%E5%AD%97) — IBM 32 extension characters (compatibility block U+FA0E..U+FA2D, 32 characters)
 
 ## 详细内容 Details 詳細内容
 
@@ -141,7 +141,7 @@ If you want to contribute to this project, you may submit your glyphs through th
 2. Submit font file through new issue
 3. Email font file to nfsl-fonts@outlook.com
 
-## 尾声 Ending note
+## 尾声 Ending note 尾聲
 
 本字体在 2020 年 12 月 25 日正式发布，祝各位圣诞节快乐！  
 It's 25 December 2020, and thus we wish you a Merry Christmas!  
@@ -149,13 +149,13 @@ It's 25 December 2020, and thus we wish you a Merry Christmas!
 
 ## 致谢 Acknowledgement 致謝
 
-- 郑庆科 ——— 原字体作者
+- 郑庆科 Zheng Qingke ——— 原字体作者 original font designer
 - [@davelab6](https://github.com/davelab6) and Google Fonts team —— Conversion of font to SIL OFL
-- 曾國榕及 But Ko ([@ButTaiwan](https://github.com/ButTaiwan)) —— 技術支援
-- Zonz 及 Alpha_Argon —— 品质监督指导
-- Henry Chan —— 技術顧問及監督
-- [@aiongg](https://github.com/aiongg/) —— [POJFonts](https://github.com/aiongg/POJFonts) 技術參考
-- ZERO子 ([@Skr-ZERO](https://github.com/Skr-ZERO)) —— 后期补字、查修建议、日文分流版制作（JPS/JPN）
+- 曾國榕及 But Ko ([@ButTaiwan](https://github.com/ButTaiwan)) —— 技術支援 technical support
+- Zonz 及 Alpha_Argon —— 品质监督指导 quality supervision and guidance
+- Henry Chan —— 技術顧問及監督 technical advice and supervision
+- [@aiongg](https://github.com/aiongg/) —— [POJFonts](https://github.com/aiongg/POJFonts) 技術參考 technical reference
+- ZERO子 ([@Skr-ZERO](https://github.com/Skr-ZERO)) —— 后期补字、查修建议、日文分流版制作（JPS/JPN） additional glyphs, proofreading suggestions, Japanese builds (JPS/JPN)
 
 ## 赞助 Sponsor 贊助
 
