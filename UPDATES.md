@@ -2,6 +2,26 @@
 
 # 更新日志 Updates 更新日誌
 
+## Unreleased
+
+- 数字 `7` 改为全宽斜笔造型，避免与 `1`、`Г` 混淆（亦适用于 `７⁷₇⅞`）  
+數字 `7` 改爲全寬斜筆造型，避免與 `1`、`Г` 混淆（亦適用於 `７⁷₇⅞`）  
+Redesigned `7` with a full-width diagonal stem so it no longer reads as `1` or a mirrored `Г` (also `７⁷₇⅞`; `sources/diagonal_seven.py`)
+
+- 数字 `0` 加上中点，以便与字母 `O`/`О` 区分（亦适用于 `⁰₀０`）  
+數字 `0` 加上中點，以便與字母 `O`/`О` 區分（亦適用於 `⁰₀０`）  
+Zero now has a centre dot so it cannot be confused with the letter `O`/`О` (also `⁰₀０`; `sources/dotted_zero.py`)
+
+- 新增马其顿语西里尔字母：`ЃѓЅѕЈјЉљЊњЌќЏџ`，及带重音符的 `ЀѐЍѝ`  
+新增馬其頓語西里爾字母：`ЃѓЅѕЈјЉљЊњЌќЏџ`，及帶重音符的 `ЀѐЍѝ`  
+Added Macedonian Cyrillic letters `ЃѓЅѕЈјЉљЊњЌќЏџ` and the stressed `ЀѐЍѝ` (built from existing glyphs with `sources/add_macedonian_cyrillic.py`)
+
+- 新增克罗地亚语、波斯尼亚语、塞尔维亚语拉丁字母：`ĆćČčĐđ`，塞尔维亚语西里尔字母：`ЂђЋћ`  
+新增克羅地亞語、波斯尼亞語、塞爾維亞語拉丁字母：`ĆćČčĐđ`，塞爾維亞語西里爾字母：`ЂђЋћ`  
+Added Croatian/Bosnian/Serbian Latin `ĆćČčĐđ` and Serbian Cyrillic `ЂђЋћ`
+
+- 新增技术符号 Added technical symbols 新增技術符號：`⌀∅∆↔↕↖↗↘↙⇐⇒⇔✓✗▼▽⁰⁵⁶⁷⁸⁹⁻₀₁₂₃₄₅₆₇₈₉⅓⅔⅛⅜⅝⅞` (`sources/add_extra_glyphs.py`)
+
 ## Ver 2.100; 20250331
 
 - <details>
