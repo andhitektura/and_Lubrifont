@@ -4,6 +4,10 @@
 
 ## Unreleased
 
+- 数字 `0` 加上中点，以便与字母 `O`/`О` 区分（亦适用于 `⁰₀０`）  
+數字 `0` 加上中點，以便與字母 `O`/`О` 區分（亦適用於 `⁰₀０`）  
+Zero now has a centre dot so it cannot be confused with the letter `O`/`О` (also `⁰₀０`; `sources/dotted_zero.py`)
+
 - 新增马其顿语西里尔字母：`ЃѓЅѕЈјЉљЊњЌќЏџ`，及带重音符的 `ЀѐЍѝ`  
 新增馬其頓語西里爾字母：`ЃѓЅѕЈјЉљЊњЌќЏџ`，及帶重音符的 `ЀѐЍѝ`  
 Added Macedonian Cyrillic letters `ЃѓЅѕЈјЉљЊњЌќЏџ` and the stressed `ЀѐЍѝ` (built from existing glyphs with `sources/add_macedonian_cyrillic.py`)
