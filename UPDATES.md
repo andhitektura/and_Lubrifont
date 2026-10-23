@@ -8,6 +8,12 @@
 新增馬其頓語西里爾字母：`ЃѓЅѕЈјЉљЊњЌќЏџ`，及帶重音符的 `ЀѐЍѝ`  
 Added Macedonian Cyrillic letters `ЃѓЅѕЈјЉљЊњЌќЏџ` and the stressed `ЀѐЍѝ` (built from existing glyphs with `sources/add_macedonian_cyrillic.py`)
 
+- 新增克罗地亚语、波斯尼亚语、塞尔维亚语拉丁字母：`ĆćČčĐđ`，塞尔维亚语西里尔字母：`ЂђЋћ`  
+新增克羅地亞語、波斯尼亞語、塞爾維亞語拉丁字母：`ĆćČčĐđ`，塞爾維亞語西里爾字母：`ЂђЋћ`  
+Added Croatian/Bosnian/Serbian Latin `ĆćČčĐđ` and Serbian Cyrillic `ЂђЋћ`
+
+- 新增技术符号 Added technical symbols 新增技術符號：`⌀∅∆↔↕↖↗↘↙⇐⇒⇔✓✗▼▽⁰⁵⁶⁷⁸⁹⁻₀₁₂₃₄₅₆₇₈₉⅓⅔⅛⅜⅝⅞` (`sources/add_extra_glyphs.py`)
+
 ## Ver 2.100; 20250331
 
 - <details>

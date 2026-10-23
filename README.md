@@ -42,9 +42,13 @@ You may use the following webfont services to use this font in webpages:
 Latin:
 - [Adobe Latin 1](http://adobe-type-tools.github.io/adobe-latin-charsets/adobe-latin-1.html)
 - [GF Latin Core](https://github.com/googlefonts/gftools/blob/main/Lib/gftools/encodings/GF%20Glyph%20Sets/GF-latin-core_unique-glyphs.nam)
+- 克罗地亚语、波斯尼亚语、塞尔维亚语拉丁字母 Croatian, Bosnian, Serbian Latin 克羅地亞語、波斯尼亞語、塞爾維亞語拉丁字母 (`ĆćČčĐđ`)
 
 Cyrillic:
-- 俄语、马其顿语 Russian, Macedonian 俄語、馬其頓語 (`А–я Ёё ЃѓЅѕЈјЉљЊњЌќЏџ ЀѐЍѝ`)
+- 俄语、马其顿语、塞尔维亚语 Russian, Macedonian, Serbian 俄語、馬其頓語、塞爾維亞語 (`А–я Ёё ЂђЃѓЅѕЈјЉљЊњЋћЌќЏџ ЀѐЍѝ`)
+
+Symbols:
+- `⌀∅∆ ↔↕↖↗↘↙⇐⇒⇔ ✓✗▼▽ ⁰–⁹ ⁺⁻ ₀–₉ ⅓⅔⅛⅜⅝⅞`
 
 汉字/漢字：
 - 原版 Original：[GB/T 2312（6763 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/encoding/gb_t_2312.txt)，[汉仪简繁字表（9169 字）](https://github.com/NightFurySL2001/cjktables/blob/master/china/foundry/hanyi_jianfan.txt)

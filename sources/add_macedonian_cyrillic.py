@@ -199,14 +199,14 @@ def finalize(parts, clockwise):
     return rec
 
 
-def patch_font(path_in):
+def patch_font(path_in, new_glyphs=NEW_GLYPHS, builder_class=Builder):
     font = TTFont(path_in, lazy=False)
     cmap = font.getBestCmap()
-    todo = {u: v for u, v in NEW_GLYPHS.items() if u not in cmap}
+    todo = {u: v for u, v in new_glyphs.items() if u not in cmap}
     if not todo:
         print(f"{path_in}: nothing to add")
         return
-    builder = Builder(font)
+    builder = builder_class(font)
     is_cff = "CFF " in font
     is_cid = is_cff and hasattr(font["CFF "].cff.topDictIndex[0], "ROS")
     if not is_cff:
