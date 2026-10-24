@@ -1,4 +1,4 @@
-# Quality check of the and_Lubrifont fonts with fontbakery (universal
+# Quality check of the and_Lubrifont and and_Lubrifont-CJK fonts with fontbakery (universal
 # profile). Runs on every push and pull request that changes the fonts or
 # the scripts; fails if any check FAILs. The full report is attached to the
 # run as an artifact (fontbakery-report) and shown in the run summary.
@@ -20,7 +20,13 @@ jobs:
         set:
           - { name: ttf, files: "fonts/and_Lubrifont/*.ttf" }
           - { name: otf, files: "fonts/and_Lubrifont/otf/*.otf" }
-    name: and_Lubrifont ${{ matrix.set.name }}
+          # CJK: one job per font (about 5 minutes each); file_size is
+          # excluded, as 30,000+ CJK glyphs are always "massive"
+          - { name: cjk-SC, files: "fonts/and_Lubrifont-CJK/andLubrifontSC-Regular.ttf", skip: "-x file_size" }
+          - { name: cjk-TC, files: "fonts/and_Lubrifont-CJK/andLubrifontTC-Regular.ttf", skip: "-x file_size" }
+          - { name: cjk-JPS, files: "fonts/and_Lubrifont-CJK/andLubrifontJPS-Regular.ttf", skip: "-x file_size" }
+          - { name: cjk-JPN, files: "fonts/and_Lubrifont-CJK/andLubrifontJPN-Regular.ttf", skip: "-x file_size" }
+    name: ${{ matrix.set.name }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -30,7 +36,7 @@ jobs:
       - name: fontbakery check-universal
         # fontdata_namecheck queries an online name registry, not the font
         run: >
-          fontbakery check-universal -x fontdata_namecheck -l WARN --succinct
+          fontbakery check-universal -x fontdata_namecheck ${{ matrix.set.skip }} -l WARN --succinct
           --ghmarkdown report-${{ matrix.set.name }}.md
           --html report-${{ matrix.set.name }}.html
           ${{ matrix.set.files }}
