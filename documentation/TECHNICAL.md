@@ -222,9 +222,9 @@ This step merges the font files into one TTC font file. As the largest table (`C
 
 ```
 fonts/
-  and_Lubrifont/          Latin / Cyrillic / Greek family: Light, Regular, Bold (.ttf, hinted)
-    otf/                  the same three as OpenType-CFF
-    woff2/                the same three as web fonts
+  and_Lubrifont/          Latin / Cyrillic / Greek family: Light, Regular, Bold and their italics (.ttf, hinted)
+    otf/                  the same six as OpenType-CFF
+    woff2/                the same six as web fonts
   and_Lubrifont-CJK/      SC, TC, JP S, JP N with Chinese and Japanese (.ttf) and andLubrifont.ttc
     otf/                  the same four as OpenType-CFF; the patch scripts work on these
 sources/                  the inherited WD-XL Lubrifont build (AFDKO), writes fonts/and_Lubrifont-CJK/
@@ -233,9 +233,9 @@ sources/                  the inherited WD-XL Lubrifont build (AFDKO), writes fo
 
 File names are the PostScript names (`andLubrifont-Bold`, no underscore); the names in font menus are "and_Lubrifont", "and_Lubrifont Light", "and_Lubrifont SC" etc.
 
-## Patch scripts (v2.200–v2.500)
+## Patch scripts (v2.200–v2.600)
 
-The characters and glyph changes added in v2.200–v2.500 did not go through the merge process above; they were made by Python scripts in `sources/scripts/` that edit the font files directly. Every new glyph is constructed from glyphs already in the font (e.g. Ѓ = Г + acute), so the scripts work both on the TrueType source (named glyphs) and on the CID-keyed OTF/TTF release files (new glyphs are appended as CID 18082 onwards; existing CIDs and OpenType features are unchanged). All scripts are safe to re-run: files that are already patched are skipped.
+The characters and glyph changes added in v2.200–v2.600 did not go through the merge process above; they were made by Python scripts in `sources/scripts/` that edit the font files directly. Every new glyph is constructed from glyphs already in the font (e.g. Ѓ = Г + acute), so the scripts work both on the TrueType source (named glyphs) and on the CID-keyed OTF/TTF release files (new glyphs are appended as CID 18082 onwards; existing CIDs and OpenType features are unchanged). All scripts are safe to re-run: files that are already patched are skipped.
 
 Run them in this order (requires `fonttools` and `skia-pathops`):
 
@@ -253,11 +253,12 @@ Run them in this order (requires `fonttools` and `skia-pathops`):
 12. `number_features.py` — tabular figure alternates (`tnum`), a fraction slash and the `frac`, `numr`, `dnom`, `sups`, `subs`, `sinf` features, compiled with feaLib into a scratch copy and merged into the existing GSUB; also gives the math signs one width.
 13. `release_fixes.py` — line metrics 945/−235 with no line gap in typo and hhea (the `.otf` and `.ttf` space lines alike), Windows ascent/descent covering the font's highest and lowest point + USE_TYPO_METRICS, PostScript names without underscore, OS/2 Unicode ranges and code pages (1250, 1253, 1254), and the "Modifications Copyright 2026 Studio ANDhitektura" credit. The build sources carry the same values.
 14. `make_latin_cyrillic.py` — cuts the light Latin / Cyrillic / Greek edition (`fonts/and_Lubrifont/andLubrifont-Regular.ttf` and `otf/andLubrifont-Regular.otf`, family "and_Lubrifont") from the finished TC fonts with the fontTools subsetter, keeping kerning, mark positioning and the number features.
-15. `make_weights.py` — builds the Light and Bold weights from that Regular: every outline is offset with skia-pathops (−9 units per edge for Light, +12 for Bold), stretched zone by zone back onto the Regular's descender, baseline, x-height and cap height, and given new sidebearings (Light −4, Bold +12 per side); base anchors move with the outlines and kerning is kept. 1-unit leftover contours in `к ж ќ κ` are dropped. Light is named as its own family ("and_Lubrifont Light", weight 300); Bold is style-linked to the Regular ("and_Lubrifont" / "Bold", weight 700). Finally the Windows ascent/descent of all three weights is set to the family's highest and lowest point. Run it last.
-16. `autohint.py` — TrueType hinting of the three `.ttf` with ttfautohint (Latin, Cyrillic and Greek; Windows compatibility mode, so glyphs stay inside the Windows ascent/descent). Existing hinting is removed first, so it can be re-run; `make_weights.py` removes the Regular's hinting from the Light and Bold it builds. Run it last: `py autohint.py ../../fonts/and_Lubrifont/*.ttf`. Requires `ttfautohint-py`.
-17. `make_woff2.py` — WOFF2 web fonts of the three hinted `.ttf` in `fonts/and_Lubrifont/woff2/`.
-18. `set_version.py` — sets the version (head, name IDs 3 and 5, CFF) before a release: `py set_version.py 2.501 <fonts>`; then rebuild the `.ttc` and run `make_woff2.py`.
-19. `make_specimen.py` — draws `documentation/specimen.png` (the README image) from the `.ttf` fonts; it shows no version number, so it only needs redrawing when the design changes.
+15. `make_weights.py` — builds the Light and Bold weights from that Regular: every outline is offset with skia-pathops (−9 units per edge for Light, +12 for Bold), stretched zone by zone back onto the Regular's descender, baseline, x-height and cap height, and given new sidebearings (Light −4, Bold +12 per side); base anchors move with the outlines and kerning is kept. 1-unit leftover contours in `к ж ќ κ` are dropped. Light is named as its own family ("and_Lubrifont Light", weight 300); Bold is style-linked to the Regular ("and_Lubrifont" / "Bold", weight 700). Finally the Windows ascent/descent of all three weights is set to the family's highest and lowest point. Then run `make_italics.py`.
+16. `make_italics.py` — builds Light Italic, Italic and Bold Italic from the three uprights: every outline is slanted 9° around half the x-height (so letters stay centred in their unchanged widths), keeping the upright letter shapes in Latin and Cyrillic; accent anchors are slanted with the outlines and kerning is kept. Italic and Bold Italic are style-linked to the Regular, Light Italic to "and_Lubrifont Light". Finally it gives all six fonts a STAT table (weight and italic axes).
+17. `autohint.py` — TrueType hinting of the six `.ttf` with ttfautohint (Latin, Cyrillic and Greek; Windows compatibility mode, so glyphs stay inside the Windows ascent/descent). Existing hinting is removed first, so it can be re-run; `make_weights.py` removes the Regular's hinting from the Light and Bold it builds. Run it after `make_italics.py`: `py autohint.py ../../fonts/and_Lubrifont/*.ttf`. Requires `ttfautohint-py`.
+18. `make_woff2.py` — WOFF2 web fonts of the six hinted `.ttf` in `fonts/and_Lubrifont/woff2/`.
+19. `set_version.py` — sets the version (head, name IDs 3 and 5, CFF) before a release: `py set_version.py 2.501 <fonts>`; then rebuild the `.ttc` and run `make_woff2.py`.
+20. `make_specimen.py` — draws `documentation/specimen.png` (the README image) from the `.ttf` fonts; it shows no version number, so it only needs redrawing when the design changes.
 
 ```
 cd sources/scripts

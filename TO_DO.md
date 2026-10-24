@@ -10,5 +10,5 @@
 - [x] WOFF2 web fonts (v2.501)
 - [x] Automatic quality check with fontbakery on GitHub (v2.501)
 - [ ] Editable design source (UFO) and a variable font with a weight axis
-- [ ] Italic
+- [x] Italic (v2.600)
 - [ ] Bulgarian letter forms (`locl`)

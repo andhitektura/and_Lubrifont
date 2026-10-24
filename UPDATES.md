@@ -2,6 +2,14 @@
 
 # Updates
 
+## Ver 2.600; 20261024
+
+- New **italics** for the Latin / Cyrillic / Greek edition: **Light Italic**, **Italic** and **Bold Italic** (`fonts/and_Lubrifont/andLubrifont-*Italic.ttf`, also in `otf/` and `woff2/`; `sources/scripts/make_italics.py`)
+  - Slanted 9°, keeping the upright letter shapes in Latin and Cyrillic, in keeping with the font's geometric character
+  - Same widths, spacing, kerning and accent positions as the uprights
+  - Italic and Bold Italic are linked to the Regular, so an application's italic button uses them; Light Italic belongs to and_Lubrifont Light
+- All six styles carry a STAT table, so applications can group them as one family
+
 ## Ver 2.501; 20261024
 
 - Reorganised the `fonts` folder into two families: `fonts/and_Lubrifont/` (Light, Regular, Bold; `.ttf`, with `.otf` in `otf/`) and `fonts/and_Lubrifont-CJK/` (SC, TC, JP S, JP N and the `.ttc`). The patch scripts moved to `sources/scripts/`. The fonts themselves are unchanged.
