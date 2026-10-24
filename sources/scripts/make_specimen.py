@@ -36,7 +36,7 @@ def main():
         d.text((x, y), label, font=f, fill=INK)
         x += d.textlength(label, font=f) + (28 if "Italic" not in style else 64)
     lines = [
-        ("Regular", 64, "ГРАДЕЖНА ДОЗВОЛА — Технички опис", 450),
+        ("Regular", 64, "ФАЗА#A - АРХИТЕКТУРА — Технички опис", 450),
         ("LightItalic", 52, "Ground floor plan  ·  Level ±0,00  ·  Scale 1:100", 545),
         ("Regular", 52, "Ѓ Ќ Ѕ Љ Њ Џ Ђ Ћ Є Ї Ґ Ў  ·  Ć Č Đ Ą Ę Ś Ż Ř Ů Ș Ț Ğ İ", 625),
         ("Bold", 52, "0123456789  ·  ½ ⅜  ·  m²  ·  CO₂  ·  ⌀12  ·  ∆h  ·  ↔ ⇒ ✓", 705),
