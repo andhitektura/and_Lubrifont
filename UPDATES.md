@@ -16,6 +16,8 @@
 
 - Web fonts: WOFF2 versions of Light, Regular and Bold in `fonts/and_Lubrifont/woff2/`, with a CSS example in the README
 
+- Automatic quality check: every change to the fonts runs fontbakery on GitHub (`.github/workflows/fontbakery.yml`); a failing check marks the commit red, and the full report is attached to the run
+
 ## Ver 2.500; 20261024
 
 - New weights **Light** and **Bold** for the Latin / Cyrillic / Greek edition: `fonts/Latin-Cyrillic/andLubrifont-Light.otf/.ttf` and `andLubrifont-Bold.otf/.ttf` (`sources/make_weights.py`)
