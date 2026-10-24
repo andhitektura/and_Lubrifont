@@ -14,6 +14,8 @@
 
 - The `.ttf` fonts of and_Lubrifont (Light, Regular, Bold) are now hinted (ttfautohint): at small sizes on screen (AutoCAD, Windows, drawings viewed zoomed out) stems, x-height, cap height and baseline snap to whole pixels, so text is sharper and more even. Printing and the `.otf` fonts are not affected
 
+- Web fonts: WOFF2 versions of Light, Regular and Bold in `fonts/and_Lubrifont/woff2/`, with a CSS example in the README
+
 ## Ver 2.500; 20261024
 
 - New weights **Light** and **Bold** for the Latin / Cyrillic / Greek edition: `fonts/Latin-Cyrillic/andLubrifont-Light.otf/.ttf` and `andLubrifont-Bold.otf/.ttf` (`sources/make_weights.py`)
