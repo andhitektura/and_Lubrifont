@@ -9,7 +9,7 @@
 # It is cut from the TC fonts, whose quotation marks are the proportional
 # Western forms by default.
 #
-# usage: py make_latin_cyrillic.py   (writes ../fonts/Latin-Cyrillic/)
+# usage: py make_latin_cyrillic.py   (writes ../../fonts/and_Lubrifont/)
 #
 # Requires: fonttools
 
@@ -18,8 +18,9 @@ from fontTools import subset
 from fontTools.ttLib import TTFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-FONTS = os.path.join(HERE, "..", "fonts")
-OUT = os.path.join(FONTS, "Latin-Cyrillic")
+FONTS = os.path.join(HERE, "..", "..", "fonts")
+CJK = os.path.join(FONTS, "and_Lubrifont-CJK")
+OUT = os.path.join(FONTS, "and_Lubrifont")
 
 UNICODES = [
     (0x0020, 0x02FF),   # Latin, IPA, spacing modifiers
@@ -99,7 +100,7 @@ def build(src, dst):
 
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
-    build(os.path.join(FONTS, "OTF", "andLubrifontTC-Regular.otf"),
-          os.path.join(OUT, f"{PS_NAME}.otf"))
-    build(os.path.join(FONTS, "TTF", "andLubrifontTC-Regular.ttf"),
+    build(os.path.join(CJK, "otf", "andLubrifontTC-Regular.otf"),
+          os.path.join(OUT, "otf", f"{PS_NAME}.otf"))
+    build(os.path.join(CJK, "andLubrifontTC-Regular.ttf"),
           os.path.join(OUT, f"{PS_NAME}.ttf"))

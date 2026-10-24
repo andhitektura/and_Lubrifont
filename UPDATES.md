@@ -2,6 +2,10 @@
 
 # Updates
 
+## Unreleased
+
+- Reorganised the `fonts` folder into two families: `fonts/and_Lubrifont/` (Light, Regular, Bold; `.ttf`, with `.otf` in `otf/`) and `fonts/and_Lubrifont-CJK/` (SC, TC, JP S, JP N and the `.ttc`). The patch scripts moved to `sources/scripts/`. The fonts themselves are unchanged.
+
 ## Ver 2.500; 20261024
 
 - New weights **Light** and **Bold** for the Latin / Cyrillic / Greek edition: `fonts/Latin-Cyrillic/andLubrifont-Light.otf/.ttf` and `andLubrifont-Bold.otf/.ttf` (`sources/make_weights.py`)

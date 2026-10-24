@@ -21,24 +21,33 @@ See [Updates](./UPDATES.md) for the full list.
 
 ## Download
 
-Download the latest version from the **[Releases page](https://github.com/andhitektura/and_Lubrifont/releases)**, or take the files from the [`fonts`](./fonts) folder.
+Download the latest version from the **[Releases page](https://github.com/andhitektura/and_Lubrifont/releases)**, or take the files from the [`fonts`](./fonts) folder. There are two downloads:
 
-| You work in | Install | Appears as |
+**`and_Lubrifont`: the one you need** for Macedonian, English and other European languages. Three files, one per weight:
+
+| File | Appears in font menus as |
+| --- | --- |
+| `andLubrifont-Regular.ttf` | **and_Lubrifont** |
+| `andLubrifont-Bold.ttf` | and_Lubrifont, style Bold (the **B** button) |
+| `andLubrifont-Light.ttf` | **and_Lubrifont Light** |
+
+Install all three. The **Bold** is linked to the Regular: when you press **B** in Word, Rhino or Affinity, the application uses the real Bold instead of thickening the letters itself, which crowds them together. The **Light** appears as its own entry, because Windows menus only group Regular, Bold and their italics under one name.
+
+The `otf` subfolder has the same three fonts in OpenType-CFF format, for Adobe and Affinity users who prefer it. They look identical; install either the `.ttf` or the `.otf` files, not both. AutoCAD needs the `.ttf`.
+
+**`and_Lubrifont-CJK`: only if you also write Chinese or Japanese.** The same Latin, Cyrillic and Greek letters, plus about 18,000 Chinese and Japanese characters (6–12 MB per file, Regular weight only). Install the one version that matches your text:
+
+| File | Appears as | For |
 | --- | --- | --- |
-| Macedonian, English and other European languages | `fonts/Latin-Cyrillic/andLubrifont-Regular.otf` | **and_Lubrifont** |
-| …in bold | `fonts/Latin-Cyrillic/andLubrifont-Bold.otf` | and_Lubrifont, style Bold |
-| …in a lighter weight | `fonts/Latin-Cyrillic/andLubrifont-Light.otf` | **and_Lubrifont Light** |
-| …plus Simplified Chinese | `fonts/OTF/andLubrifontSC-Regular.otf` | and_Lubrifont SC |
-| …plus Traditional Chinese | `fonts/OTF/andLubrifontTC-Regular.otf` | and_Lubrifont TC |
-| …plus Japanese (JIS90 forms, like Adobe Std) | `fonts/OTF/andLubrifontJPS-Regular.otf` | and_Lubrifont JP S |
-| …plus Japanese (JIS2004 forms, like Adobe StdN) | `fonts/OTF/andLubrifontJPN-Regular.otf` | and_Lubrifont JP N |
-| All four CJK versions in one file | `fonts/andLubrifont.ttc` | all four of the above |
+| `andLubrifontSC-Regular.ttf` | and_Lubrifont SC | Simplified Chinese (mainland China) |
+| `andLubrifontTC-Regular.ttf` | and_Lubrifont TC | Traditional Chinese (Taiwan, Hong Kong) |
+| `andLubrifontJPS-Regular.ttf` | and_Lubrifont JP S | Japanese, JIS90 forms (like Adobe Std) |
+| `andLubrifontJPN-Regular.ttf` | and_Lubrifont JP N | Japanese, JIS2004 forms (like Adobe StdN) |
+| `andLubrifont.ttc` | all four of the above | all four in one smaller file |
 
-All versions have the same Latin, Cyrillic and Greek letters, spacing and features. The four CJK versions differ only in their Chinese and Japanese character forms. Each folder also has TrueType (`.ttf`) versions; use them if an application has trouble with `.otf`.
+The regional codes (SC, TC, JP) exist because Chinese and Japanese draw some of the same characters differently.
 
-**Why is there a light edition?** Most of the file size of the full fonts comes from about 18,000 Chinese and Japanese characters. If you don't need them, the light edition installs faster, keeps your font menus tidy (one entry instead of four) and is easier to share. It looks exactly the same.
-
-**Weights.** The light edition comes in Light (thinner strokes), Regular and Bold. Install the Bold next to the Regular: when you press **B** in Word, Rhino or Affinity, the application then uses the real Bold instead of thickening the letters itself, which crowds them together. The Light appears in font menus as its own entry, **and_Lubrifont Light**. The full Chinese/Japanese versions are Regular only.
+**Versions.** The version number (e.g. 2.500) only tells you which release you have; there is always just one current version. Install the newest one and uninstall the older one first.
 
 ### Installing on Windows
 
@@ -110,11 +119,11 @@ The original fonts are built with [AFDKO](https://github.com/adobe-type-tools/af
 pip3 install afdko fonttools gftools
 ```
 
-The build scripts `build_mergeFont.bat` / `build_mergeFont.sh` are in [`sources`](./sources). The additions of this edition are made by Python patch scripts in the same folder (they also need `skia-pathops`, `freetype-py` and `uharfbuzz`); [Technical notes → Patch scripts](./documentation/TECHNICAL.md#patch-scripts-v2200v2500) describes the order to run them in.
+The build scripts `build_mergeFont.bat` / `build_mergeFont.sh` (inherited from WD-XL Lubrifont) are in [`sources`](./sources) and build the CJK fonts. The additions of this edition are made by Python patch scripts in [`sources/scripts`](./sources/scripts) (they also need `skia-pathops`, `freetype-py` and `uharfbuzz`); [Technical notes → Patch scripts](./documentation/TECHNICAL.md#patch-scripts-v2200v2500) describes the order to run them in.
 
 ## Web fonts
 
-The original WD-XL Lubrifont is available as a web font from [Google Fonts](https://fonts.google.com/specimen/WDXL+Lubrifont+SC) and [ZeoSeven Fonts](https://fonts.zeoseven.com/items/138/). These do not include the additions of this edition. For a website, use the light edition `andLubrifont-Regular` (convert it to WOFF2 with fontTools if needed).
+The original WD-XL Lubrifont is available as a web font from [Google Fonts](https://fonts.google.com/specimen/WDXL+Lubrifont+SC) and [ZeoSeven Fonts](https://fonts.zeoseven.com/items/138/). These do not include the additions of this edition. For a website, use `fonts/and_Lubrifont/andLubrifont-Regular.ttf` (convert it to WOFF2 with fontTools if needed).
 
 ## License
 

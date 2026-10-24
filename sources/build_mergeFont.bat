@@ -1,14 +1,13 @@
 @echo off
 SETLOCAL
 
-set "startdir=..\fonts"
+set "startdir=..\fonts\and_Lubrifont-CJK"
 
 :: make folders
 IF EXIST "%startdir%" rmdir /S /Q "%startdir%"
 
 mkdir "%startdir%"
-mkdir "%startdir%\OTF"
-mkdir "%startdir%\TTF"
+mkdir "%startdir%\otf"
 
 :: script params
 set "rebuild="
@@ -56,21 +55,21 @@ mergeFonts -cid cidfontinfo-JPN cidfont-JPN.ps map_HuaYou.txt font.pfa
 ::build
 echo ### Start building SC ver ###
 mergeFonts -cid cidfontinfo-SC cidfont-SC.ps map_HuaYou.txt font.pfa
-makeotf -f cidfont-SC.ps -omitMacNames -mf FontMenuNameDB -ff feature_SC.fea -cs 25 -ch cmap_SC.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "%startdir%\OTF" %release_tag%
+makeotf -f cidfont-SC.ps -omitMacNames -mf FontMenuNameDB -ff feature_SC.fea -cs 25 -ch cmap_SC.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "%startdir%\otf" %release_tag%
 echo ### Start building TC ver ###
 mergeFonts -cid cidfontinfo-TC cidfont-TC.ps map_HuaYou.txt font.pfa
-makeotf -f cidfont-TC.ps -omitMacNames -mf FontMenuNameDB -ff feature_TC.fea -cs 2 -ch cmap_TC.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "%startdir%\OTF" %release_tag%
+makeotf -f cidfont-TC.ps -omitMacNames -mf FontMenuNameDB -ff feature_TC.fea -cs 2 -ch cmap_TC.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "%startdir%\otf" %release_tag%
 echo ### Start building JPS ver ###
 mergeFonts -cid cidfontinfo-JPS cidfont-JPS.ps map_HuaYou.txt font.pfa
-makeotf -f cidfont-JPS.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPS.fea -cs 1 -ch cmap_JP90.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "%startdir%\OTF" %release_tag%
+makeotf -f cidfont-JPS.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPS.fea -cs 1 -ch cmap_JP90.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "%startdir%\otf" %release_tag%
 echo ### Start building JPN ver ###
 mergeFonts -cid cidfontinfo-JPN cidfont-JPS.ps map_HuaYou.txt font.pfa
-makeotf -f cidfont-JPN.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPN.fea -cs 1 -ch cmap_JP04.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "%startdir%\OTF" %release_tag%
+makeotf -f cidfont-JPN.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPN.fea -cs 1 -ch cmap_JP04.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "%startdir%\otf" %release_tag%
 
 :: backtick escape space for CFF  only works in PowerShell
 if "%collection%" == "y" (
 echo "Building TTC"
-otf2otc -t "CFF "=0 -o "%startdir%\andLubrifont.ttc" "%startdir%\OTF\andLubrifontSC-Regular.otf" "%startdir%\OTF\andLubrifontTC-Regular.otf" "%startdir%\OTF\andLubrifontJPS-Regular.otf" "%startdir%\OTF\andLubrifontJPN-Regular.otf"
+otf2otc -t "CFF "=0 -o "%startdir%\andLubrifont.ttc" "%startdir%\otf\andLubrifontSC-Regular.otf" "%startdir%\otf\andLubrifontTC-Regular.otf" "%startdir%\otf\andLubrifontJPS-Regular.otf" "%startdir%\otf\andLubrifontJPN-Regular.otf"
 )
 
 ::echo "Start check"
@@ -84,12 +83,12 @@ andLubrifontTC-Regular.otf
 andLubrifontJPS-Regular.otf
 andLubrifontJPN-Regular.otf
 ) do (
-    echo Processing file: "%startdir%\OTF\%%f"
-    sfntedit -d DSIG "%startdir%\OTF\%%f"
-    python add_design_language.py "%startdir%\OTF\%%f"
-    otf2ttf -o "%startdir%\TTF\%%~nf.ttf" "%startdir%\OTF\%%f"
-    python googlefonts_metrics.py "%startdir%\TTF\%%~nf.ttf"
-    gftools fix-nonhinting "%startdir%\TTF\%%~nf.ttf" "%startdir%\TTF\%%~nf.ttf" --no-backup
+    echo Processing file: "%startdir%\otf\%%f"
+    sfntedit -d DSIG "%startdir%\otf\%%f"
+    python add_design_language.py "%startdir%\otf\%%f"
+    otf2ttf -o "%startdir%\%%~nf.ttf" "%startdir%\otf\%%f"
+    python googlefonts_metrics.py "%startdir%\%%~nf.ttf"
+    gftools fix-nonhinting "%startdir%\%%~nf.ttf" "%startdir%\%%~nf.ttf" --no-backup
 )
 
 if "%done_shutdown%" == "y" (

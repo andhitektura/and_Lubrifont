@@ -24,7 +24,7 @@ Help()
 ############################################################
 set -e
 
-startdir=../fonts
+startdir=../fonts/and_Lubrifont-CJK
 
 # Make folders
 if [ -d "$startdir" ]; then
@@ -32,8 +32,7 @@ if [ -d "$startdir" ]; then
 fi
 
 mkdir -p "$startdir"
-mkdir -p "$startdir/OTF"
-mkdir -p "$startdir/TTF"
+mkdir -p "$startdir/otf"
 
 # Script parameters
 rebuild=""
@@ -98,24 +97,24 @@ mergeFonts -cid cidfontinfo-JPN cidfont-JPN.ps map_HuaYou.txt font.pfa
 # Build
 echo "### Start building SC ver ###"
 mergeFonts -cid cidfontinfo-SC cidfont-SC.ps map_HuaYou.txt font.pfa
-makeotf -f cidfont-SC.ps -omitMacNames -mf FontMenuNameDB -ff feature_SC.fea -cs 25 -ch cmap_SC.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "$startdir/OTF" $release_tag
+makeotf -f cidfont-SC.ps -omitMacNames -mf FontMenuNameDB -ff feature_SC.fea -cs 25 -ch cmap_SC.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "$startdir/otf" $release_tag
 
 echo "### Start building TC ver ###"
 mergeFonts -cid cidfontinfo-TC cidfont-TC.ps map_HuaYou.txt font.pfa
-makeotf -f cidfont-TC.ps -omitMacNames -mf FontMenuNameDB -ff feature_TC.fea -cs 2 -ch cmap_TC.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "$startdir/OTF" $release_tag
+makeotf -f cidfont-TC.ps -omitMacNames -mf FontMenuNameDB -ff feature_TC.fea -cs 2 -ch cmap_TC.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "$startdir/otf" $release_tag
 
 echo "### Start building JPS ver ###"
 mergeFonts -cid cidfontinfo-JPS cidfont-JPS.ps map_HuaYou.txt font.pfa
-makeotf -f cidfont-JPS.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPS.fea -cs 1 -ch cmap_JP90.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "$startdir/OTF" $release_tag
+makeotf -f cidfont-JPS.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPS.fea -cs 1 -ch cmap_JP90.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "$startdir/otf" $release_tag
 
 echo "### Start building JPN ver ###"
 mergeFonts -cid cidfontinfo-JPN cidfont-JPN.ps map_HuaYou.txt font.pfa
-makeotf -f cidfont-JPN.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPN.fea -cs 1 -ch cmap_JP04.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "$startdir/OTF" $release_tag
+makeotf -f cidfont-JPN.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPN.fea -cs 1 -ch cmap_JP04.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "$startdir/otf" $release_tag
 
 
 if [ "$collection" == "y" ]; then
     echo "Building TTC"
-    otf2otc -t "CFF=0" -o $startdir/andLubrifont.ttc $startdir/OTF/andLubrifontSC-Regular.otf $startdir/OTF/andLubrifontTC-Regular.otf $startdir/OTF/andLubrifontJPS-Regular.otf $startdir/OTF/andLubrifontJPN-Regular.otf
+    otf2otc -t "CFF=0" -o $startdir/andLubrifont.ttc $startdir/otf/andLubrifontSC-Regular.otf $startdir/otf/andLubrifontTC-Regular.otf $startdir/otf/andLubrifontJPS-Regular.otf $startdir/otf/andLubrifontJPN-Regular.otf
 fi
 
 # Process files
@@ -123,9 +122,9 @@ for f in andLubrifontSC-Regular.otf andLubrifontTC-Regular.otf andLubrifontJPS-R
     echo "Processing file: $f"
     sfntedit -d DSIG "$f"
     python add_design_language.py "$f"
-    otf2ttf -o "$startdir/TTF/${f%.otf}.ttf" "$f"
-    python googlefonts_metrics.py "$startdir/TTF/${f%.otf}.ttf"
-    gftools fix-nonhinting "$startdir/TTF/${f%.otf}.ttf" "$startdir/TTF/${f%.otf}.ttf" --no-backup
+    otf2ttf -o "$startdir/${f%.otf}.ttf" "$f"
+    python googlefonts_metrics.py "$startdir/${f%.otf}.ttf"
+    gftools fix-nonhinting "$startdir/${f%.otf}.ttf" "$startdir/${f%.otf}.ttf" --no-backup
 done
 
 if [ "$done_shutdown" == "y" ]; then
