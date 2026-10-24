@@ -17,13 +17,14 @@
 #   added after the original notice (which is kept, as the OFL requires),
 #   in every language, and the same notice in the CFF table (which had
 #   carried a stray Adobe notice from the AFDKO CID template).
-# - Vendor: Studio ANDhitektura (OS/2 vendor code ANDH, name ID 8, vendor
+# - Vendor: Studio ANDhitektura (OS/2 vendor code ANDs, name ID 8, vendor
 #   URL in name ID 11 and the unique ID in name ID 3), so applications do
 #   not present the original author as vendor of this modified version. The
 #   original designers stay credited in name ID 9, followed by this edition.
 #
 # usage: py release_fixes.py font1.otf [font2.ttf ...]   (safe to re-run)
 
+import re
 import sys
 from fontTools.ttLib import TTFont
 
@@ -32,7 +33,7 @@ USE_TYPO_METRICS = 1 << 7
 UNICODE_BITS = [2, 3, 31, 32, 37, 38]
 CODEPAGE_BITS = [1, 3, 4]   # 1250, 1253, 1254
 CREDIT = "Modifications Copyright 2026 Studio ANDhitektura."
-VENDOR_ID = "ANDH"
+VENDOR_ID = "ANDs"
 MANUFACTURER = "Studio ANDhitektura"
 VENDOR_URL = "https://github.com/andhitektura/and_Lubrifont"
 DESIGNER_CREDIT = ("[and_Lubrifont] Studio ANDhitektura - Cyrillic and Central European "
@@ -67,7 +68,7 @@ def patch_font(path):
         text = record.toUnicode()
         new = text
         if record.nameID in (3, 6):
-            new = ps_name(text).replace(";NFSL;", f";{VENDOR_ID};")
+            new = re.sub(r";[A-Za-z]{4};", f";{VENDOR_ID};", ps_name(text), count=1)
         elif record.nameID == 0 and CREDIT not in text:
             new = f"{text} {CREDIT}"
         elif record.nameID == 9 and record.langID == 0x409 and DESIGNER_CREDIT not in text:

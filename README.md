@@ -56,7 +56,7 @@ The `otf` subfolder of the download has the same four fonts in OpenType-CFF form
 
 The regional codes (SC, TC, JP) exist because Chinese and Japanese draw some of the same characters differently.
 
-**Versions.** The version number (e.g. 2.600) only tells you which release you have; there is always just one current version. Install the newest one and uninstall the older one first.
+**Versions.** The version number (e.g. 2.601) only tells you which release you have; there is always just one current version. Install the newest one and uninstall the older one first.
 
 ### Installing on Windows
 
@@ -158,7 +158,7 @@ Copyright 2026 Studio ANDhitektura for the and_Lubrifont additions, licensed und
 ## Credits
 
 **and_Lubrifont edition**
-- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.600. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero and new 7; respacing and kerning; technical symbols and number features; light Latin/Cyrillic edition with Light and Bold weights and italics; hinting and web fonts; English documentation.
+- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.601. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero and new 7; respacing and kerning; technical symbols and number features; light Latin/Cyrillic edition with Light and Bold weights and italics; hinting and web fonts; English documentation.
 
 **WD-XL Lubrifont (original project)**
 - NightFurySL2001 ([@NightFurySL2001](https://github.com/NightFurySL2001)): WD-XL Lubrifont, expansion for Traditional Chinese, symbols and OpenType features

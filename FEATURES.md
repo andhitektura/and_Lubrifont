@@ -5,7 +5,7 @@
 and_Lubrifont has set up multiple OpenType features, which are listed as follows.
 
 > [!NOTE] 
-> The version of font for this document is v2.600 (20261024).
+> The version of font for this document is v2.601 (20261024).
 
 ## `vert` / `vrt2` — Vertical Alternates
 

@@ -2,10 +2,10 @@
 
 # Updates
 
-## Unreleased
+## Ver 2.601; 20261024
 
 - Longer arm on the small `r` (also `ŕ ř`), 50 units more: the old arm looked stunted. The letter widens by the same amount, so spacing and kerning stay as they were; applies to all styles and the CJK fonts
-- Font metadata for this modified version: vendor Studio ANDhitektura (vendor code `ANDH`, vendor URL), the modification copyright in every language and in the CFF table (replacing a stray Adobe notice inherited from the CID build template), and this edition credited after the original designers. Glyphs are unchanged
+- Font metadata for this modified version: vendor Studio ANDhitektura (vendor code `ANDs`, vendor URL), the modification copyright in every language and in the CFF table (replacing a stray Adobe notice inherited from the CID build template), and this edition credited after the original designers. Glyphs are unchanged
 - `OFL.txt` (and its Chinese translations) and `sources/LICENSE.txt` name Studio ANDhitektura as copyright holder of the modifications
 
 ## Ver 2.600; 20261024
