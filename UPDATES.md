@@ -2,6 +2,13 @@
 
 # Updates
 
+## Unreleased
+
+- New weights **Light** and **Bold** for the Latin / Cyrillic / Greek edition: `fonts/Latin-Cyrillic/andLubrifont-Light.otf/.ttf` and `andLubrifont-Bold.otf/.ttf` (`sources/make_weights.py`)
+  - Light: strokes 74 instead of 92, set slightly tighter to keep the Regular's rhythm; installs as its own family **and_Lubrifont Light**
+  - Bold: strokes 116, letters widened by what the strokes gained so the gaps between letters stay as in the Regular; linked to the Regular, so an application's **B** button uses it instead of thickening the letters itself
+  - Both keep the Regular's cap height, x-height, descenders, kerning and accent positions
+
 ## Ver 2.402; 20261024
 
 - Fixed accented capitals being clipped at the top in Windows applications (`Ѓ Ќ Ѐ Ѝ Ў Č Ř Š Ž Ś Ź Ń Ů` …): Windows ascent raised to 1030 and USE_TYPO_METRICS set, so line spacing in modern applications is unchanged

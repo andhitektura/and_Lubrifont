@@ -15,7 +15,7 @@ Compared with the original WD-XL Lubrifont (v2.100):
 - **Spacing:** corrected and evened-out letter spacing, slightly more open overall, and kerning for Latin, Cyrillic and punctuation
 - **Accents:** combining stress accents (`е́ о́ и́`) sit correctly on Cyrillic letters, and accented capitals are no longer clipped in Windows applications
 - **Numbers and symbols:** tabular figures, fractions, superscripts and subscripts, `⌀ ∅ ∆` and arrows, with all math signs at one width
-- **A light Latin / Cyrillic / Greek edition:** about 200 KB instead of 6–12 MB
+- **A light Latin / Cyrillic / Greek edition:** about 200 KB instead of 6–12 MB, in three weights: **Light**, Regular and **Bold**
 
 See [Updates](./UPDATES.md) for the full list.
 
@@ -26,6 +26,8 @@ Download the latest version from the **[Releases page](https://github.com/andhit
 | You work in | Install | Appears as |
 | --- | --- | --- |
 | Macedonian, English and other European languages | `fonts/Latin-Cyrillic/andLubrifont-Regular.otf` | **and_Lubrifont** |
+| …in bold | `fonts/Latin-Cyrillic/andLubrifont-Bold.otf` | and_Lubrifont, style Bold |
+| …in a lighter weight | `fonts/Latin-Cyrillic/andLubrifont-Light.otf` | **and_Lubrifont Light** |
 | …plus Simplified Chinese | `fonts/OTF/andLubrifontSC-Regular.otf` | and_Lubrifont SC |
 | …plus Traditional Chinese | `fonts/OTF/andLubrifontTC-Regular.otf` | and_Lubrifont TC |
 | …plus Japanese (JIS90 forms, like Adobe Std) | `fonts/OTF/andLubrifontJPS-Regular.otf` | and_Lubrifont JP S |
@@ -35,6 +37,8 @@ Download the latest version from the **[Releases page](https://github.com/andhit
 All versions have the same Latin, Cyrillic and Greek letters, spacing and features. The four CJK versions differ only in their Chinese and Japanese character forms. Each folder also has TrueType (`.ttf`) versions; use them if an application has trouble with `.otf`.
 
 **Why is there a light edition?** Most of the file size of the full fonts comes from about 18,000 Chinese and Japanese characters. If you don't need them, the light edition installs faster, keeps your font menus tidy (one entry instead of four) and is easier to share. It looks exactly the same.
+
+**Weights.** The light edition comes in Light (thinner strokes), Regular and Bold. Install the Bold next to the Regular: when you press **B** in Word, Rhino or Affinity, the application then uses the real Bold instead of thickening the letters itself, which crowds them together. The Light appears in font menus as its own entry, **and_Lubrifont Light**. The full Chinese/Japanese versions are Regular only.
 
 ### Installing on Windows
 
@@ -125,7 +129,7 @@ Copyright 2022-2025 NightFurySL2001 in WD-XL Lubrifont project, licensed under (
 ## Credits
 
 **and_Lubrifont edition**
-- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.402. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero and new 7; respacing and kerning; technical symbols and number features; light Latin/Cyrillic edition; English documentation.
+- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.402. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero and new 7; respacing and kerning; technical symbols and number features; light Latin/Cyrillic edition with Light and Bold weights; English documentation.
 
 **WD-XL Lubrifont (original project)**
 - NightFurySL2001 ([@NightFurySL2001](https://github.com/NightFurySL2001)): WD-XL Lubrifont, expansion for Traditional Chinese, symbols and OpenType features

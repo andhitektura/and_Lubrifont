@@ -3,8 +3,10 @@
 #
 # Every outline is offset by OFFSET units on each edge: negative erodes
 # (Light, strokes 92 -> 74), positive grows (Bold). SPACE units are then added
-# to both sidebearings of every spacing glyph, so a Bold's letters widen by what
-# their strokes gained and the gaps between letters stay as in the Regular.
+# to both sidebearings of every spacing glyph (negative tightens): a Bold's
+# letters widen by what their strokes gained, so the gaps between letters stay
+# as in the Regular; the Light is set 8 units per letter tighter than its
+# eroded outlines would give, to keep the Regular's rhythm.
 # Kerning is kept; accent anchors move with the outlines.
 #
 # Offsetting also moves the outer edges, so the outlines are then stretched
@@ -36,7 +38,7 @@ FAMILY = "and_Lubrifont"
 STEM = 92                # Regular stroke
 WEIGHTS = {
     # style: offset per edge, extra sidebearing per side, usWeightClass
-    "Light": dict(offset=-9, space=0, weight=300),     # stroke 74
+    "Light": dict(offset=-9, space=-4, weight=300),    # stroke 74, set 8 tighter per letter
     "Bold": dict(offset=12, space=12, weight=700),     # stroke 116
 }
 
