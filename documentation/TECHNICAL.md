@@ -218,9 +218,23 @@ This step merges the font files into one TTC font file. As the largest table (`C
 * `convert_webfonts.py` — generates web fonts.
 * `unicodedata2.py` — reference database for `AI0_HuaYou.txt` (source: https://github.com/fonttools/unicodedata2).
 
+## Repository layout
+
+```
+fonts/
+  and_Lubrifont/          Latin / Cyrillic / Greek family: Light, Regular, Bold (.ttf)
+    otf/                  the same three as OpenType-CFF
+  and_Lubrifont-CJK/      SC, TC, JP S, JP N with Chinese and Japanese (.ttf) and andLubrifont.ttc
+    otf/                  the same four as OpenType-CFF; the patch scripts work on these
+sources/                  the inherited WD-XL Lubrifont build (AFDKO), writes fonts/and_Lubrifont-CJK/
+  scripts/                this edition's patch scripts (below) and kerning.txt
+```
+
+File names are the PostScript names (`andLubrifont-Bold`, no underscore); the names in font menus are "and_Lubrifont", "and_Lubrifont Light", "and_Lubrifont SC" etc.
+
 ## Patch scripts (v2.200–v2.500)
 
-The characters and glyph changes added in v2.200–v2.500 did not go through the merge process above; they were made by Python scripts in `sources/` that edit the font files directly. Every new glyph is constructed from glyphs already in the font (e.g. Ѓ = Г + acute), so the scripts work both on the TrueType source (named glyphs) and on the CID-keyed OTF/TTF release files (new glyphs are appended as CID 18082 onwards; existing CIDs and OpenType features are unchanged). All scripts are safe to re-run: files that are already patched are skipped.
+The characters and glyph changes added in v2.200–v2.500 did not go through the merge process above; they were made by Python scripts in `sources/scripts/` that edit the font files directly. Every new glyph is constructed from glyphs already in the font (e.g. Ѓ = Г + acute), so the scripts work both on the TrueType source (named glyphs) and on the CID-keyed OTF/TTF release files (new glyphs are appended as CID 18082 onwards; existing CIDs and OpenType features are unchanged). All scripts are safe to re-run: files that are already patched are skipped.
 
 Run them in this order (requires `fonttools` and `skia-pathops`):
 
@@ -231,20 +245,21 @@ Run them in this order (requires `fonttools` and `skia-pathops`):
 5. `add_mark_anchors.py` — `mark` anchors for Cyrillic letters and `ĆćČčĐđ`
 6. `add_ukrainian_belarusian.py` — Ukrainian and Belarusian `ЄєІіЇїҐґЎў` (v2.300; run `add_mark_anchors.py` again afterwards)
 7. `respace.py` — corrects the side bearings of Latin and Cyrillic letters (accented letters follow their base, mark anchors move with the outlines)
-8. `autokern.py` — kerning: `py autokern.py measure ../fonts/OTF/andLubrifontTC-Regular.otf kerning.txt` measures the outlines and writes `kerning.txt` (classes, class pairs, exceptions); `py autokern.py apply kerning.txt <fonts>` adds it to the release fonts as a `kern` feature. It also needs `freetype-py` and `uharfbuzz`. The kerning is not added to the TrueType source, because the full build generates GPOS from the feature files; after a full rebuild, run `apply` on the built fonts.
+8. `autokern.py` — kerning: `py autokern.py measure ../../fonts/and_Lubrifont-CJK/otf/andLubrifontTC-Regular.otf kerning.txt` measures the outlines and writes `kerning.txt` (classes, class pairs, exceptions); `py autokern.py apply kerning.txt <fonts>` adds it to the release fonts as a `kern` feature. It also needs `freetype-py` and `uharfbuzz`. The kerning is not added to the TrueType source, because the full build generates GPOS from the feature files; after a full rebuild, run `apply` on the built fonts.
 9. `track.py` — opens up the overall letter spacing: `py track.py 12 <fonts>` adds 12 units to both sides of Western letters, digits and punctuation (and 24 to the word space); CJK and full-width glyphs are not touched. Applied in v2.400.
 10. `add_central_european.py` — Polish, Czech, Slovak, Romanian and Turkish letters `ĄąĘęŚśŹźŻżĎďŘřŤťŮůĹĺĽľŔŕȘșȚțŞşŢţĞğİĖė`; afterwards run `add_mark_anchors.py`, then `autokern.py measure` and `autokern.py replace kerning.txt <fonts>` to re-kern with the new letters (`autokern.py` measures as if `track.py`'s spacing were absent, so existing kerning values stay the same).
 11. `rename_family.py` — renames the family to and_Lubrifont (name IDs 1, 3, 4, 6 in all languages, CFF names) and shortens the version string to "Version X.XXX"; the copyright and designer credits are kept. The build sources (`cidfontinfo-*`, `FontMenuNameDB`, `feature_shared_meta.fea`) carry the new names too. Run it after the version bump.
 12. `number_features.py` — tabular figure alternates (`tnum`), a fraction slash and the `frac`, `numr`, `dnom`, `sups`, `subs`, `sinf` features, compiled with feaLib into a scratch copy and merged into the existing GSUB; also gives the math signs one width.
 13. `release_fixes.py` — Windows ascent 1030 + USE_TYPO_METRICS, PostScript names without underscore, OS/2 Unicode ranges and code pages (1250, 1253, 1254), and the "Modifications Copyright 2026 Studio ANDhitektura" credit. The build sources carry the same values.
-14. `make_latin_cyrillic.py` — cuts the light Latin / Cyrillic / Greek edition (`fonts/Latin-Cyrillic/andLubrifont-Regular.otf/.ttf`, family "and_Lubrifont") from the finished TC fonts with the fontTools subsetter, keeping kerning, mark positioning and the number features.
+14. `make_latin_cyrillic.py` — cuts the light Latin / Cyrillic / Greek edition (`fonts/and_Lubrifont/andLubrifont-Regular.ttf` and `otf/andLubrifont-Regular.otf`, family "and_Lubrifont") from the finished TC fonts with the fontTools subsetter, keeping kerning, mark positioning and the number features.
 15. `make_weights.py` — builds the Light and Bold weights from that Regular: every outline is offset with skia-pathops (−9 units per edge for Light, +12 for Bold), stretched zone by zone back onto the Regular's descender, baseline, x-height and cap height, and given new sidebearings (Light −4, Bold +12 per side); base anchors move with the outlines and kerning is kept. 1-unit leftover contours in `к ж ќ κ` are dropped. Light is named as its own family ("and_Lubrifont Light", weight 300); Bold is style-linked to the Regular ("and_Lubrifont" / "Bold", weight 700). Run it last.
 
 ```
-cd sources
-py add_macedonian_cyrillic.py WD-XLLubrifont-Regular.ttf ../fonts/OTF/*.otf ../fonts/TTF/*.ttf
+cd sources/scripts
+py add_macedonian_cyrillic.py ../WD-XLLubrifont-Regular.ttf ../../fonts/and_Lubrifont-CJK/otf/*.otf ../../fonts/and_Lubrifont-CJK/*.ttf
 (repeat for the other scripts)
-otf2otc -t "CFF =0" -o ../fonts/andLubrifont.ttc ../fonts/OTF/andLubrifontSC-Regular.otf ../fonts/OTF/andLubrifontTC-Regular.otf ../fonts/OTF/andLubrifontJPS-Regular.otf ../fonts/OTF/andLubrifontJPN-Regular.otf
+cd ../../fonts/and_Lubrifont-CJK
+otf2otc -t "CFF =0" -o andLubrifont.ttc otf/andLubrifontSC-Regular.otf otf/andLubrifontTC-Regular.otf otf/andLubrifontJPS-Regular.otf otf/andLubrifontJPN-Regular.otf
 ```
 
 ### How the spacing and kerning were measured

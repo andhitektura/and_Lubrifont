@@ -18,7 +18,7 @@
 # to the Regular, so an application's Bold button picks it up.
 #
 # usage: py make_weights.py   (run after make_latin_cyrillic.py;
-#                              writes ../fonts/Latin-Cyrillic/andLubrifont-{Light,Bold}.*)
+#                              writes ../../fonts/and_Lubrifont/andLubrifont-{Light,Bold}.*)
 #
 # Requires: fonttools, skia-pathops
 
@@ -32,7 +32,7 @@ from fontTools.pens.boundsPen import BoundsPen
 from fontTools.ttLib.tables import otTables
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DIR = os.path.join(HERE, "..", "fonts", "Latin-Cyrillic")
+DIR = os.path.join(HERE, "..", "..", "fonts", "and_Lubrifont")
 
 FAMILY = "and_Lubrifont"
 STEM = 92                # Regular stroke
@@ -201,6 +201,7 @@ def build(src, dst, style, offset, space, weight):
 
 if __name__ == "__main__":
     for style, params in WEIGHTS.items():
-        for ext in ("otf", "ttf"):
-            build(os.path.join(DIR, f"andLubrifont-Regular.{ext}"),
-                  os.path.join(DIR, f"andLubrifont-{style}.{ext}"), style, **params)
+        for sub in ("otf", ""):   # OTF in otf/, TTF at the top
+            ext = sub or "ttf"
+            build(os.path.join(DIR, sub, f"andLubrifont-Regular.{ext}"),
+                  os.path.join(DIR, sub, f"andLubrifont-{style}.{ext}"), style, **params)
