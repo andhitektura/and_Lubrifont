@@ -1,0 +1,32 @@
+name: Display problem
+description: A character, spacing or rendering problem with and_Lubrifont
+title: "Problem: "
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Font file and version
+      description: The file you installed and its version (shown in the font's properties or the release name).
+      placeholder: "e.g. andLubrifont-Regular.ttf, 2.602"
+    validations:
+      required: true
+  - type: input
+    id: software
+    attributes:
+      label: Application and operating system
+      placeholder: "e.g. a CAD application on Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happens?
+      description: The text that shows the problem, what you see and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag an image here, if possible.
