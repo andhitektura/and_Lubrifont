@@ -146,12 +146,13 @@ The CJK fonts have no web version: at over 10 MB each they are too large to serv
 
 ## License
 
-The fonts are licensed under the [SIL Open Font License 1.1](./OFL.txt). You may use them freely, including commercially, embed them in documents and software, and modify them, as long as modified versions are also released under the OFL.
+The fonts are licensed under the [SIL Open Font License 1.1](./OFL.txt). You may use them freely, including commercially, embed them in documents and software, and modify them, as long as modified versions are also released under the OFL. The OFL file must travel with the fonts (it is included in every download), and the fonts may not be sold on their own.
 
 Files used to build the fonts (non-font files in `sources`) may be reused under the SIL OFL or the MIT License. If possible, please credit the source:
 
 ```
 Copyright 2022-2025 NightFurySL2001 in WD-XL Lubrifont project, licensed under (SIL OFL/MIT License).
+Copyright 2026 Studio ANDhitektura for the and_Lubrifont additions, licensed under (SIL OFL/MIT License).
 ```
 
 ## Credits
@@ -169,7 +170,7 @@ Copyright 2022-2025 NightFurySL2001 in WD-XL Lubrifont project, licensed under (
 - [@aiongg](https://github.com/aiongg/): [POJFonts](https://github.com/aiongg/POJFonts) technical reference
 - ZERO ([@Skr-ZERO](https://github.com/Skr-ZERO)): additional glyphs, proofreading suggestions, Japanese builds (JPS/JPN)
 
-The original WD-XL Lubrifont was first released on 25 December 2020. Its [display page](https://nightfurysl2001.github.io/WD-XL/) is still online, and you can support its author at https://paypal.me/nightfurysl2001.
+The original WD-XL Lubrifont was first released on 25 December 2020. Its [display page](https://nightfurysl2001.github.io/WD-XL/) is still online, and you can support its author at https://paypal.me/nightfurysl2001; the **Sponsor** button of this repository leads there too, as a show of support for the original work.
 
 ## Contributing
 

@@ -2,6 +2,11 @@
 
 # Updates
 
+## Unreleased
+
+- Font metadata for this modified version: vendor Studio ANDhitektura (vendor code `ANDH`, vendor URL), the modification copyright in every language and in the CFF table (replacing a stray Adobe notice inherited from the CID build template), and this edition credited after the original designers. Glyphs are unchanged
+- `OFL.txt` (and its Chinese translations) and `sources/LICENSE.txt` name Studio ANDhitektura as copyright holder of the modifications
+
 ## Ver 2.600; 20261024
 
 - New **italics** for the Latin / Cyrillic / Greek edition: **Light Italic**, **Italic** and **Bold Italic** (`fonts/and_Lubrifont/andLubrifont-*Italic.ttf`, also in `otf/` and `woff2/`; `sources/scripts/make_italics.py`)

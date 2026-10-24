@@ -127,7 +127,7 @@ def rename(font, upright):
     ps_name = f"andLubrifont-{ps_style}"
     full = f"{FAMILY} {'Italic' if upright == 'Regular' else upright + ' Italic'}"
     version = f"{font['head'].fontRevision:.3f}"
-    names = {1: family, 2: sub, 3: f"{version};NFSL;{ps_name}", 4: full, 6: ps_name}
+    names = {1: family, 2: sub, 3: f"{version};ANDH;{ps_name}", 4: full, 6: ps_name}
     if typo:
         names.update({16: typo[0], 17: typo[1]})
     table = font["name"]
