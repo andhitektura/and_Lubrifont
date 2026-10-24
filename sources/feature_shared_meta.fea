@@ -34,8 +34,8 @@ table head {
 } head;
 
 table hhea {
-  Ascender 855;
-  Descender -145;
+  Ascender 945;
+  Descender -235;
   LineGap 0;
 } hhea;
 

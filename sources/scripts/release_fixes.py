@@ -1,10 +1,14 @@
 # Fixes for and_Lubrifont v2.402 (font files; the build sources carry the
 # same values for future builds):
 #
-# - Windows line metrics: usWinAscent raised to 1030 so accented capitals
-#   (Ѓ Ќ Ѐ Ѝ Ў Č Ř Š Ž Ś Ź Ń Ů Å ..., up to 1022 units) are not clipped by
-#   Windows, and the USE_TYPO_METRICS flag set so applications that honour it
-#   keep the line spacing given by the typo metrics.
+# - Line metrics: typo and hhea ascender/descender 945/-235, line gap 0, in
+#   every font, so the .otf and .ttf of a font set text with the same line
+#   spacing (1180 units, as the .ttf always had) on Windows, macOS and in
+#   Adobe applications; USE_TYPO_METRICS set so applications that honour it
+#   use these values.
+# - Windows clipping box: usWinAscent/usWinDescent at least the font's
+#   highest and lowest point (accented capitals Ѓ Ќ Ѐ Ѝ Ў Č Ř Š ... reach
+#   1168), so Windows clips nothing.
 # - PostScript names without the underscore (andLubrifontSC-Regular, ...);
 #   the visible family name stays "and_Lubrifont".
 # - OS/2 Unicode ranges and code pages for the added languages: Latin
@@ -18,7 +22,7 @@
 import sys
 from fontTools.ttLib import TTFont
 
-WIN_ASCENT = 1030
+ASCENT, DESCENT = 945, -235
 USE_TYPO_METRICS = 1 << 7
 UNICODE_BITS = [2, 3, 31, 32, 37, 38]
 CODEPAGE_BITS = [1, 3, 4]   # 1250, 1253, 1254
@@ -38,7 +42,12 @@ def set_bits(os2, prefix, bits):
 def patch_font(path):
     font = TTFont(path)
     os2 = font["OS/2"]
-    os2.usWinAscent = max(os2.usWinAscent, WIN_ASCENT)
+    os2.sTypoAscender, os2.sTypoDescender, os2.sTypoLineGap = ASCENT, DESCENT, 0
+    hhea = font["hhea"]
+    hhea.ascent, hhea.descent, hhea.lineGap = ASCENT, DESCENT, 0
+    head = font["head"]
+    os2.usWinAscent = max(os2.usWinAscent, head.yMax)
+    os2.usWinDescent = max(os2.usWinDescent, -head.yMin)
     os2.fsSelection |= USE_TYPO_METRICS
     set_bits(os2, "ulUnicodeRange", UNICODE_BITS)
     set_bits(os2, "ulCodePageRange", CODEPAGE_BITS)

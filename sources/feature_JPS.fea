@@ -24,9 +24,9 @@ table OS/2 {
     1254    # Turkish
     932     # Japanese
     ;
-  TypoAscender 880;
-  TypoDescender -120;
-  TypoLineGap 150;
+  TypoAscender 945;
+  TypoDescender -235;
+  TypoLineGap 0;
   XHeight 485;
   CapHeight 710;
   WeightClass 400;
@@ -34,8 +34,8 @@ table OS/2 {
   Panose 0 0 0 0 0 0 0 0 0 0;
   FSType 0;
   Vendor "NFSL";
-  winAscent 1030;
-  winDescent 250;
+  winAscent 1168;
+  winDescent 495;
 } OS/2;
 
 ### FEATURE DEFINITION

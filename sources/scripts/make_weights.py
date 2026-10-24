@@ -14,6 +14,10 @@
 # x-height and cap height (zones()). Shapes above the caps (accents, brackets)
 # are only shifted, so their gap to the letter stays as it was.
 #
+# Finally the Windows clipping box (usWinAscent/Descent) of all three weights
+# is set to the tallest and deepest glyph of the family, so Windows clips
+# nothing; line spacing is unaffected, as USE_TYPO_METRICS is set.
+#
 # Light installs as its own family "and_Lubrifont Light"; Bold is style-linked
 # to the Regular, so an application's Bold button picks it up.
 #
@@ -127,11 +131,11 @@ def rename(font, style, weight):
         names = {1: f"{FAMILY} {style}", 2: "Regular", 16: FAMILY, 17: style}
     names.update({3: f"{version[8:]};NFSL;{ps_name}", 4: f"{FAMILY} {style}", 6: ps_name})
     table = font["name"]
-    table.names = [r for r in table.names if r.nameID not in (1, 2, 3, 4, 6, 16, 17)]
+    # Windows names only: Mac (platform 1) records are obsolete
+    table.names = [r for r in table.names
+                   if r.platformID == 3 and r.nameID not in (1, 2, 3, 4, 6, 16, 17)]
     for nid, text in names.items():
         table.setName(text, nid, 3, 1, 0x409)
-        if nid in (1, 2, 3, 4, 6):
-            table.setName(text, nid, 1, 0, 0)
     os2 = font["OS/2"]
     os2.usWeightClass = weight
     bold = style == "Bold"
@@ -199,9 +203,25 @@ def build(src, dst, style, offset, space, weight):
     print(f"{dst}: {os.path.getsize(dst) // 1024} KB")
 
 
+def set_win_metrics(paths):
+    fonts = [TTFont(p) for p in paths]
+    ascent = max(f["head"].yMax for f in fonts)
+    descent = max(-f["head"].yMin for f in fonts)
+    for path, f in zip(paths, fonts):
+        f["OS/2"].usWinAscent = ascent
+        f["OS/2"].usWinDescent = descent
+        f["OS/2"].recalcAvgCharWidth(f)
+        f.save(path)
+    print(f"usWinAscent {ascent}, usWinDescent {descent}")
+
+
 if __name__ == "__main__":
     for style, params in WEIGHTS.items():
         for sub in ("otf", ""):   # OTF in otf/, TTF at the top
             ext = sub or "ttf"
             build(os.path.join(DIR, sub, f"andLubrifont-Regular.{ext}"),
                   os.path.join(DIR, sub, f"andLubrifont-{style}.{ext}"), style, **params)
+    for sub in ("otf", ""):
+        ext = sub or "ttf"
+        set_win_metrics([os.path.join(DIR, sub, f"andLubrifont-{style}.{ext}")
+                         for style in ("Light", "Regular", "Bold")])
