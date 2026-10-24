@@ -2,6 +2,13 @@
 
 # Updates
 
+## Unreleased
+
+- The small `l` (also `ĺ ľ ł`) has a short foot: the stem turns right along the baseline, like the arm of the `r` turned upside down, so `l` is clearly different from `I` and `1`
+- `ł` and `Ł` have a longer bar crossing at 40°, so `ł` with its foot does not read as `t`
+- `i j і ј` have the tall rounded dot of the dotted zero instead of the round dot
+- Both apply to all styles and the CJK fonts
+
 ## Ver 2.601; 20261024
 
 - Longer arm on the small `r` (also `ŕ ř`), 50 units more: the old arm looked stunted. The letter widens by the same amount, so spacing and kerning stay as they were; applies to all styles and the CJK fonts
