@@ -22,7 +22,8 @@
 # to the Regular, so an application's Bold button picks it up.
 #
 # usage: py make_weights.py   (run after make_latin_cyrillic.py;
-#                              writes ../../fonts/and_Lubrifont/andLubrifont-{Light,Bold}.*)
+#                              writes ../../fonts/and_Lubrifont/andLubrifont-{Light,Bold}.*;
+#                              then run autohint.py on the three .ttf)
 #
 # Requires: fonttools, skia-pathops
 
@@ -34,6 +35,7 @@ from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.pens.cu2quPen import Cu2QuPen
 from fontTools.pens.boundsPen import BoundsPen
 from fontTools.ttLib.tables import otTables
+from autohint import dehint
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DIR = os.path.join(HERE, "..", "..", "fonts", "and_Lubrifont")
@@ -154,6 +156,8 @@ def rename(font, style, weight):
 
 def build(src, dst, style, offset, space, weight):
     font = TTFont(src)
+    if "glyf" in font:
+        dehint(font)    # hinting of the Regular does not fit the new outlines; run autohint.py after
     gs = font.getGlyphSet()
     knots = zones(offset)
     cff = font["CFF "].cff if "CFF " in font else None
