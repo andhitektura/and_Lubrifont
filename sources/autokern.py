@@ -5,7 +5,7 @@
 # kerning to a text file, and applies that file to font files as a `kern`
 # feature (a new GPOS lookup; existing GPOS lookups are untouched).
 #
-#   py autokern.py measure ../fonts/OTF/and_LubrifontTC-Regular.otf kerning.txt
+#   py autokern.py measure ../fonts/OTF/andLubrifontTC-Regular.otf kerning.txt
 #   py autokern.py apply kerning.txt font1.otf [font2.ttf ...]
 #   py autokern.py replace kerning.txt font1.otf [...]   (replaces an existing kern)
 #

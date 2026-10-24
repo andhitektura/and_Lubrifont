@@ -1,4 +1,4 @@
-[and_LubrifontSC-Regular]
+[andLubrifontSC-Regular]
 	f=3,1,0x804,and_Lubrifont SC
 	s=3,1,0x804,Regular
 	l=3,1,0x804,and_Lubrifont SC
@@ -12,7 +12,7 @@
 	s=Regular
 	l=and_Lubrifont SC
 
-[and_LubrifontTC-Regular]
+[andLubrifontTC-Regular]
 	f=3,1,0x804,and_Lubrifont TC
 	s=3,1,0x804,Regular
 	l=3,1,0x804,and_Lubrifont TC
@@ -26,7 +26,7 @@
 	s=Regular
 	l=and_Lubrifont TC
 
-[and_LubrifontJPS-Regular]
+[andLubrifontJPS-Regular]
 	f=3,1,0x804,and_Lubrifont JP S
 	s=3,1,0x804,Regular
 	l=3,1,0x804,and_Lubrifont JP S
@@ -43,7 +43,7 @@
 	s=Regular
 	l=and_Lubrifont JP S
 	
-[and_LubrifontJPN-Regular]
+[andLubrifontJPN-Regular]
 	f=3,1,0x804,and_Lubrifont JP N
 	s=3,1,0x804,Regular
 	l=3,1,0x804,and_Lubrifont JP N

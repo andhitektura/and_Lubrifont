@@ -9,3 +9,4 @@
 # Names should be added to this file as:
 # Name <email address>
 Skr-ZERO <2404873442@qq.com>
+Studio ANDhitektura (and_Lubrifont edition) <https://github.com/andhitektura>

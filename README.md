@@ -1,60 +1,78 @@
 # and_Lubrifont
 
-This is the repository for **and_Lubrifont**, Studio ANDhitektura's edition of [WD-XL Lubrifont](https://github.com/NightFurySL2001/WD-XL-font) by NightFurySL2001. Source files and history records are kept here.
+![and_Lubrifont specimen](./documentation/specimen.png)
 
-The fonts are named **and_Lubrifont** (previously WD-XL Lubrifont), so they can be installed next to the original without clashing.
+**and_Lubrifont** is Studio ANDhitektura's edition of [WD-XL Lubrifont](https://github.com/NightFurySL2001/WD-XL-font) by NightFurySL2001, itself based on [ZCOOL QingKe HuangYou](https://www.github.com/googlefonts/zcool-qingke-huangyou). It keeps the original's geometric, rounded-square design and its full Chinese and Japanese character set, and extends it for architectural and technical documents in Macedonian and other European languages.
 
-## Target
+The font is free and open source under the [SIL Open Font License 1.1](./OFL.txt).
 
-This font is based on [ZCOOL QingKe HuangYou](https://www.github.com/googlefonts/zcool-qingke-huangyou) and further expanded for Chinese (Traditional) such that this font may be used in Chinese (Traditional) environment in a suitable manner, and also expanded with the required symbols and punctuations for daily Chinese typesetting. The font supports the common characters of Simplified Chinese, Traditional Chinese, Taiwanese, Hakka and Cantonese, as well as Pe̍h-ōe-jī and Tâi-lô romanisation. Latin glyphs in this font are expanded to Adobe Latin 1 and GF Latin Core, and Cyrillic covers Russian, Ukrainian, Belarusian, Macedonian and Serbian. Currently also testing Japanese typesetting usage.
+## What this edition adds
+
+Compared with the original WD-XL Lubrifont (v2.100):
+
+- **Languages:** Macedonian, Serbian, Croatian, Bosnian, Slovenian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish
+- **Legibility:** a zero with a centre dot (`0` vs `O`), and a 7 with a diagonal stem
+- **Spacing:** corrected and evened-out letter spacing, slightly more open overall, and kerning for Latin, Cyrillic and punctuation
+- **Accents:** combining stress accents (`е́ о́ и́`) sit correctly on Cyrillic letters, and accented capitals are no longer clipped in Windows applications
+- **Numbers and symbols:** tabular figures, fractions, superscripts and subscripts, `⌀ ∅ ∆` and arrows, with all math signs at one width
+- **A light Latin / Cyrillic / Greek edition:** about 200 KB instead of 6–12 MB
+
+See [Updates](./UPDATES.md) for the full list.
 
 ## Download
 
-**SC** : Simplified Chinese  
-**TC** : Traditional Chinese  
-**JPS** : Japanese (JIS90 glyphs, same as Adobe Std)  
-**JPN** : Japanese (JIS2004 glyphs, same as Adobe StdN)
+Download the latest version from the **[Releases page](https://github.com/andhitektura/and_Lubrifont/releases)**, or take the files from the [`fonts`](./fonts) folder.
 
-Please visit the **[Release page](https://github.com/andhitektura/and_Lubrifont/releases)** to download the latest version of and_Lubrifont, or take the files from the [`fonts`](./fonts) folder:
+| You work in | Install | Appears as |
+| --- | --- | --- |
+| Macedonian, English and other European languages | `fonts/Latin-Cyrillic/andLubrifont-Regular.otf` | **and_Lubrifont** |
+| …plus Simplified Chinese | `fonts/OTF/andLubrifontSC-Regular.otf` | and_Lubrifont SC |
+| …plus Traditional Chinese | `fonts/OTF/andLubrifontTC-Regular.otf` | and_Lubrifont TC |
+| …plus Japanese (JIS90 forms, like Adobe Std) | `fonts/OTF/andLubrifontJPS-Regular.otf` | and_Lubrifont JP S |
+| …plus Japanese (JIS2004 forms, like Adobe StdN) | `fonts/OTF/andLubrifontJPN-Regular.otf` | and_Lubrifont JP N |
+| All four CJK versions in one file | `fonts/andLubrifont.ttc` | all four of the above |
 
-| File | Installs as |
-| --- | --- |
-| `fonts/OTF/and_LubrifontSC-Regular.otf` (or `fonts/TTF/…`) | and_Lubrifont SC |
-| `fonts/OTF/and_LubrifontTC-Regular.otf` | and_Lubrifont TC |
-| `fonts/OTF/and_LubrifontJPS-Regular.otf` | and_Lubrifont JP S |
-| `fonts/OTF/and_LubrifontJPN-Regular.otf` | and_Lubrifont JP N |
-| `fonts/and_Lubrifont.ttc` | all four of the above |
+All versions have the same Latin, Cyrillic and Greek letters, spacing and features. The four CJK versions differ only in their Chinese and Japanese character forms. Each folder also has TrueType (`.ttf`) versions; use them if an application has trouble with `.otf`.
 
-The four versions differ only in their Chinese and Japanese character forms; for Latin and Cyrillic text one of them (e.g. SC) is enough.
+**Why is there a light edition?** Most of the file size of the full fonts comes from about 18,000 Chinese and Japanese characters. If you don't need them, the light edition installs faster, keeps your font menus tidy (one entry instead of four) and is easier to share. It looks exactly the same.
 
-Please visit the **[old releases branch](https://github.com/NightFurySL2001/WD-XL-font/tree/old-releases)** of the original project to download past versions of the original WD-XL Lubrifont.
+### Installing on Windows
 
-## Webfont
+1. Uninstall any older **WD-XL Lubrifont** or **and_Lubrifont** fonts first. Otherwise both stay in your font menus.
+2. Right-click the font file and choose **Install for all users**.
+3. Restart the application.
 
-You may use the following webfont services to use this font in webpages:
+Drawings that used "WD-XL Lubrifont SC" need the font reassigned to "and_Lubrifont" (or "and_Lubrifont SC").
 
-| Service | Language |
-| --- | --- |
-| Google Fonts | [SC](https://fonts.google.com/specimen/WDXL+Lubrifont+SC) · [TC](https://fonts.google.com/specimen/WDXL+Lubrifont+TC) · [Japanese JIS2004 JPN](https://fonts.google.com/specimen/WDXL+Lubrifont+JP+N) |
-| ZeoSeven Fonts | [SC · TC · Japanese JIS90 JPS · Japanese JIS2004 JPN](https://fonts.zeoseven.com/items/138/) |
+## Using the font in your software
 
-> These services host the original project's fonts, which do not yet include the additions of v2.200–v2.400 (Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Romanian and Turkish letters, technical symbols, dotted zero, new 7, improved spacing and kerning, wider letter spacing).
+| Feature | Rhino, Affinity, Adobe, browsers | Microsoft Word | AutoCAD |
+| --- | --- | --- | --- |
+| Letter spacing, accents | ✓ | ✓ | ✓ |
+| Kerning | automatic | turn on: Font → Advanced → *Kerning for fonts* | not supported |
+| Tabular figures, fractions, super/subscripts | OpenType / Typography panel | Font → Advanced | use `½ ⅜ ² ₂` directly |
+
+See [OpenType features](./FEATURES.md) for every feature and how to switch it on.
 
 ## Character set
 
-Latin:
-- [Adobe Latin 1](http://adobe-type-tools.github.io/adobe-latin-charsets/adobe-latin-1.html)
-- [GF Latin Core](https://github.com/googlefonts/gftools/blob/main/Lib/gftools/encodings/GF%20Glyph%20Sets/GF-latin-core_unique-glyphs.nam)
-- Croatian, Bosnian, Serbian Latin (`ĆćČčĐđ`)
-- Polish, Czech, Slovak, Romanian, Turkish (`ĄąĘęŚśŹźŻż ĎďŘřŤťŮů ĹĺĽľŔŕ ȘșȚțŞşŢţ ĞğİĖė`)
+**Latin:**
+- [Adobe Latin 1](http://adobe-type-tools.github.io/adobe-latin-charsets/adobe-latin-1.html) and [GF Latin Core](https://github.com/googlefonts/gftools/blob/main/Lib/gftools/encodings/GF%20Glyph%20Sets/GF-latin-core_unique-glyphs.nam)
+- Croatian, Bosnian, Serbian Latin: `ĆćČčĐđ`
+- Polish, Czech, Slovak, Romanian, Turkish: `ĄąĘęŚśŹźŻż ĎďŘřŤťŮů ĹĺĽľŔŕ ȘșȚțŞşŢţ ĞğİĖė`
 
-Cyrillic:
-- Russian, Ukrainian, Belarusian, Macedonian, Serbian (`А–я Ёё ЂђЃѓЄєЅѕІіЇїЈјЉљЊњЋћЌќЎўЏџ ҐґЀѐЍѝ`)
+**Cyrillic:** Russian, Ukrainian, Belarusian, Macedonian, Serbian: `А–я Ёё ЂђЃѓЄєЅѕІіЇїЈјЉљЊњЋћЌќЎўЏџ ҐґЀѐЍѝ`
 
-Symbols:
-- `⌀∅∆ ↔↕↖↗↘↙⇐⇒⇔ ✓✗▼▽ ⁰–⁹ ⁺⁻ ₀–₉ ⅓⅔⅛⅜⅝⅞`
+**Greek:** the full monotonic alphabet with accents.
 
-Chinese characters (hanzi):
+**Numbers and symbols:**
+- `⌀ ∅ ∆ ± × ÷ ≤ ≥ ≈ ° ′ ″ № €`
+- `↔ ↕ ↖ ↗ ↘ ↙ ⇐ ⇒ ⇔ ✓ ✗ ▲ ▼`
+- `½ ⅓ ⅔ ¼ ¾ ⅛ ⅜ ⅝ ⅞ ⁰–⁹ ⁺⁻ ₀–₉`
+
+<details>
+<summary><b>Chinese and Japanese characters</b> (full versions only)</summary>
+
 - Original font: [GB/T 2312 (6763 characters)](https://github.com/NightFurySL2001/cjktables/blob/master/china/encoding/gb_t_2312.txt), [Hanyi Simplified–Traditional list (9169 characters)](https://github.com/NightFurySL2001/cjktables/blob/master/china/foundry/hanyi_jianfan.txt)
 - [List of Frequently Used Characters in Modern Chinese (3500 characters)](https://github.com/NightFurySL2001/cjktables/blob/master/china/standard/xiandai_changyong.txt), [List of Commonly Used Characters in Modern Chinese (7000 characters)](https://github.com/NightFurySL2001/cjktables/blob/master/china/standard/xiandai_tongyong.txt)
 - [Table of General Standard Chinese Characters (8105 characters)](https://github.com/NightFurySL2001/cjktables/blob/master/china/standard/tongyong_guifan.txt)
@@ -70,81 +88,57 @@ Chinese characters (hanzi):
 - JIS [level 1](https://kanji.jitenon.jp/cat/jisdai1.html) and [level 2](https://kanji.jitenon.jp/cat/jisdai2.html) kanji
 - [IBM 32 extension characters (compatibility block U+FA0E..U+FA2D, 32 characters)](https://zh.wikipedia.org/wiki/%E4%B8%AD%E6%97%A5%E9%9F%93%E7%9B%B8%E5%AE%B9%E8%A1%A8%E6%84%8F%E6%96%87%E5%AD%97)
 
-## Details
+The full versions also support Pe̍h-ōe-jī and Tâi-lô romanisation, Bopomofo and vertical typesetting.
+</details>
 
-- [OpenType features](./FEATURES.md) ⇦ [**Please read!**]
-- [Updates](./UPDATES.md)
+## Documentation
+
+- [OpenType features](./FEATURES.md): kerning, tabular figures, fractions, stylistic sets and more
+- [Updates](./UPDATES.md): the history of every version
 - [To-Do](./TO_DO.md)
-- [Technical Tidbits](./documentation/TECHNICAL.md)
+- [Technical notes](./documentation/TECHNICAL.md): how the font is built and patched
 
-## Licensing
+## Building the font
 
-### Font Files
-
-This font is modified from ZCOOL QingKe HuangYou under SIL Open Font License v1.1.
-
-This font is also publicly released under SIL Open Font License v1.1. Please refer to the [License file](./OFL.txt) for details of the license.
-
-Under this license, you can:
-- **Free for commercial use**  
-Use the font with no payment or attribution to the author including commercial use.
-
-- **Free for redistribution**  
-Embed the font into any systems and software without requiring written permission.
-
-- **Free for modification**  
-Modify the font into other fonts, but the modified font must be also released under SIL Open Font License.
-
-### Non-Font Files
-
-Files used in the font building process (non-font files under `\sources\`, e.g. Python files and text files) can be reused under SIL OFL or MIT License; if possible, please note the source as below:
-
-```
-Copyright 2022-2025 NightFurySL2001 in WD-XL Lubrifont project, licensed under (SIL OFL/MIT License).
-```
-
-> Please choose only 1 license at `(SIL OFL/MIT License)`.
-
-## Building font
-
-This font uses [AFDKO](https://github.com/adobe-type-tools/afdko), [fontTools](https://github.com/fonttools/fonttools) and [gftools](https://github.com/googlefonts/gftools) to build the fonts. Please use this command to install the dependencies (requires Python 3):
+The original fonts are built with [AFDKO](https://github.com/adobe-type-tools/afdko), [fontTools](https://github.com/fonttools/fonttools) and [gftools](https://github.com/googlefonts/gftools):
 
 ```
 pip3 install afdko fonttools gftools
 ```
 
-The build script `build_mergeFont.bat`/`build_mergeFont.sh` is included under `/sources/`; running it will produce the fonts. More detail can be read in [`build_commands_mergeFonts.txt`](./sources/build_commands_mergeFonts.txt) or the [technical tidbits](./documentation/TECHNICAL.md).
+The build scripts `build_mergeFont.bat` / `build_mergeFont.sh` are in [`sources`](./sources). The additions of this edition are made by Python patch scripts in the same folder (they also need `skia-pathops`, `freetype-py` and `uharfbuzz`); [Technical notes → Patch scripts](./documentation/TECHNICAL.md#patch-scripts-v2200v2402) describes the order to run them in.
 
-The additions of v2.200–v2.400 were made with patch scripts in `/sources/` (they also need `skia-pathops`); see [Patch scripts (v2.200)](./documentation/TECHNICAL.md#patch-scripts-v2200v2400).
+## Web fonts
 
-## Contribution
+The original WD-XL Lubrifont is available as a web font from [Google Fonts](https://fonts.google.com/specimen/WDXL+Lubrifont+SC) and [ZeoSeven Fonts](https://fonts.zeoseven.com/items/138/). These do not include the additions of this edition. For a website, use the light edition `andLubrifont-Regular` (convert it to WOFF2 with fontTools if needed).
 
-If you want to contribute to this project, you may submit your glyphs through the following ways (glyphs that are modified only, not the whole font):
+## License
 
-1. Fork repository, add a new branch with font file, request pull repository
-2. Submit font file through new issue
-3. Email font file to nfsl-fonts@outlook.com
+The fonts are licensed under the [SIL Open Font License 1.1](./OFL.txt). You may use them freely, including commercially, embed them in documents and software, and modify them, as long as modified versions are also released under the OFL.
 
-## Ending note
+Files used to build the fonts (non-font files in `sources`) may be reused under the SIL OFL or the MIT License. If possible, please credit the source:
 
-It's 25 December 2020, and thus we wish you a Merry Christmas!
+```
+Copyright 2022-2025 NightFurySL2001 in WD-XL Lubrifont project, licensed under (SIL OFL/MIT License).
+```
 
-## Acknowledgement
+## Credits
 
-- Zheng Qingke — original font designer
-- [@davelab6](https://github.com/davelab6) and Google Fonts team — conversion of the font to SIL OFL
-- 曾國榕 and But Ko ([@ButTaiwan](https://github.com/ButTaiwan)) — technical support
-- Zonz and Alpha_Argon — quality supervision and guidance
-- Henry Chan — technical advice and supervision
-- [@aiongg](https://github.com/aiongg/) — [POJFonts](https://github.com/aiongg/POJFonts) technical reference
-- ZERO ([@Skr-ZERO](https://github.com/Skr-ZERO)) — additional glyphs, proofreading suggestions, Japanese builds (JPS/JPN)
+**and_Lubrifont edition**
+- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.402. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero and new 7; respacing and kerning; technical symbols and number features; light Latin/Cyrillic edition; English documentation.
 
-## Sponsor
+**WD-XL Lubrifont (original project)**
+- NightFurySL2001 ([@NightFurySL2001](https://github.com/NightFurySL2001)): WD-XL Lubrifont, expansion for Traditional Chinese, symbols and OpenType features
+- Zheng Qingke: original font design (ZCOOL QingKe HuangYou)
+- [@davelab6](https://github.com/davelab6) and the Google Fonts team: conversion of the font to SIL OFL
+- 曾國榕 and But Ko ([@ButTaiwan](https://github.com/ButTaiwan)): technical support
+- Zonz and Alpha_Argon: quality supervision and guidance
+- Henry Chan: technical advice and supervision
+- [@aiongg](https://github.com/aiongg/): [POJFonts](https://github.com/aiongg/POJFonts) technical reference
+- ZERO ([@Skr-ZERO](https://github.com/Skr-ZERO)): additional glyphs, proofreading suggestions, Japanese builds (JPS/JPN)
 
-This font is a demonstrative font to try out some OpenType features and producing font with AFDKO, released free and open-source. Hope you liked this font, and sponsor the author through the following PayPal link.
+The original WD-XL Lubrifont was first released on 25 December 2020. Its [display page](https://nightfurysl2001.github.io/WD-XL/) is still online, and you can support its author at https://paypal.me/nightfurysl2001.
 
-https://paypal.me/nightfurysl2001
+## Contributing
 
-## Display page
-
-[WD-XL Lubrifont (original project)](https://nightfurysl2001.github.io/WD-XL/)
+Suggestions and corrections are welcome. Please open an [issue](https://github.com/andhitektura/and_Lubrifont/issues) or a pull request. For changes to the Chinese and Japanese characters, consider contributing to the [original project](https://github.com/NightFurySL2001/WD-XL-font) as well.

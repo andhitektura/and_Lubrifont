@@ -192,7 +192,7 @@ The settings used in this step:
 * `-osbOn 6`: turn on bit 6 of OS/2.fsSelection, marking the Regular weight.
 * `-r`: release mode.
 
-5. `sfntedit -d DSIG .\and_LubrifontSC-Regular.otf`
+5. `sfntedit -d DSIG .\andLubrifontSC-Regular.otf`
 
 This step removes the digital signature (`DSIG`) from the font. Word 2016 and later do not require a digital signature to use OTF fonts, and Google Fonts advises against adding one (even an empty one), so the signature is deleted.
 
@@ -208,7 +208,7 @@ The font is now packaged.
 
 ## Merge to TTC font
 
-`otf2otc -t CFF`` =0 -o and_Lubrifont.ttc and_LubrifontSC-Regular.otf and_LubrifontTC-Regular.otf`
+`otf2otc -t CFF`` =0 -o andLubrifont.ttc andLubrifontSC-Regular.otf andLubrifontTC-Regular.otf`
 
 This step merges the font files into one TTC font file. As the largest table (`CFF `) differs slightly between the fonts, sharing of that table has to be forced. Note that there is a space after `CFF `, and `otf2otc` currently does not support quotation marks (see https://github.com/adobe-type-tools/afdko/issues/1442), so in Windows PowerShell a backtick (\`) is needed to escape the space.
 
@@ -218,9 +218,9 @@ This step merges the font files into one TTC font file. As the largest table (`C
 * `convert_webfonts.py` — generates web fonts.
 * `unicodedata2.py` — reference database for `AI0_HuaYou.txt` (source: https://github.com/fonttools/unicodedata2).
 
-## Patch scripts (v2.200–v2.400)
+## Patch scripts (v2.200–v2.402)
 
-The characters and glyph changes added in v2.200–v2.400 did not go through the merge process above; they were made by Python scripts in `sources/` that edit the font files directly. Every new glyph is constructed from glyphs already in the font (e.g. Ѓ = Г + acute), so the scripts work both on the TrueType source (named glyphs) and on the CID-keyed OTF/TTF release files (new glyphs are appended as CID 18082 onwards; existing CIDs and OpenType features are unchanged). All scripts are safe to re-run: files that are already patched are skipped.
+The characters and glyph changes added in v2.200–v2.402 did not go through the merge process above; they were made by Python scripts in `sources/` that edit the font files directly. Every new glyph is constructed from glyphs already in the font (e.g. Ѓ = Г + acute), so the scripts work both on the TrueType source (named glyphs) and on the CID-keyed OTF/TTF release files (new glyphs are appended as CID 18082 onwards; existing CIDs and OpenType features are unchanged). All scripts are safe to re-run: files that are already patched are skipped.
 
 Run them in this order (requires `fonttools` and `skia-pathops`):
 
@@ -231,16 +231,19 @@ Run them in this order (requires `fonttools` and `skia-pathops`):
 5. `add_mark_anchors.py` — `mark` anchors for Cyrillic letters and `ĆćČčĐđ`
 6. `add_ukrainian_belarusian.py` — Ukrainian and Belarusian `ЄєІіЇїҐґЎў` (v2.300; run `add_mark_anchors.py` again afterwards)
 7. `respace.py` — corrects the side bearings of Latin and Cyrillic letters (accented letters follow their base, mark anchors move with the outlines)
-8. `autokern.py` — kerning: `py autokern.py measure ../fonts/OTF/and_LubrifontTC-Regular.otf kerning.txt` measures the outlines and writes `kerning.txt` (classes, class pairs, exceptions); `py autokern.py apply kerning.txt <fonts>` adds it to the release fonts as a `kern` feature. It also needs `freetype-py` and `uharfbuzz`. The kerning is not added to the TrueType source, because the full build generates GPOS from the feature files; after a full rebuild, run `apply` on the built fonts.
+8. `autokern.py` — kerning: `py autokern.py measure ../fonts/OTF/andLubrifontTC-Regular.otf kerning.txt` measures the outlines and writes `kerning.txt` (classes, class pairs, exceptions); `py autokern.py apply kerning.txt <fonts>` adds it to the release fonts as a `kern` feature. It also needs `freetype-py` and `uharfbuzz`. The kerning is not added to the TrueType source, because the full build generates GPOS from the feature files; after a full rebuild, run `apply` on the built fonts.
 9. `track.py` — opens up the overall letter spacing: `py track.py 12 <fonts>` adds 12 units to both sides of Western letters, digits and punctuation (and 24 to the word space); CJK and full-width glyphs are not touched. Applied in v2.400.
 10. `add_central_european.py` — Polish, Czech, Slovak, Romanian and Turkish letters `ĄąĘęŚśŹźŻżĎďŘřŤťŮůĹĺĽľŔŕȘșȚțŞşŢţĞğİĖė`; afterwards run `add_mark_anchors.py`, then `autokern.py measure` and `autokern.py replace kerning.txt <fonts>` to re-kern with the new letters (`autokern.py` measures as if `track.py`'s spacing were absent, so existing kerning values stay the same).
 11. `rename_family.py` — renames the family to and_Lubrifont (name IDs 1, 3, 4, 6 in all languages, CFF names) and shortens the version string to "Version X.XXX"; the copyright and designer credits are kept. The build sources (`cidfontinfo-*`, `FontMenuNameDB`, `feature_shared_meta.fea`) carry the new names too. Run it after the version bump.
+12. `number_features.py` — tabular figure alternates (`tnum`), a fraction slash and the `frac`, `numr`, `dnom`, `sups`, `subs`, `sinf` features, compiled with feaLib into a scratch copy and merged into the existing GSUB; also gives the math signs one width.
+13. `release_fixes.py` — Windows ascent 1030 + USE_TYPO_METRICS, PostScript names without underscore, OS/2 Unicode ranges and code pages (1250, 1253, 1254), and the "Modifications Copyright 2026 Studio ANDhitektura" credit. The build sources carry the same values.
+14. `make_latin_cyrillic.py` — cuts the light Latin / Cyrillic / Greek edition (`fonts/Latin-Cyrillic/andLubrifont-Regular.otf/.ttf`, family "and_Lubrifont") from the finished TC fonts with the fontTools subsetter, keeping kerning, mark positioning and the number features; run it last.
 
 ```
 cd sources
 py add_macedonian_cyrillic.py WD-XLLubrifont-Regular.ttf ../fonts/OTF/*.otf ../fonts/TTF/*.ttf
 (repeat for the other scripts)
-otf2otc -t "CFF =0" -o ../fonts/and_Lubrifont.ttc ../fonts/OTF/and_LubrifontSC-Regular.otf ../fonts/OTF/and_LubrifontTC-Regular.otf ../fonts/OTF/and_LubrifontJPS-Regular.otf ../fonts/OTF/and_LubrifontJPN-Regular.otf
+otf2otc -t "CFF =0" -o ../fonts/andLubrifont.ttc ../fonts/OTF/andLubrifontSC-Regular.otf ../fonts/OTF/andLubrifontTC-Regular.otf ../fonts/OTF/andLubrifontJPS-Regular.otf ../fonts/OTF/andLubrifontJPN-Regular.otf
 ```
 
 ### How the spacing and kerning were measured
@@ -249,5 +252,7 @@ Each glyph is rendered at 1 unit = 1 pixel, and its left and right profiles (the
 
 * **Spacing (`respace.py`):** the average white space at each side over the letter body is compared with the straight letters (н п и, Н П И H N U); 70% of the difference is applied, open sides are not taken below 10 units, and differences under 5 units are ignored.
 * **Kerning (`autokern.py`):** for each pair, the white gap over the heights where both glyphs have ink is compared with that of нн; 60% of the difference is applied, but no two shapes come closer than 40 units at any height, accents included. Values below 20 units are dropped. Base letters with similar kerning share a class, accented letters join their base letter's class, and pairs that differ from their class (usually an accent that would clash) get exceptions.
+
+> After a full rebuild with the merge process, run `autokern.py apply`/`replace`, `number_features.py` and `release_fixes.py` on the built fonts again: the kerning and the number features are added to the finished fonts, not to the feature files.
 
 > Note: if the full merge process is run again later, `WD-XLLubrifont-Regular.ttf` already contains the new glyphs, but CIDs will be renumbered, so the feature code must be regenerated as described above.
