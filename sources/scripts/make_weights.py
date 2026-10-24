@@ -23,7 +23,7 @@
 #
 # usage: py make_weights.py   (run after make_latin_cyrillic.py;
 #                              writes ../../fonts/and_Lubrifont/andLubrifont-{Light,Bold}.*;
-#                              then run autohint.py on the three .ttf)
+#                              then run make_italics.py and autohint.py)
 #
 # Requires: fonttools, skia-pathops
 

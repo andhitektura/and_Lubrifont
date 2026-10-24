@@ -15,7 +15,7 @@ Compared with the original WD-XL Lubrifont (v2.100):
 - **Spacing:** corrected and evened-out letter spacing, slightly more open overall, and kerning for Latin, Cyrillic and punctuation
 - **Accents:** combining stress accents (`е́ о́ и́`) sit correctly on Cyrillic letters, and accented capitals are no longer clipped at the top
 - **Numbers and symbols:** tabular figures, fractions, superscripts and subscripts, `⌀ ∅ ∆` and arrows, with all math signs at one width
-- **A light Latin / Cyrillic / Greek edition:** about 200 KB instead of 6–12 MB, in three weights: **Light**, Regular and **Bold**
+- **A light Latin / Cyrillic / Greek edition:** about 200 KB instead of 6–12 MB, in three weights, **Light**, Regular and **Bold**, each with an *italic*
 - **Screen and web:** hinted `.ttf` for sharp text at small sizes, and WOFF2 web fonts
 - **Quality:** every change is checked automatically with [fontbakery](https://github.com/fonttools/fontbakery)
 
@@ -25,17 +25,22 @@ See [Updates](./UPDATES.md) for the full list.
 
 Download the latest version from the **[Releases page](https://github.com/andhitektura/and_Lubrifont/releases)**, or take the files from the [`fonts`](./fonts) folder. There are two downloads:
 
-**`and_Lubrifont`: the one you need** for Macedonian, English and other European languages. Three files, one per weight:
+**`and_Lubrifont`: the one you need** for Macedonian, English and other European languages. Six files, three weights with their italics:
 
 | File | Appears in font menus as |
 | --- | --- |
 | `andLubrifont-Regular.ttf` | **and_Lubrifont** |
+| `andLubrifont-Italic.ttf` | and_Lubrifont, style Italic (the *I* button) |
 | `andLubrifont-Bold.ttf` | and_Lubrifont, style Bold (the **B** button) |
+| `andLubrifont-BoldItalic.ttf` | and_Lubrifont, style Bold Italic |
 | `andLubrifont-Light.ttf` | **and_Lubrifont Light** |
+| `andLubrifont-LightItalic.ttf` | and_Lubrifont Light, style Italic |
 
-Install all three. The **Bold** is linked to the Regular: when you switch text to bold, the application uses the real Bold instead of thickening the letters itself, which crowds them together. The **Light** appears as its own entry, because Windows menus only group Regular, Bold and their italics under one name.
+Install all six. The **Bold** and *Italic* are linked to the Regular: when you switch text to bold or italic, the application uses the real Bold or Italic instead of thickening or slanting the letters itself, which distorts them. The **Light** appears as its own entry, because Windows menus only group Regular, Bold and their italics under one name.
 
-The `otf` subfolder has the same three fonts in OpenType-CFF format. They look identical; install either the `.ttf` or the `.otf` files, not both. The `.ttf` is the safe choice: it works everywhere, including technical applications that accept only TrueType fonts, and it is hinted for sharp text on screen. The `woff2` folder is for websites (see [Web fonts](#web-fonts)), not for installing.
+The italic is slanted at 9° and keeps the upright letter shapes, in Latin as well as Cyrillic, in keeping with the font's geometric, technical character.
+
+The `otf` subfolder has the same six fonts in OpenType-CFF format. They look identical; install either the `.ttf` or the `.otf` files, not both. The `.ttf` is the safe choice: it works everywhere, including technical applications that accept only TrueType fonts, and it is hinted for sharp text on screen. The `woff2` folder is for websites (see [Web fonts](#web-fonts)), not for installing.
 
 **`and_Lubrifont-CJK`: only if you also write Chinese or Japanese.** The same Latin, Cyrillic and Greek letters, plus about 18,000 Chinese and Japanese characters (6–12 MB per file, Regular weight only). Install the one version that matches your text:
 
@@ -51,7 +56,7 @@ The `otf` subfolder of the download has the same four fonts in OpenType-CFF form
 
 The regional codes (SC, TC, JP) exist because Chinese and Japanese draw some of the same characters differently.
 
-**Versions.** The version number (e.g. 2.501) only tells you which release you have; there is always just one current version. Install the newest one and uninstall the older one first.
+**Versions.** The version number (e.g. 2.600) only tells you which release you have; there is always just one current version. Install the newest one and uninstall the older one first.
 
 ### Installing on Windows
 
@@ -121,16 +126,19 @@ The original fonts are built with [AFDKO](https://github.com/adobe-type-tools/af
 pip3 install afdko fonttools gftools
 ```
 
-The build scripts `build_mergeFont.bat` / `build_mergeFont.sh` (inherited from WD-XL Lubrifont) are in [`sources`](./sources) and build the CJK fonts. The additions of this edition are made by Python patch scripts in [`sources/scripts`](./sources/scripts) (they also need `skia-pathops`, `freetype-py` and `uharfbuzz`); [Technical notes → Patch scripts](./documentation/TECHNICAL.md#patch-scripts-v2200v2500) describes the order to run them in.
+The build scripts `build_mergeFont.bat` / `build_mergeFont.sh` (inherited from WD-XL Lubrifont) are in [`sources`](./sources) and build the CJK fonts. The additions of this edition are made by Python patch scripts in [`sources/scripts`](./sources/scripts) (they also need `skia-pathops`, `freetype-py` and `uharfbuzz`); [Technical notes → Patch scripts](./documentation/TECHNICAL.md#patch-scripts-v2200v2600) describes the order to run them in.
 
 ## Web fonts
 
-The original WD-XL Lubrifont is available as a web font from [Google Fonts](https://fonts.google.com/specimen/WDXL+Lubrifont+SC) and [ZeoSeven Fonts](https://fonts.zeoseven.com/items/138/). These do not include the additions of this edition. For a website, use the WOFF2 files of and_Lubrifont in [`fonts/and_Lubrifont/woff2`](./fonts/and_Lubrifont/woff2) (about 65 KB each), as one family with three weights:
+The original WD-XL Lubrifont is available as a web font from [Google Fonts](https://fonts.google.com/specimen/WDXL+Lubrifont+SC) and [ZeoSeven Fonts](https://fonts.zeoseven.com/items/138/). These do not include the additions of this edition. For a website, use the WOFF2 files of and_Lubrifont in [`fonts/and_Lubrifont/woff2`](./fonts/and_Lubrifont/woff2) (about 65 KB each), as one family with three weights and their italics:
 
 ```css
 @font-face { font-family: "and_Lubrifont"; src: url("andLubrifont-Light.woff2") format("woff2"); font-weight: 300; }
 @font-face { font-family: "and_Lubrifont"; src: url("andLubrifont-Regular.woff2") format("woff2"); font-weight: 400; }
 @font-face { font-family: "and_Lubrifont"; src: url("andLubrifont-Bold.woff2") format("woff2"); font-weight: 700; }
+@font-face { font-family: "and_Lubrifont"; src: url("andLubrifont-LightItalic.woff2") format("woff2"); font-weight: 300; font-style: italic; }
+@font-face { font-family: "and_Lubrifont"; src: url("andLubrifont-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+@font-face { font-family: "and_Lubrifont"; src: url("andLubrifont-BoldItalic.woff2") format("woff2"); font-weight: 700; font-style: italic; }
 body { font-family: "and_Lubrifont", sans-serif; }
 ```
 
@@ -149,7 +157,7 @@ Copyright 2022-2025 NightFurySL2001 in WD-XL Lubrifont project, licensed under (
 ## Credits
 
 **and_Lubrifont edition**
-- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.501. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero and new 7; respacing and kerning; technical symbols and number features; light Latin/Cyrillic edition with Light and Bold weights; English documentation.
+- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.600. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero and new 7; respacing and kerning; technical symbols and number features; light Latin/Cyrillic edition with Light and Bold weights and italics; hinting and web fonts; English documentation.
 
 **WD-XL Lubrifont (original project)**
 - NightFurySL2001 ([@NightFurySL2001](https://github.com/NightFurySL2001)): WD-XL Lubrifont, expansion for Traditional Chinese, symbols and OpenType features

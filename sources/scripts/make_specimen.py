@@ -30,13 +30,14 @@ def main():
     d.line((X, 305, 1528, 305), fill=RULE, width=2)
     y = 335
     x = X
-    for style in ("Light", "Regular", "Bold"):
+    for style, label in (("Light", "Light"), ("LightItalic", "Italic"), ("Regular", "Regular"),
+                         ("Italic", "Italic"), ("Bold", "Bold"), ("BoldItalic", "Italic")):
         f = font(style, 64)
-        d.text((x, y), style, font=f, fill=INK)
-        x += d.textlength(style, font=f) + 60
+        d.text((x, y), label, font=f, fill=INK)
+        x += d.textlength(label, font=f) + (28 if "Italic" not in style else 64)
     lines = [
         ("Regular", 64, "ГРАДЕЖНА ДОЗВОЛА — Технички опис", 450),
-        ("Light", 52, "Ground floor plan  ·  Level ±0,00  ·  Scale 1:100", 545),
+        ("LightItalic", 52, "Ground floor plan  ·  Level ±0,00  ·  Scale 1:100", 545),
         ("Regular", 52, "Ѓ Ќ Ѕ Љ Њ Џ Ђ Ћ Є Ї Ґ Ў  ·  Ć Č Đ Ą Ę Ś Ż Ř Ů Ș Ț Ğ İ", 625),
         ("Bold", 52, "0123456789  ·  ½ ⅜  ·  m²  ·  CO₂  ·  ⌀12  ·  ∆h  ·  ↔ ⇒ ✓", 705),
     ]
