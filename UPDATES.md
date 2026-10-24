@@ -4,6 +4,10 @@
 
 ## Ver 2.601; 20261024
 
+- The small `l` (also `ĺ ľ ł`) has a short foot: the stem turns right along the baseline, like the arm of the `r` turned upside down, so `l` is clearly different from `I` and `1`
+- `ł` and `Ł` have a longer bar crossing at 40°, so `ł` with its foot does not read as `t`
+- `i j і ј` have the tall rounded dot of the dotted zero instead of the round dot
+- These letter changes apply to all styles and the CJK fonts
 - Longer arm on the small `r` (also `ŕ ř`), 50 units more: the old arm looked stunted. The letter widens by the same amount, so spacing and kerning stay as they were; applies to all styles and the CJK fonts
 - Font metadata for this modified version: vendor Studio ANDhitektura (vendor code `ANDs`, vendor URL), the modification copyright in every language and in the CFF table (replacing a stray Adobe notice inherited from the CID build template), and this edition credited after the original designers. Glyphs are unchanged
 - `OFL.txt` (and its Chinese translations) and `sources/LICENSE.txt` name Studio ANDhitektura as copyright holder of the modifications
