@@ -1,0 +1,30 @@
+name: Character request
+description: A letter, symbol or sign that is missing from and_Lubrifont
+title: "Character request: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the [character set in the README](https://github.com/andhitektura/and_Lubrifont#character-set) and the latest [release](https://github.com/andhitektura/and_Lubrifont/releases) first: the character may already be there.
+  - type: input
+    id: character
+    attributes:
+      label: Character
+      description: Paste the character itself, and its Unicode code if you know it.
+      placeholder: "e.g. ⌀ (U+2300)"
+    validations:
+      required: true
+  - type: textarea
+    id: use
+    attributes:
+      label: What is it used for?
+      description: The language, document or drawing it is needed in.
+      placeholder: "e.g. diameters in reinforcement schedules"
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Reference (optional)
+      description: An image or a link showing how the character usually looks.

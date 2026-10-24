@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Installation and use
+    url: https://github.com/andhitektura/and_Lubrifont#download
+    about: How to install the fonts, which file to choose and how to switch on the OpenType features.
+  - name: Chinese and Japanese characters
+    url: https://github.com/NightFurySL2001/WD-XL-font/issues
+    about: Problems in the CJK characters themselves may also concern the original WD-XL Lubrifont project.
