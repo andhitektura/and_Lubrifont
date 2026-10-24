@@ -256,6 +256,7 @@ Run them in this order (requires `fonttools` and `skia-pathops`):
 15. `make_weights.py` — builds the Light and Bold weights from that Regular: every outline is offset with skia-pathops (−9 units per edge for Light, +12 for Bold), stretched zone by zone back onto the Regular's descender, baseline, x-height and cap height, and given new sidebearings (Light −4, Bold +12 per side); base anchors move with the outlines and kerning is kept. 1-unit leftover contours in `к ж ќ κ` are dropped. Light is named as its own family ("and_Lubrifont Light", weight 300); Bold is style-linked to the Regular ("and_Lubrifont" / "Bold", weight 700). Finally the Windows ascent/descent of all three weights is set to the family's highest and lowest point. Run it last.
 16. `autohint.py` — TrueType hinting of the three `.ttf` with ttfautohint (Latin, Cyrillic and Greek; Windows compatibility mode, so glyphs stay inside the Windows ascent/descent). Existing hinting is removed first, so it can be re-run; `make_weights.py` removes the Regular's hinting from the Light and Bold it builds. Run it last: `py autohint.py ../../fonts/and_Lubrifont/*.ttf`. Requires `ttfautohint-py`.
 17. `make_woff2.py` — WOFF2 web fonts of the three hinted `.ttf` in `fonts/and_Lubrifont/woff2/`.
+18. `set_version.py` — sets the version (head, name IDs 3 and 5, CFF) before a release: `py set_version.py 2.501 <fonts>`; then rebuild the `.ttc` and run `make_woff2.py`.
 
 ```
 cd sources/scripts

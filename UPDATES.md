@@ -2,7 +2,7 @@
 
 # Updates
 
-## Unreleased
+## Ver 2.501; 20261024
 
 - Reorganised the `fonts` folder into two families: `fonts/and_Lubrifont/` (Light, Regular, Bold; `.ttf`, with `.otf` in `otf/`) and `fonts/and_Lubrifont-CJK/` (SC, TC, JP S, JP N and the `.ttc`). The patch scripts moved to `sources/scripts/`. The fonts themselves are unchanged.
 
