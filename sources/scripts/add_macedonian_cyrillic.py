@@ -239,7 +239,7 @@ def patch_font(path_in, new_glyphs=NEW_GLYPHS, builder_class=Builder):
         new_names[uni] = gname
         bp = BoundsPen(None)
         rec.replay(bp)
-        xmin, ymin, xmax, ymax = (round(v) for v in bp.bounds)
+        xmin, ymin, xmax, ymax = (round(v) for v in bp.bounds or (0, 0, 0, 0))   # spaces have no outline
 
         if is_cff:
             private = td.FDArray[0].Private if is_cid else td.Private
