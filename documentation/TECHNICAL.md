@@ -222,8 +222,9 @@ This step merges the font files into one TTC font file. As the largest table (`C
 
 ```
 fonts/
-  and_Lubrifont/          Latin / Cyrillic / Greek family: Light, Regular, Bold (.ttf)
+  and_Lubrifont/          Latin / Cyrillic / Greek family: Light, Regular, Bold (.ttf, hinted)
     otf/                  the same three as OpenType-CFF
+    woff2/                the same three as web fonts
   and_Lubrifont-CJK/      SC, TC, JP S, JP N with Chinese and Japanese (.ttf) and andLubrifont.ttc
     otf/                  the same four as OpenType-CFF; the patch scripts work on these
 sources/                  the inherited WD-XL Lubrifont build (AFDKO), writes fonts/and_Lubrifont-CJK/
@@ -250,9 +251,12 @@ Run them in this order (requires `fonttools` and `skia-pathops`):
 10. `add_central_european.py` — Polish, Czech, Slovak, Romanian and Turkish letters `ĄąĘęŚśŹźŻżĎďŘřŤťŮůĹĺĽľŔŕȘșȚțŞşŢţĞğİĖė`; afterwards run `add_mark_anchors.py`, then `autokern.py measure` and `autokern.py replace kerning.txt <fonts>` to re-kern with the new letters (`autokern.py` measures as if `track.py`'s spacing were absent, so existing kerning values stay the same).
 11. `rename_family.py` — renames the family to and_Lubrifont (name IDs 1, 3, 4, 6 in all languages, CFF names) and shortens the version string to "Version X.XXX"; the copyright and designer credits are kept. The build sources (`cidfontinfo-*`, `FontMenuNameDB`, `feature_shared_meta.fea`) carry the new names too. Run it after the version bump.
 12. `number_features.py` — tabular figure alternates (`tnum`), a fraction slash and the `frac`, `numr`, `dnom`, `sups`, `subs`, `sinf` features, compiled with feaLib into a scratch copy and merged into the existing GSUB; also gives the math signs one width.
-13. `release_fixes.py` — Windows ascent 1030 + USE_TYPO_METRICS, PostScript names without underscore, OS/2 Unicode ranges and code pages (1250, 1253, 1254), and the "Modifications Copyright 2026 Studio ANDhitektura" credit. The build sources carry the same values.
+13. `release_fixes.py` — line metrics 945/−235 with no line gap in typo and hhea (the `.otf` and `.ttf` space lines alike), Windows ascent/descent covering the font's highest and lowest point + USE_TYPO_METRICS, PostScript names without underscore, OS/2 Unicode ranges and code pages (1250, 1253, 1254), and the "Modifications Copyright 2026 Studio ANDhitektura" credit. The build sources carry the same values.
 14. `make_latin_cyrillic.py` — cuts the light Latin / Cyrillic / Greek edition (`fonts/and_Lubrifont/andLubrifont-Regular.ttf` and `otf/andLubrifont-Regular.otf`, family "and_Lubrifont") from the finished TC fonts with the fontTools subsetter, keeping kerning, mark positioning and the number features.
-15. `make_weights.py` — builds the Light and Bold weights from that Regular: every outline is offset with skia-pathops (−9 units per edge for Light, +12 for Bold), stretched zone by zone back onto the Regular's descender, baseline, x-height and cap height, and given new sidebearings (Light −4, Bold +12 per side); base anchors move with the outlines and kerning is kept. 1-unit leftover contours in `к ж ќ κ` are dropped. Light is named as its own family ("and_Lubrifont Light", weight 300); Bold is style-linked to the Regular ("and_Lubrifont" / "Bold", weight 700). Run it last.
+15. `make_weights.py` — builds the Light and Bold weights from that Regular: every outline is offset with skia-pathops (−9 units per edge for Light, +12 for Bold), stretched zone by zone back onto the Regular's descender, baseline, x-height and cap height, and given new sidebearings (Light −4, Bold +12 per side); base anchors move with the outlines and kerning is kept. 1-unit leftover contours in `к ж ќ κ` are dropped. Light is named as its own family ("and_Lubrifont Light", weight 300); Bold is style-linked to the Regular ("and_Lubrifont" / "Bold", weight 700). Finally the Windows ascent/descent of all three weights is set to the family's highest and lowest point. Run it last.
+16. `autohint.py` — TrueType hinting of the three `.ttf` with ttfautohint (Latin, Cyrillic and Greek; Windows compatibility mode, so glyphs stay inside the Windows ascent/descent). Existing hinting is removed first, so it can be re-run; `make_weights.py` removes the Regular's hinting from the Light and Bold it builds. Run it last: `py autohint.py ../../fonts/and_Lubrifont/*.ttf`. Requires `ttfautohint-py`.
+17. `make_woff2.py` — WOFF2 web fonts of the three hinted `.ttf` in `fonts/and_Lubrifont/woff2/`.
+18. `set_version.py` — sets the version (head, name IDs 3 and 5, CFF) before a release: `py set_version.py 2.501 <fonts>`; then rebuild the `.ttc` and run `make_woff2.py`.
 
 ```
 cd sources/scripts

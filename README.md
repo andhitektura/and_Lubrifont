@@ -33,7 +33,7 @@ Download the latest version from the **[Releases page](https://github.com/andhit
 
 Install all three. The **Bold** is linked to the Regular: when you press **B** in Word, Rhino or Affinity, the application uses the real Bold instead of thickening the letters itself, which crowds them together. The **Light** appears as its own entry, because Windows menus only group Regular, Bold and their italics under one name.
 
-The `otf` subfolder has the same three fonts in OpenType-CFF format, for Adobe and Affinity users who prefer it. They look identical; install either the `.ttf` or the `.otf` files, not both. AutoCAD needs the `.ttf`.
+The `otf` subfolder has the same three fonts in OpenType-CFF format, for Adobe and Affinity users who prefer it. They look identical; install either the `.ttf` or the `.otf` files, not both. AutoCAD needs the `.ttf`. The `woff2` folder is for websites (see [Web fonts](#web-fonts)), not for installing.
 
 **`and_Lubrifont-CJK`: only if you also write Chinese or Japanese.** The same Latin, Cyrillic and Greek letters, plus about 18,000 Chinese and Japanese characters (6–12 MB per file, Regular weight only). Install the one version that matches your text:
 
@@ -125,7 +125,16 @@ The build scripts `build_mergeFont.bat` / `build_mergeFont.sh` (inherited from W
 
 ## Web fonts
 
-The original WD-XL Lubrifont is available as a web font from [Google Fonts](https://fonts.google.com/specimen/WDXL+Lubrifont+SC) and [ZeoSeven Fonts](https://fonts.zeoseven.com/items/138/). These do not include the additions of this edition. For a website, use `fonts/and_Lubrifont/andLubrifont-Regular.ttf` (convert it to WOFF2 with fontTools if needed).
+The original WD-XL Lubrifont is available as a web font from [Google Fonts](https://fonts.google.com/specimen/WDXL+Lubrifont+SC) and [ZeoSeven Fonts](https://fonts.zeoseven.com/items/138/). These do not include the additions of this edition. For a website, use the WOFF2 files of and_Lubrifont in [`fonts/and_Lubrifont/woff2`](./fonts/and_Lubrifont/woff2) (about 65 KB each), as one family with three weights:
+
+```css
+@font-face { font-family: "and_Lubrifont"; src: url("andLubrifont-Light.woff2") format("woff2"); font-weight: 300; }
+@font-face { font-family: "and_Lubrifont"; src: url("andLubrifont-Regular.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "and_Lubrifont"; src: url("andLubrifont-Bold.woff2") format("woff2"); font-weight: 700; }
+body { font-family: "and_Lubrifont", sans-serif; }
+```
+
+The CJK fonts have no web version: at over 10 MB each they are too large to serve whole.
 
 ## License
 
@@ -140,7 +149,7 @@ Copyright 2022-2025 NightFurySL2001 in WD-XL Lubrifont project, licensed under (
 ## Credits
 
 **and_Lubrifont edition**
-- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.500. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero and new 7; respacing and kerning; technical symbols and number features; light Latin/Cyrillic edition with Light and Bold weights; English documentation.
+- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.501. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero and new 7; respacing and kerning; technical symbols and number features; light Latin/Cyrillic edition with Light and Bold weights; English documentation.
 
 **WD-XL Lubrifont (original project)**
 - NightFurySL2001 ([@NightFurySL2001](https://github.com/NightFurySL2001)): WD-XL Lubrifont, expansion for Traditional Chinese, symbols and OpenType features

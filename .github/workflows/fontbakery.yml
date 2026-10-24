@@ -1,0 +1,50 @@
+# Quality check of the and_Lubrifont and and_Lubrifont-CJK fonts with fontbakery (universal
+# profile). Runs on every push and pull request that changes the fonts or
+# the scripts; fails if any check FAILs. The full report is attached to the
+# run as an artifact (fontbakery-report) and shown in the run summary.
+name: Font quality (fontbakery)
+
+on:
+  push:
+    paths: ["fonts/**", "sources/scripts/**", ".github/workflows/fontbakery.yml"]
+  pull_request:
+    paths: ["fonts/**", "sources/scripts/**", ".github/workflows/fontbakery.yml"]
+  workflow_dispatch:
+
+jobs:
+  fontbakery:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        set:
+          - { name: ttf, files: "fonts/and_Lubrifont/*.ttf" }
+          - { name: otf, files: "fonts/and_Lubrifont/otf/*.otf" }
+          # CJK: one job per font (about 5 minutes each); file_size is
+          # excluded, as 30,000+ CJK glyphs are always "massive"
+          - { name: cjk-SC, files: "fonts/and_Lubrifont-CJK/andLubrifontSC-Regular.ttf", skip: "-x file_size" }
+          - { name: cjk-TC, files: "fonts/and_Lubrifont-CJK/andLubrifontTC-Regular.ttf", skip: "-x file_size" }
+          - { name: cjk-JPS, files: "fonts/and_Lubrifont-CJK/andLubrifontJPS-Regular.ttf", skip: "-x file_size" }
+          - { name: cjk-JPN, files: "fonts/and_Lubrifont-CJK/andLubrifontJPN-Regular.ttf", skip: "-x file_size" }
+    name: ${{ matrix.set.name }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "fontbakery==1.1.0"
+      - name: fontbakery check-universal
+        # fontdata_namecheck queries an online name registry, not the font
+        run: >
+          fontbakery check-universal -x fontdata_namecheck ${{ matrix.set.skip }} -l WARN --succinct
+          --ghmarkdown report-${{ matrix.set.name }}.md
+          --html report-${{ matrix.set.name }}.html
+          ${{ matrix.set.files }}
+      - name: Report in run summary
+        if: always()
+        run: cat report-${{ matrix.set.name }}.md >> "$GITHUB_STEP_SUMMARY" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fontbakery-report-${{ matrix.set.name }}
+          path: report-${{ matrix.set.name }}.*
