@@ -2,6 +2,24 @@
 
 # Updates
 
+## Ver 2.402; 20261024
+
+- Fixed accented capitals being clipped at the top in Windows applications (`Ѓ Ќ Ѐ Ѝ Ў Č Ř Š Ž Ś Ź Ń Ů` …): Windows ascent raised to 1030 and USE_TYPO_METRICS set, so line spacing in modern applications is unchanged
+
+- New number features: tabular figures (`tnum`), fractions (`frac`, e.g. 3/8), numerators and denominators (`numr`, `dnom`), superscripts for all digits and `+ −` (`sups`), subscripts (`subs`, `sinf`) (`sources/number_features.py`)
+
+- The math signs `+ − = < > ± × ÷ ¬` now share one width, so they align in tables
+
+- PostScript names without the underscore (`andLubrifontSC-Regular` …) and files renamed to match (`andLubrifontSC-Regular.otf` …, `andLubrifont.ttc`); the family name stays and_Lubrifont
+
+- Windows language support declared for Central European (1250), Greek (1253) and Turkish (1254), and the Latin Extended-A/B ranges
+
+- Copyright notice extended with "Modifications Copyright 2026 Studio ANDhitektura" (`sources/release_fixes.py`)
+
+- New light edition with only the Latin, Cyrillic and Greek characters, numbers and symbols: `fonts/Latin-Cyrillic/andLubrifont-Regular.otf/.ttf` (about 200 KB instead of 6–12 MB), installing as **and_Lubrifont** (`sources/make_latin_cyrillic.py`)
+
+- README rewritten: specimen, download guide, software support, credits for this edition
+
 ## Ver 2.401; 20261023
 
 - Renamed the fonts to **and_Lubrifont** (and_Lubrifont SC / TC / JP S / JP N; files `and_Lubrifont*.otf/.ttf` and `and_Lubrifont.ttc`), so they no longer clash with the original WD-XL Lubrifont; the copyright and credits of the original project are kept (`sources/rename_family.py`)

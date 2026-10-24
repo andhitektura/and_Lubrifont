@@ -67,41 +67,41 @@ makeotf -f cidfont-JPN.ps -omitMacNames -mf .\FontMenuNameDB -ff .\feature_JPN.f
 4.1. prep metadata
 
 delete signature:
-sfntedit -d DSIG .\and_LubrifontSC-Regular.otf
-sfntedit -d DSIG .\and_LubrifontTC-Regular.otf
-sfntedit -d DSIG .\and_LubrifontJPS-Regular.otf
-sfntedit -d DSIG .\and_LubrifontJPN-Regular.otf
+sfntedit -d DSIG .\andLubrifontSC-Regular.otf
+sfntedit -d DSIG .\andLubrifontTC-Regular.otf
+sfntedit -d DSIG .\andLubrifontJPS-Regular.otf
+sfntedit -d DSIG .\andLubrifontJPN-Regular.otf
 
 add metadata dlng, slng
-py add_design_language.py .\and_LubrifontSC-Regular.otf
-py add_design_language.py .\and_LubrifontTC-Regular.otf
-py add_design_language.py .\and_LubrifontJPS-Regular.otf
-py add_design_language.py .\and_LubrifontJPN-Regular.otf
+py add_design_language.py .\andLubrifontSC-Regular.otf
+py add_design_language.py .\andLubrifontTC-Regular.otf
+py add_design_language.py .\andLubrifontJPS-Regular.otf
+py add_design_language.py .\andLubrifontJPN-Regular.otf
 
 5. merge into otc 
 #escape space in CFF with `, only works in Windows Powershell (quotation marks hv bug)
-otf2otc -t CFF` =0 -o and_Lubrifont.ttc .\and_LubrifontSC-Regular.otf .\and_LubrifontTC-Regular.otf .\and_LubrifontJPS-Regular.otf .\and_LubrifontJPN-Regular.otf
+otf2otc -t CFF` =0 -o andLubrifont.ttc .\andLubrifontSC-Regular.otf .\andLubrifontTC-Regular.otf .\andLubrifontJPS-Regular.otf .\andLubrifontJPN-Regular.otf
 
 5.1 prep TTF for GF
-otf2ttf -o and_LubrifontSC-Regular.ttf and_LubrifontSC-Regular.otf
-otf2ttf -o and_LubrifontTC-Regular.ttf and_LubrifontTC-Regular.otf
-otf2ttf -o and_LubrifontJPS-Regular.ttf and_LubrifontJPS-Regular.otf
-otf2ttf -o and_LubrifontJPN-Regular.ttf and_LubrifontJPN-Regular.otf
-py googlefonts_metrics.py .\and_LubrifontSC-Regular.ttf
-py googlefonts_metrics.py .\and_LubrifontTC-Regular.ttf
-py googlefonts_metrics.py .\and_LubrifontJPS-Regular.ttf
-py googlefonts_metrics.py .\and_LubrifontJPN-Regular.ttf
-gftools fix-nonhinting .\and_LubrifontSC-Regular.ttf .\and_LubrifontSC-Regular.ttf --no-backup
-gftools fix-nonhinting .\and_LubrifontTC-Regular.ttf .\and_LubrifontTC-Regular.ttf --no-backup
-gftools fix-nonhinting .\and_LubrifontJPS-Regular.ttf .\and_LubrifontJPS-Regular.ttf --no-backup
-gftools fix-nonhinting .\and_LubrifontJPN-Regular.ttf .\and_LubrifontJPN-Regular.ttf --no-backup
+otf2ttf -o andLubrifontSC-Regular.ttf andLubrifontSC-Regular.otf
+otf2ttf -o andLubrifontTC-Regular.ttf andLubrifontTC-Regular.otf
+otf2ttf -o andLubrifontJPS-Regular.ttf andLubrifontJPS-Regular.otf
+otf2ttf -o andLubrifontJPN-Regular.ttf andLubrifontJPN-Regular.otf
+py googlefonts_metrics.py .\andLubrifontSC-Regular.ttf
+py googlefonts_metrics.py .\andLubrifontTC-Regular.ttf
+py googlefonts_metrics.py .\andLubrifontJPS-Regular.ttf
+py googlefonts_metrics.py .\andLubrifontJPN-Regular.ttf
+gftools fix-nonhinting .\andLubrifontSC-Regular.ttf .\andLubrifontSC-Regular.ttf --no-backup
+gftools fix-nonhinting .\andLubrifontTC-Regular.ttf .\andLubrifontTC-Regular.ttf --no-backup
+gftools fix-nonhinting .\andLubrifontJPS-Regular.ttf .\andLubrifontJPS-Regular.ttf --no-backup
+gftools fix-nonhinting .\andLubrifontJPN-Regular.ttf .\andLubrifontJPN-Regular.ttf --no-backup
 
 6. Font check (result store in HTML)
-fontbakery check-universal --html check-SC.html and_LubrifontSC-Regular.otf
-fontbakery check-universal --html check-TC.html and_LubrifontTC-Regular.otf
-fontbakery check-universal --html check-JPStd.html and_LubrifontJPS-Regular.otf
-fontbakery check-universal --html check-JPStdN.html and_LubrifontJPN-Regular.otf
-fontbakery check-universal --html check-TTC.html and_Lubrifont.ttc
+fontbakery check-universal --html check-SC.html andLubrifontSC-Regular.otf
+fontbakery check-universal --html check-TC.html andLubrifontTC-Regular.otf
+fontbakery check-universal --html check-JPStd.html andLubrifontJPS-Regular.otf
+fontbakery check-universal --html check-JPStdN.html andLubrifontJPN-Regular.otf
+fontbakery check-universal --html check-TTC.html andLubrifont.ttc
 
 Ext: build webfont
 py convert_webfonts.py

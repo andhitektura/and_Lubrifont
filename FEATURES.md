@@ -5,7 +5,7 @@
 and_Lubrifont has set up multiple OpenType features, which are listed as follows.
 
 > [!NOTE] 
-> The version of font for this document is v2.401 (20261023).
+> The version of font for this document is v2.402 (20261024).
 
 ## `vert` / `vrt2` — Vertical Alternates
 
@@ -32,6 +32,28 @@ This feature is turned on automatically; users do not need to set anything up.
 Since v2.300, Latin and Cyrillic letters and the common punctuation are kerned, so pairs such as `Та`, `Гл`, `ГА`, `LT`, `AV`, `Yo` and `P.` close up. Kerning applies within each script (Latin with Latin, Cyrillic with Cyrillic) and with punctuation; digits are not kerned, so numbers stay aligned in tables and drawings.
 
 This feature is on by default in most software (Affinity, Adobe apps, Rhino, browsers). In Microsoft Word it must be turned on: select the text, open **Font → Advanced** and tick **Kerning for fonts**. AutoCAD's text engine does not apply kerning; there the even letter spacing of the font itself applies.
+
+## `tnum` — Tabular Figures
+
+By default the digits are proportional (the `1` is narrower). With `tnum` all digits have the same width, so columns of numbers line up in tables, schedules and title blocks:
+
+| Default | `tnum` |
+| --- | --- |
+| `1 111,18` — narrow 1 | every digit 532 units wide |
+
+The math signs `+ − = < > ± × ÷ ¬` always share one width (662 units).
+
+## `frac` — Fractions
+
+Typing `3/8`, `5/16` or `12/25` with `frac` on gives proper fractions, laid out like the built-in `½ ¼ ¾`. Note that it applies to any digits around a slash (e.g. dates), so turn it on only for the fractions.
+
+## `sups`, `subs` / `sinf`, `numr`, `dnom` — Superscripts and Subscripts
+
+* `sups`: superscript digits and `+ −` (e.g. select `2` in `m2` → `m²`, `-5` in `10-5` → `10⁻⁵`)
+* `subs` / `sinf`: subscript digits (`CO2` → `CO₂`)
+* `numr` / `dnom`: the numerator and denominator digits used by `frac`
+
+These features are switched on in the application: in Affinity and Adobe software in the OpenType or Typography panel, in Word under Font → Advanced, in CSS with `font-feature-settings` (e.g. `"tnum"`). AutoCAD does not support OpenType features; there, use the precomposed characters `½ ⅓ ¼ ⅛ ² ³ ₂` directly.
 
 ## `mark` / `mkmk` — Mark Positioning
 

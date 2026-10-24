@@ -56,33 +56,33 @@ mergeFonts -cid cidfontinfo-JPN cidfont-JPN.ps map_HuaYou.txt font.pfa
 ::build
 echo ### Start building SC ver ###
 mergeFonts -cid cidfontinfo-SC cidfont-SC.ps map_HuaYou.txt font.pfa
-makeotf -f cidfont-SC.ps -omitMacNames -mf FontMenuNameDB -ff feature_SC.fea -cs 25 -ch cmap_SC.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -o "%startdir%\OTF" %release_tag%
+makeotf -f cidfont-SC.ps -omitMacNames -mf FontMenuNameDB -ff feature_SC.fea -cs 25 -ch cmap_SC.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "%startdir%\OTF" %release_tag%
 echo ### Start building TC ver ###
 mergeFonts -cid cidfontinfo-TC cidfont-TC.ps map_HuaYou.txt font.pfa
-makeotf -f cidfont-TC.ps -omitMacNames -mf FontMenuNameDB -ff feature_TC.fea -cs 2 -ch cmap_TC.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -o "%startdir%\OTF" %release_tag%
+makeotf -f cidfont-TC.ps -omitMacNames -mf FontMenuNameDB -ff feature_TC.fea -cs 2 -ch cmap_TC.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "%startdir%\OTF" %release_tag%
 echo ### Start building JPS ver ###
 mergeFonts -cid cidfontinfo-JPS cidfont-JPS.ps map_HuaYou.txt font.pfa
-makeotf -f cidfont-JPS.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPS.fea -cs 1 -ch cmap_JP90.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -o "%startdir%\OTF" %release_tag%
+makeotf -f cidfont-JPS.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPS.fea -cs 1 -ch cmap_JP90.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "%startdir%\OTF" %release_tag%
 echo ### Start building JPN ver ###
 mergeFonts -cid cidfontinfo-JPN cidfont-JPS.ps map_HuaYou.txt font.pfa
-makeotf -f cidfont-JPN.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPN.fea -cs 1 -ch cmap_JP04.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -o "%startdir%\OTF" %release_tag%
+makeotf -f cidfont-JPN.ps -omitMacNames -mf FontMenuNameDB -ff feature_JPN.fea -cs 1 -ch cmap_JP04.txt -ci UVS_sequence_CID -osv 5 -osbOn 6 -osbOn 7 -o "%startdir%\OTF" %release_tag%
 
 :: backtick escape space for CFF  only works in PowerShell
 if "%collection%" == "y" (
 echo "Building TTC"
-otf2otc -t "CFF "=0 -o "%startdir%\and_Lubrifont.ttc" "%startdir%\OTF\and_LubrifontSC-Regular.otf" "%startdir%\OTF\and_LubrifontTC-Regular.otf" "%startdir%\OTF\and_LubrifontJPS-Regular.otf" "%startdir%\OTF\and_LubrifontJPN-Regular.otf"
+otf2otc -t "CFF "=0 -o "%startdir%\andLubrifont.ttc" "%startdir%\OTF\andLubrifontSC-Regular.otf" "%startdir%\OTF\andLubrifontTC-Regular.otf" "%startdir%\OTF\andLubrifontJPS-Regular.otf" "%startdir%\OTF\andLubrifontJPN-Regular.otf"
 )
 
 ::echo "Start check"
-::fontbakery check-universal --html check-SC.html and_LubrifontSC-Regular.otf
-::fontbakery check-universal --html check-TC.html and_LubrifontTC-Regular.otf
-::fontbakery check-universal --html check-TTC.html and_Lubrifont.ttc
+::fontbakery check-universal --html check-SC.html andLubrifontSC-Regular.otf
+::fontbakery check-universal --html check-TC.html andLubrifontTC-Regular.otf
+::fontbakery check-universal --html check-TTC.html andLubrifont.ttc
 
 for %%f in (
-and_LubrifontSC-Regular.otf
-and_LubrifontTC-Regular.otf
-and_LubrifontJPS-Regular.otf
-and_LubrifontJPN-Regular.otf
+andLubrifontSC-Regular.otf
+andLubrifontTC-Regular.otf
+andLubrifontJPS-Regular.otf
+andLubrifontJPN-Regular.otf
 ) do (
     echo Processing file: "%startdir%\OTF\%%f"
     sfntedit -d DSIG "%startdir%\OTF\%%f"

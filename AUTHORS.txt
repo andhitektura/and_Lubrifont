@@ -5,3 +5,4 @@
 # Names should be added to this file as:
 # Name or Organization <email address>
 NightFurySL2001 <nfsl-fonts@outlook.my>
+Studio ANDhitektura (and_Lubrifont edition) <https://github.com/andhitektura>

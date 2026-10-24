@@ -4,8 +4,14 @@ table OS/2 {
   UnicodeRange
     0   # Basic Latin
     1   # Latin-1 Supplement
+    2   # Latin Extended-A
+    3   # Latin Extended-B
     7	  # Greek and Coptic
     9   # Cyrillic
+    31  # General Punctuation
+    32  # Superscripts And Subscripts
+    37  # Arrows
+    38  # Mathematical Operators
     57	# Non-Plane 0
     59  # CJK Unified Ideographs
     65	# Vertical Forms/CJK Compatibility Forms
@@ -13,6 +19,9 @@ table OS/2 {
   CodePageRange
     1252    # Latin 1
     1251    # Cyrillic
+    1250    # Central European
+    1253    # Greek
+    1254    # Turkish
     950     # Traditional Chinese
     ;
   TypoAscender 880;
@@ -25,7 +34,7 @@ table OS/2 {
   Panose 0 0 0 0 0 0 0 0 0 0;
   FSType 0;
   Vendor "NFSL";
-  winAscent 900;
+  winAscent 1030;
   winDescent 250;
 } OS/2;
 
