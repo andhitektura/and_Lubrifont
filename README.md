@@ -110,7 +110,7 @@ The original fonts are built with [AFDKO](https://github.com/adobe-type-tools/af
 pip3 install afdko fonttools gftools
 ```
 
-The build scripts `build_mergeFont.bat` / `build_mergeFont.sh` are in [`sources`](./sources). The additions of this edition are made by Python patch scripts in the same folder (they also need `skia-pathops`, `freetype-py` and `uharfbuzz`); [Technical notes → Patch scripts](./documentation/TECHNICAL.md#patch-scripts-v2200v2402) describes the order to run them in.
+The build scripts `build_mergeFont.bat` / `build_mergeFont.sh` are in [`sources`](./sources). The additions of this edition are made by Python patch scripts in the same folder (they also need `skia-pathops`, `freetype-py` and `uharfbuzz`); [Technical notes → Patch scripts](./documentation/TECHNICAL.md#patch-scripts-v2200v2500) describes the order to run them in.
 
 ## Web fonts
 
@@ -129,7 +129,7 @@ Copyright 2022-2025 NightFurySL2001 in WD-XL Lubrifont project, licensed under (
 ## Credits
 
 **and_Lubrifont edition**
-- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.402. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero and new 7; respacing and kerning; technical symbols and number features; light Latin/Cyrillic edition with Light and Bold weights; English documentation.
+- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.500. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero and new 7; respacing and kerning; technical symbols and number features; light Latin/Cyrillic edition with Light and Bold weights; English documentation.
 
 **WD-XL Lubrifont (original project)**
 - NightFurySL2001 ([@NightFurySL2001](https://github.com/NightFurySL2001)): WD-XL Lubrifont, expansion for Traditional Chinese, symbols and OpenType features

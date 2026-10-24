@@ -2,7 +2,7 @@
 
 # Updates
 
-## Unreleased
+## Ver 2.500; 20261024
 
 - New weights **Light** and **Bold** for the Latin / Cyrillic / Greek edition: `fonts/Latin-Cyrillic/andLubrifont-Light.otf/.ttf` and `andLubrifont-Bold.otf/.ttf` (`sources/make_weights.py`)
   - Light: strokes 74 instead of 92, set slightly tighter to keep the Regular's rhythm; installs as its own family **and_Lubrifont Light**

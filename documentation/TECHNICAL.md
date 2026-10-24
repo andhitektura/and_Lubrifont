@@ -218,9 +218,9 @@ This step merges the font files into one TTC font file. As the largest table (`C
 * `convert_webfonts.py` — generates web fonts.
 * `unicodedata2.py` — reference database for `AI0_HuaYou.txt` (source: https://github.com/fonttools/unicodedata2).
 
-## Patch scripts (v2.200–v2.402)
+## Patch scripts (v2.200–v2.500)
 
-The characters and glyph changes added in v2.200–v2.402 did not go through the merge process above; they were made by Python scripts in `sources/` that edit the font files directly. Every new glyph is constructed from glyphs already in the font (e.g. Ѓ = Г + acute), so the scripts work both on the TrueType source (named glyphs) and on the CID-keyed OTF/TTF release files (new glyphs are appended as CID 18082 onwards; existing CIDs and OpenType features are unchanged). All scripts are safe to re-run: files that are already patched are skipped.
+The characters and glyph changes added in v2.200–v2.500 did not go through the merge process above; they were made by Python scripts in `sources/` that edit the font files directly. Every new glyph is constructed from glyphs already in the font (e.g. Ѓ = Г + acute), so the scripts work both on the TrueType source (named glyphs) and on the CID-keyed OTF/TTF release files (new glyphs are appended as CID 18082 onwards; existing CIDs and OpenType features are unchanged). All scripts are safe to re-run: files that are already patched are skipped.
 
 Run them in this order (requires `fonttools` and `skia-pathops`):
 
