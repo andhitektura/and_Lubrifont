@@ -1,5 +1,6 @@
 版權 2020-2025 © WD-XL 滑油字計劃作者 (https://github.com/NightFurySL2001/WD-XL-font)
 版權 2018-2020 © 站酷慶科黃油體計劃作者 (https://www.github.com/googlefonts/zcool-qingke-huangyou)
+版權 2026 © Studio ANDhitektura，and_Lubrifont 修改部分 (https://github.com/andhitektura/and_Lubrifont)
 
 譯者按
 《SIL開源字型授權》由SIL國際制定，初版於2005年發佈，如今已是諸多開源字

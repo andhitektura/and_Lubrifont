@@ -14,7 +14,13 @@
 #   Extended-A/B, punctuation, super/subscripts, arrows, math operators;
 #   code pages 1250 (Central European), 1253 (Greek), 1254 (Turkish).
 # - Copyright notice: "Modifications Copyright 2026 Studio ANDhitektura."
-#   added after the original notice (which is kept, as the OFL requires).
+#   added after the original notice (which is kept, as the OFL requires),
+#   in every language, and the same notice in the CFF table (which had
+#   carried a stray Adobe notice from the AFDKO CID template).
+# - Vendor: Studio ANDhitektura (OS/2 vendor code ANDH, name ID 8, vendor
+#   URL in name ID 11 and the unique ID in name ID 3), so applications do
+#   not present the original author as vendor of this modified version. The
+#   original designers stay credited in name ID 9, followed by this edition.
 #
 # usage: py release_fixes.py font1.otf [font2.ttf ...]   (safe to re-run)
 
@@ -26,6 +32,11 @@ USE_TYPO_METRICS = 1 << 7
 UNICODE_BITS = [2, 3, 31, 32, 37, 38]
 CODEPAGE_BITS = [1, 3, 4]   # 1250, 1253, 1254
 CREDIT = "Modifications Copyright 2026 Studio ANDhitektura."
+VENDOR_ID = "ANDH"
+MANUFACTURER = "Studio ANDhitektura"
+VENDOR_URL = "https://github.com/andhitektura/and_Lubrifont"
+DESIGNER_CREDIT = ("[and_Lubrifont] Studio ANDhitektura - Cyrillic and Central European "
+                   "extension, spacing, kerning, weights and italics")
 
 
 def ps_name(s):
@@ -50,18 +61,28 @@ def patch_font(path):
     os2.fsSelection |= USE_TYPO_METRICS
     set_bits(os2, "ulUnicodeRange", UNICODE_BITS)
     set_bits(os2, "ulCodePageRange", CODEPAGE_BITS)
-    for record in font["name"].names:
+    os2.achVendID = VENDOR_ID
+    name = font["name"]
+    for record in name.names:
         text = record.toUnicode()
         new = text
         if record.nameID in (3, 6):
-            new = ps_name(text)
-        elif record.nameID == 0 and record.langID == 0x409 and CREDIT not in text:
+            new = ps_name(text).replace(";NFSL;", f";{VENDOR_ID};")
+        elif record.nameID == 0 and CREDIT not in text:
             new = f"{text} {CREDIT}"
+        elif record.nameID == 9 and record.langID == 0x409 and DESIGNER_CREDIT not in text:
+            new = f"{text}; {DESIGNER_CREDIT}"
+        elif record.nameID == 11:
+            new = VENDOR_URL
         if new != text:
             record.string = new
+    name.setName(MANUFACTURER, 8, 3, 1, 0x409)
+    name.setName(VENDOR_URL, 11, 3, 1, 0x409)
     if "CFF " in font:
         cff = font["CFF "].cff
         cff.fontNames = [ps_name(n) for n in cff.fontNames]
+        top = cff.topDictIndex[0]
+        top.Notice = name.getName(0, 3, 1, 0x409).toUnicode()
         for fd in getattr(cff.topDictIndex[0], "FDArray", []):
             if hasattr(fd, "FontName"):
                 fd.FontName = ps_name(fd.FontName)

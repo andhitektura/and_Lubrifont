@@ -1,5 +1,6 @@
 Copyright 2020-2025 © The WD-XL Lubrifont Project Authors (https://github.com/NightFurySL2001/WD-XL-font)
 Copyright 2018-2020 © The ZCOOL QingKe HuangYou Project Authors (https://www.github.com/googlefonts/zcool-qingke-huangyou)
+Copyright 2026 © Studio ANDhitektura, modifications in and_Lubrifont (https://github.com/andhitektura/and_Lubrifont)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:

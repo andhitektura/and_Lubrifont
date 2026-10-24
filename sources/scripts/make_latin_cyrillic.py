@@ -58,7 +58,7 @@ def rename(font):
         if r.nameID in (1, 4):
             r.string = FAMILY
         elif r.nameID == 3:
-            r.string = f"{version[8:]};NFSL;{PS_NAME}"
+            r.string = f"{version[8:]};ANDH;{PS_NAME}"
         elif r.nameID == 6:
             r.string = PS_NAME
         elif r.nameID == 5:

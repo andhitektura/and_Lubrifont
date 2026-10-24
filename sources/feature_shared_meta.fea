@@ -49,7 +49,8 @@ table name {
   nameid 0 "Copyright 2020-2025 The WD-XL Lubrifont Project Authors (https://github.com/NightFurySL2001/WD-XL-font) Modifications Copyright 2026 Studio ANDhitektura.";
   nameid 5 "Version 2.600";
   nameid 9 "[WD-XL Lubrifont] NightFurySL2001 - Expansion for Chinese (Traditional) and symbols, Skr-ZERO - Expansion for Japanese and symbols; [ZCOOL QingKe HuangYou] The ZCOOL QingKe HuangYou Project Authors";
-  nameid 11 "https://maoken.com";
+  nameid 8 "Studio ANDhitektura";
+  nameid 11 "https://github.com/andhitektura/and_Lubrifont";
   nameid 12 "https://github.com/NightFurySL2001";
   nameid 13 "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org";
   nameid 14 "https://openfontlicense.org";
