@@ -5,7 +5,7 @@
 and_Lubrifont has set up multiple OpenType features, which are listed as follows.
 
 > [!NOTE] 
-> The version of font for this document is v2.500 (20261024).
+> The version of font for this document is v2.501 (20261024).
 
 ## `vert` / `vrt2` — Vertical Alternates
 
@@ -31,7 +31,7 @@ This feature is turned on automatically; users do not need to set anything up.
 
 Since v2.300, Latin and Cyrillic letters and the common punctuation are kerned, so pairs such as `Та`, `Гл`, `ГА`, `LT`, `AV`, `Yo` and `P.` close up. Kerning applies within each script (Latin with Latin, Cyrillic with Cyrillic) and with punctuation; digits are not kerned, so numbers stay aligned in tables and drawings.
 
-This feature is on by default in most software (Affinity, Adobe apps, Rhino, browsers). In Microsoft Word it must be turned on: select the text, open **Font → Advanced** and tick **Kerning for fonts**. AutoCAD's text engine does not apply kerning; there the even letter spacing of the font itself applies.
+This feature is on by default in most software and in browsers. Some word processors apply it only after it is switched on in the font or character settings, and some technical text engines do not apply kerning at all; there the even letter spacing of the font itself applies.
 
 ## `tnum` — Tabular Figures
 
@@ -53,7 +53,7 @@ Typing `3/8`, `5/16` or `12/25` with `frac` on gives proper fractions, laid out 
 * `subs` / `sinf`: subscript digits (`CO2` → `CO₂`)
 * `numr` / `dnom`: the numerator and denominator digits used by `frac`
 
-These features are switched on in the application: in Affinity and Adobe software in the OpenType or Typography panel, in Word under Font → Advanced, in CSS with `font-feature-settings` (e.g. `"tnum"`). AutoCAD does not support OpenType features; there, use the precomposed characters `½ ⅓ ¼ ⅛ ² ³ ₂` directly.
+These features are switched on in the application's OpenType or typography settings, or in CSS with `font-feature-settings` (e.g. `"tnum"`). Where an application has no such settings, use the precomposed characters `½ ⅓ ¼ ⅛ ² ³ ₂` directly.
 
 ## `mark` / `mkmk` — Mark Positioning
 
@@ -169,17 +169,17 @@ Users need to find “Historical and discretionary ligatures” in their softwar
 
 This font includes a few technical tests, including Simplified/Traditional form exchange. This feature lets users convert Simplified characters to Traditional characters (`trad`) or Traditional characters to Simplified characters (`smpl`). One-to-many characters are not swapped automatically; users need to change those characters manually. **Warning: the feature modifies the information stored in documents; please save the original file in a safe location before testing.** [(Source)](https://docs.microsoft.com/en-us/typography/opentype/spec/features_pt)
 
-Most software does not support this feature; only browsers can set it through CSS. (Note: Adobe InDesign can turn on `trad` only.)
+Most software does not support this feature; browsers can set it through CSS.
 
 ## `locl` — Localized Forms
 
 This font includes a feature for testing: localized forms based on region. The SC, TC and JP versions are merged into one font file, which allows character glyphs to be switched from one region's form to another's. This feature is mainly used to change glyphs that differ between SC, TC and JP, such as the top of “骨”.
 
-Currently some software supports this feature: if the software can tag the language of the text, the feature is likely available (such as in Word and InDesign) and is applied automatically when changing languages. In browsers, adding the language attribute `lang="zh-cn"`, `lang="zh-tw"` or `lang="ja"` to the elements turns on this feature.
+Currently some software supports this feature: if the software can tag the language of the text, the feature is likely available and is applied automatically when changing languages. In browsers, adding the language attribute `lang="zh-cn"`, `lang="zh-tw"` or `lang="ja"` to the elements turns on this feature.
 
 ## `aalt` — Access All Alternates
 
-All the features above (except `liga` and `dlig`) can be accessed through `aalt`, so the character choices from `smpl`/`trad` can still be used in Adobe software through this feature.
+All the features above (except `liga` and `dlig`) can be accessed through `aalt`, so the character choices from `smpl`/`trad` can still be used in software that offers a glyph or alternates panel.
 
 ## Extra: Variation Selector
 

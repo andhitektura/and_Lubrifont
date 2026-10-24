@@ -13,9 +13,11 @@ Compared with the original WD-XL Lubrifont (v2.100):
 - **Languages:** Macedonian, Serbian, Croatian, Bosnian, Slovenian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish
 - **Legibility:** a zero with a centre dot (`0` vs `O`), and a 7 with a diagonal stem
 - **Spacing:** corrected and evened-out letter spacing, slightly more open overall, and kerning for Latin, Cyrillic and punctuation
-- **Accents:** combining stress accents (`е́ о́ и́`) sit correctly on Cyrillic letters, and accented capitals are no longer clipped in Windows applications
+- **Accents:** combining stress accents (`е́ о́ и́`) sit correctly on Cyrillic letters, and accented capitals are no longer clipped at the top
 - **Numbers and symbols:** tabular figures, fractions, superscripts and subscripts, `⌀ ∅ ∆` and arrows, with all math signs at one width
 - **A light Latin / Cyrillic / Greek edition:** about 200 KB instead of 6–12 MB, in three weights: **Light**, Regular and **Bold**
+- **Screen and web:** hinted `.ttf` for sharp text at small sizes, and WOFF2 web fonts
+- **Quality:** every change is checked automatically with [fontbakery](https://github.com/fonttools/fontbakery)
 
 See [Updates](./UPDATES.md) for the full list.
 
@@ -31,9 +33,9 @@ Download the latest version from the **[Releases page](https://github.com/andhit
 | `andLubrifont-Bold.ttf` | and_Lubrifont, style Bold (the **B** button) |
 | `andLubrifont-Light.ttf` | **and_Lubrifont Light** |
 
-Install all three. The **Bold** is linked to the Regular: when you press **B** in Word, Rhino or Affinity, the application uses the real Bold instead of thickening the letters itself, which crowds them together. The **Light** appears as its own entry, because Windows menus only group Regular, Bold and their italics under one name.
+Install all three. The **Bold** is linked to the Regular: when you switch text to bold, the application uses the real Bold instead of thickening the letters itself, which crowds them together. The **Light** appears as its own entry, because Windows menus only group Regular, Bold and their italics under one name.
 
-The `otf` subfolder has the same three fonts in OpenType-CFF format, for Adobe and Affinity users who prefer it. They look identical; install either the `.ttf` or the `.otf` files, not both. AutoCAD needs the `.ttf`. The `woff2` folder is for websites (see [Web fonts](#web-fonts)), not for installing.
+The `otf` subfolder has the same three fonts in OpenType-CFF format. They look identical; install either the `.ttf` or the `.otf` files, not both. The `.ttf` is the safe choice: it works everywhere, including technical applications that accept only TrueType fonts, and it is hinted for sharp text on screen. The `woff2` folder is for websites (see [Web fonts](#web-fonts)), not for installing.
 
 **`and_Lubrifont-CJK`: only if you also write Chinese or Japanese.** The same Latin, Cyrillic and Greek letters, plus about 18,000 Chinese and Japanese characters (6–12 MB per file, Regular weight only). Install the one version that matches your text:
 
@@ -41,15 +43,15 @@ The `otf` subfolder has the same three fonts in OpenType-CFF format, for Adobe a
 | --- | --- | --- |
 | `andLubrifontSC-Regular.ttf` | and_Lubrifont SC | Simplified Chinese (mainland China) |
 | `andLubrifontTC-Regular.ttf` | and_Lubrifont TC | Traditional Chinese (Taiwan, Hong Kong) |
-| `andLubrifontJPS-Regular.ttf` | and_Lubrifont JP S | Japanese, JIS90 forms (like Adobe Std) |
-| `andLubrifontJPN-Regular.ttf` | and_Lubrifont JP N | Japanese, JIS2004 forms (like Adobe StdN) |
+| `andLubrifontJPS-Regular.ttf` | and_Lubrifont JP S | Japanese, JIS90 character forms |
+| `andLubrifontJPN-Regular.ttf` | and_Lubrifont JP N | Japanese, JIS2004 character forms |
 | `andLubrifont.ttc` | all four of the above | all four in one smaller file |
 
-The `otf` subfolder of the download has the same four fonts in OpenType-CFF format (also in [`fonts/and_Lubrifont-CJK/otf`](./fonts/and_Lubrifont-CJK/otf)); the `.ttc` contains those four in one file and installs directly on Windows, macOS and in Adobe applications. Install only one of the `.ttf`, `.otf` or `.ttc` versions.
+The `otf` subfolder of the download has the same four fonts in OpenType-CFF format (also in [`fonts/and_Lubrifont-CJK/otf`](./fonts/and_Lubrifont-CJK/otf)); the `.ttc` contains those four in one file and installs directly on Windows and macOS. Install only one of the `.ttf`, `.otf` or `.ttc` versions.
 
 The regional codes (SC, TC, JP) exist because Chinese and Japanese draw some of the same characters differently.
 
-**Versions.** The version number (e.g. 2.500) only tells you which release you have; there is always just one current version. Install the newest one and uninstall the older one first.
+**Versions.** The version number (e.g. 2.501) only tells you which release you have; there is always just one current version. Install the newest one and uninstall the older one first.
 
 ### Installing on Windows
 
@@ -57,15 +59,13 @@ The regional codes (SC, TC, JP) exist because Chinese and Japanese draw some of 
 2. Right-click the font file and choose **Install for all users**.
 3. Restart the application.
 
-Drawings that used "WD-XL Lubrifont SC" need the font reassigned to "and_Lubrifont" (or "and_Lubrifont SC").
+Documents that used "WD-XL Lubrifont SC" need the font reassigned to "and_Lubrifont" (or "and_Lubrifont SC").
 
 ## Using the font in your software
 
-| Feature | Rhino, Affinity, Adobe, browsers | Microsoft Word | AutoCAD |
-| --- | --- | --- | --- |
-| Letter spacing, accents | ✓ | ✓ | ✓ |
-| Kerning | automatic | turn on: Font → Advanced → *Kerning for fonts* | not supported |
-| Tabular figures, fractions, super/subscripts | OpenType / Typography panel | Font → Advanced | use `½ ⅜ ² ₂` directly |
+The letters, spacing and accents work in every application. **Kerning** (the adjusted spacing of pairs such as `AV`, `Ту`) is applied automatically by most applications and browsers; a few word processors apply it only after it is switched on in the font or character settings, and some technical text engines do not apply it at all.
+
+**Tabular figures, fractions, superscripts and subscripts** are OpenType features: switch them on in the application's OpenType or typography settings, or in CSS with `font-feature-settings`. Where an application has no such settings, type the ready-made characters directly (`½ ⅜ ² ₂`).
 
 See [OpenType features](./FEATURES.md) for every feature and how to switch it on.
 

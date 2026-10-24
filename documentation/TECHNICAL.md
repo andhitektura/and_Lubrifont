@@ -194,7 +194,7 @@ The settings used in this step:
 
 5. `sfntedit -d DSIG .\andLubrifontSC-Regular.otf`
 
-This step removes the digital signature (`DSIG`) from the font. Word 2016 and later do not require a digital signature to use OTF fonts, and Google Fonts advises against adding one (even an empty one), so the signature is deleted.
+This step removes the digital signature (`DSIG`) from the font. Current operating systems and applications do not require a digital signature to use OTF fonts, and Google Fonts advises against adding one (even an empty one), so the signature is deleted.
 
 ### 2.100
 
@@ -257,6 +257,7 @@ Run them in this order (requires `fonttools` and `skia-pathops`):
 16. `autohint.py` — TrueType hinting of the three `.ttf` with ttfautohint (Latin, Cyrillic and Greek; Windows compatibility mode, so glyphs stay inside the Windows ascent/descent). Existing hinting is removed first, so it can be re-run; `make_weights.py` removes the Regular's hinting from the Light and Bold it builds. Run it last: `py autohint.py ../../fonts/and_Lubrifont/*.ttf`. Requires `ttfautohint-py`.
 17. `make_woff2.py` — WOFF2 web fonts of the three hinted `.ttf` in `fonts/and_Lubrifont/woff2/`.
 18. `set_version.py` — sets the version (head, name IDs 3 and 5, CFF) before a release: `py set_version.py 2.501 <fonts>`; then rebuild the `.ttc` and run `make_woff2.py`.
+19. `make_specimen.py` — draws `documentation/specimen.png` (the README image) from the `.ttf` fonts; it shows no version number, so it only needs redrawing when the design changes.
 
 ```
 cd sources/scripts

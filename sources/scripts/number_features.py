@@ -9,7 +9,7 @@
 #
 # and gives the math signs + − = < > ± × ÷ ¬ one common width, so they align in
 # tables. Proportional figures stay the default; the features are switched on
-# in the application (Rhino, Affinity, Adobe, Word, CSS font-feature-settings).
+# in the application (OpenType / typography settings, CSS font-feature-settings).
 #
 # The features are compiled with feaLib into a scratch copy of the font and
 # merged into the existing GSUB (existing lookups and features are untouched).

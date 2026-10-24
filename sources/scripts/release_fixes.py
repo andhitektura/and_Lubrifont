@@ -3,8 +3,7 @@
 #
 # - Line metrics: typo and hhea ascender/descender 945/-235, line gap 0, in
 #   every font, so the .otf and .ttf of a font set text with the same line
-#   spacing (1180 units, as the .ttf always had) on Windows, macOS and in
-#   Adobe applications; USE_TYPO_METRICS set so applications that honour it
+#   spacing (1180 units, as the .ttf always had) in every application; USE_TYPO_METRICS set so applications that honour it
 #   use these values.
 # - Windows clipping box: usWinAscent/usWinDescent at least the font's
 #   highest and lowest point (accented capitals Ѓ Ќ Ѐ Ѝ Ў Č Ř Š ... reach
