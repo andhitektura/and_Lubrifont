@@ -45,7 +45,7 @@ The `otf` subfolder has the same three fonts in OpenType-CFF format, for Adobe a
 | `andLubrifontJPN-Regular.ttf` | and_Lubrifont JP N | Japanese, JIS2004 forms (like Adobe StdN) |
 | `andLubrifont.ttc` | all four of the above | all four in one smaller file |
 
-The release download has the `.ttf` files and the `.ttc`. The `.ttc` contains the same four fonts in OpenType-CFF format, and installs directly on Windows, macOS and in Adobe applications. If you need them as separate `.otf` files, download them from [`fonts/and_Lubrifont-CJK/otf`](./fonts/and_Lubrifont-CJK/otf) (open a file, then **Download raw file**) or from the release page.
+The `otf` subfolder of the download has the same four fonts in OpenType-CFF format (also in [`fonts/and_Lubrifont-CJK/otf`](./fonts/and_Lubrifont-CJK/otf)); the `.ttc` contains those four in one file and installs directly on Windows, macOS and in Adobe applications. Install only one of the `.ttf`, `.otf` or `.ttc` versions.
 
 The regional codes (SC, TC, JP) exist because Chinese and Japanese draw some of the same characters differently.
 
