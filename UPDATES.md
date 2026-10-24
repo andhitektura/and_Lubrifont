@@ -2,6 +2,17 @@
 
 # Updates
 
+## Unreleased
+
+- 57 new symbols for technical documents (`sources/scripts/add_technical_symbols.py`), in all styles and the CJK fonts:
+  - math: `⋅ ∡ ≅ ∼ ∓ ∂ ∇ ∛ ‱`
+  - arrows: `⇑ ⇓ ⇕ ↺ ↻ ➔`
+  - drawing and plan symbols: `▪ ◊ ◯ ⊕ ⊗ ⌂ ⌖`
+  - notes and units: `⚠ ☐ ☑ ☒ ✕ ♿ ℓ ℉ ℮`
+  - GD&T tolerance symbols: `⌓ ⌭ ⌯ ⌰ ⌱ ⌲ ⌳ ⌴ ⌵ ⏤ ⏥`
+  - fractions `⅕ ⅖ ⅗ ⅘ ⅙ ⅚`, superscripts `⁼ ⁽ ⁾`, subscripts `₊ ₋ ₌ ₍ ₎`, and an em space
+- Repository: the Simplified/Traditional conversion tools moved from `scripts/smpl-trad-conv` to `sources/smpl-trad-conv`; two unused sample images of the original font removed; README updated (letter refinements, symbol list, macOS and Linux installation, build requirements)
+
 ## Ver 2.601; 20261024
 
 - The small `l` (also `ĺ ľ ł`) has a short foot: the stem turns right along the baseline, like the arm of the `r` turned upside down, so `l` is clearly different from `I` and `1`

@@ -11,11 +11,11 @@ The font is free and open source under the [SIL Open Font License 1.1](./OFL.txt
 Compared with the original WD-XL Lubrifont (v2.100):
 
 - **Languages:** Macedonian, Serbian, Croatian, Bosnian, Slovenian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish
-- **Legibility:** a zero with a centre dot (`0` vs `O`), and a 7 with a diagonal stem
+- **Legibility:** letters that can't be confused in drawings and tables: a zero with a centre dot (`0` vs `O`), a 7 with a diagonal stem, an `l` with a foot and `i j` with a tall dot (`l` vs `I` vs `1`), a longer arm on the `r` (`rn` vs `m`), and a diagonal bar on `ł Ł`
 - **Spacing:** corrected and evened-out letter spacing, slightly more open overall, and kerning for Latin, Cyrillic and punctuation
 - **Accents:** combining stress accents (`е́ о́ и́`) sit correctly on Cyrillic letters, and accented capitals are no longer clipped at the top
-- **Numbers and symbols:** tabular figures, fractions, superscripts and subscripts, `⌀ ∅ ∆` and arrows, with all math signs at one width
-- **A light Latin / Cyrillic / Greek edition:** about 200 KB instead of 6–12 MB, in three weights, **Light**, Regular and **Bold**, each with an *italic*
+- **Numbers and symbols:** tabular figures, fractions, superscripts and subscripts, and the symbols of technical drawings: `⌀ ∅ ∆ ⋅ ∡ ≅`, arrows, plan and electrical symbols, checkboxes, `⚠ ♿ ℓ` and the GD&T tolerance symbols, with all math signs at one width
+- **A light Latin / Cyrillic / Greek edition:** about 300 KB instead of 6–12 MB, in three weights, **Light**, Regular and **Bold**, each with an *italic*
 - **Screen and web:** hinted `.ttf` for sharp text at small sizes, and WOFF2 web fonts
 - **Quality:** every change is checked automatically with [fontbakery](https://github.com/fonttools/fontbakery)
 
@@ -64,6 +64,11 @@ The regional codes (SC, TC, JP) exist because Chinese and Japanese draw some of 
 2. Right-click the font file and choose **Install for all users**.
 3. Restart the application.
 
+### Installing on macOS and Linux
+
+- **macOS:** double-click each font file and click **Install Font** (Font Book), or select all six in Font Book.
+- **Linux:** copy the font files to `~/.local/share/fonts` (or `/usr/local/share/fonts` for all users) and run `fc-cache -f`.
+
 Documents that used "WD-XL Lubrifont SC" need the font reassigned to "and_Lubrifont" (or "and_Lubrifont SC").
 
 ## Using the font in your software
@@ -86,9 +91,12 @@ See [OpenType features](./FEATURES.md) for every feature and how to switch it on
 **Greek:** the full monotonic alphabet with accents.
 
 **Numbers and symbols:**
-- `⌀ ∅ ∆ ± × ÷ ≤ ≥ ≈ ° ′ ″ № €`
-- `↔ ↕ ↖ ↗ ↘ ↙ ⇐ ⇒ ⇔ ✓ ✗ ▲ ▼`
-- `½ ⅓ ⅔ ¼ ¾ ⅛ ⅜ ⅝ ⅞ ⁰–⁹ ⁺⁻ ₀–₉`
+- Math: `± × ÷ − ∓ ⋅ = ≠ ≈ ≅ ∼ ≤ ≥ ∞ √ ∛ ∂ ∆ ∇ ∠ ∡ ⊥ ∥ ° ′ ″ ‰ ‱ µ Ω π`
+- Drawing and plan symbols: `⌀ ∅ ⌒ ⌖ ⌂ ⊕ ⊗ ○ ◯ ● □ ■ ▪ ◇ ◊ △ ▲ ▼`
+- GD&T tolerances: `⏤ ⏥ ⌓ ⌭ ⌯ ⌰ ⌱ ⌲ ⌳ ⌴ ⌵`
+- Arrows: `← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙ ⇐ ⇑ ⇒ ⇓ ⇔ ⇕ ↺ ↻ ➔`
+- Notes and units: `✓ ✗ ✕ ☐ ☑ ☒ ⚠ ♿ № ℓ ℃ ℉ ℮ € © ® §`
+- Fractions, superscripts and subscripts: `½ ⅓ ⅔ ¼ ¾ ⅕ ⅖ ⅗ ⅘ ⅙ ⅚ ⅛ ⅜ ⅝ ⅞ ⁰–⁹ ⁺⁻⁼⁽⁾ ₀–₉ ₊₋₌₍₎`
 
 <details>
 <summary><b>Chinese and Japanese characters</b> (full versions only)</summary>
@@ -126,7 +134,13 @@ The original fonts are built with [AFDKO](https://github.com/adobe-type-tools/af
 pip3 install afdko fonttools gftools
 ```
 
-The build scripts `build_mergeFont.bat` / `build_mergeFont.sh` (inherited from WD-XL Lubrifont) are in [`sources`](./sources) and build the CJK fonts. The additions of this edition are made by Python patch scripts in [`sources/scripts`](./sources/scripts) (they also need `skia-pathops`, `freetype-py` and `uharfbuzz`); [Technical notes → Patch scripts](./documentation/TECHNICAL.md#patch-scripts-v2200v2600) describes the order to run them in.
+The patch scripts of this edition also need:
+
+```
+pip3 install skia-pathops freetype-py uharfbuzz ttfautohint-py brotli Pillow
+```
+
+The build scripts `build_mergeFont.bat` / `build_mergeFont.sh` (inherited from WD-XL Lubrifont) are in [`sources`](./sources) and build the CJK fonts. The additions of this edition are made by Python patch scripts in [`sources/scripts`](./sources/scripts); [Technical notes → Patch scripts](./documentation/TECHNICAL.md#patch-scripts-v2200v2600) describes the order to run them in.
 
 ## Web fonts
 
@@ -158,7 +172,7 @@ Copyright 2026 Studio ANDhitektura for the and_Lubrifont additions, licensed und
 ## Credits
 
 **and_Lubrifont edition**
-- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.601. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero and new 7; respacing and kerning; technical symbols and number features; light Latin/Cyrillic edition with Light and Bold weights and italics; hinting and web fonts; English documentation.
+- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.601. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero, new 7, refined r, l, i and ł; respacing and kerning; technical, drawing and GD&T symbols and number features; light Latin/Cyrillic edition with Light and Bold weights and italics; hinting and web fonts; English documentation.
 
 **WD-XL Lubrifont (original project)**
 - NightFurySL2001 ([@NightFurySL2001](https://github.com/NightFurySL2001)): WD-XL Lubrifont, expansion for Traditional Chinese, symbols and OpenType features
