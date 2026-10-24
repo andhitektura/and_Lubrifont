@@ -33,7 +33,7 @@ table OS/2 {
   WidthClass 5;
   Panose 0 0 0 0 0 0 0 0 0 0;
   FSType 0;
-  Vendor "ANDH";
+  Vendor "ANDs";
   winAscent 1168;
   winDescent 495;
 } OS/2;

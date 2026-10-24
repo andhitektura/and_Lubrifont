@@ -131,7 +131,7 @@ def rename(font, style, weight):
         names = {1: FAMILY, 2: "Bold"}
     else:                               # its own family
         names = {1: f"{FAMILY} {style}", 2: "Regular", 16: FAMILY, 17: style}
-    names.update({3: f"{version[8:]};ANDH;{ps_name}", 4: f"{FAMILY} {style}", 6: ps_name})
+    names.update({3: f"{version[8:]};ANDs;{ps_name}", 4: f"{FAMILY} {style}", 6: ps_name})
     table = font["name"]
     # Windows names only: Mac (platform 1) records are obsolete
     table.names = [r for r in table.names
