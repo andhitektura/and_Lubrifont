@@ -1,8 +1,7 @@
 # TrueType hinting for the and_Lubrifont .ttf fonts, with ttfautohint.
 #
 # Hinting snaps stems, x-height, cap height and baseline to whole pixels at
-# small sizes, so text stays sharp and even on screen: AutoCAD, Windows
-# applications and plan sheets viewed below about 20 px. Latin, Cyrillic and
+# small sizes, so text stays sharp and even on screen below about 20 px. Latin, Cyrillic and
 # Greek are hinted; CJK glyphs are left unhinted (ttfautohint has no CJK
 # support). -W (Windows compatibility) keeps glyphs inside usWinAscent and
 # usWinDescent, so GDI clips nothing.

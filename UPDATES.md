@@ -6,13 +6,13 @@
 
 - Reorganised the `fonts` folder into two families: `fonts/and_Lubrifont/` (Light, Regular, Bold; `.ttf`, with `.otf` in `otf/`) and `fonts/and_Lubrifont-CJK/` (SC, TC, JP S, JP N and the `.ttc`). The patch scripts moved to `sources/scripts/`. The fonts themselves are unchanged.
 
-- The `.otf` fonts now have the same line spacing as the `.ttf` (ascender 945, descender 235, no line gap). Until now the `.otf` set lines tighter (1000 units on macOS, 1150 in Windows and Adobe applications, against 1180 for the `.ttf`), so the same text spaced differently depending on which format was installed. Glyph shapes and widths are unchanged
+- The `.otf` fonts now have the same line spacing as the `.ttf` (ascender 945, descender 235, no line gap). Until now the `.otf` set lines tighter (1000 or 1150 units depending on the application, against 1180 for the `.ttf`), so the same text spaced differently depending on which format was installed. Glyph shapes and widths are unchanged
 
 - Windows no longer clips the tallest and deepest glyphs: the Windows ascent/descent now covers every glyph of the font (Light, Regular and Bold share the same values)
 
 - Light and Bold no longer carry the obsolete Macintosh name records, so all three weights have the same name table layout
 
-- The `.ttf` fonts of and_Lubrifont (Light, Regular, Bold) are now hinted (ttfautohint): at small sizes on screen (AutoCAD, Windows, drawings viewed zoomed out) stems, x-height, cap height and baseline snap to whole pixels, so text is sharper and more even. Printing and the `.otf` fonts are not affected
+- The `.ttf` fonts of and_Lubrifont (Light, Regular, Bold) are now hinted (ttfautohint): at small sizes on screen stems, x-height, cap height and baseline snap to whole pixels, so text is sharper and more even. Printing and the `.otf` fonts are not affected
 
 - Web fonts: WOFF2 versions of Light, Regular and Bold in `fonts/and_Lubrifont/woff2/`, with a CSS example in the README
 
@@ -208,7 +208,7 @@
 
 - Fixed glyphs missed in earlier passes (chamfered corners)
 
-- Removed `name` table entries 16/17 (SC/TC) so that some Adobe software can load the font
+- Removed `name` table entries 16/17 (SC/TC) so that some design software can load the font
 
 - Added stylistic set names
 
