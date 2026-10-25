@@ -22,7 +22,8 @@
 # heights where both glyphs have ink (each row clipped at CLIP units), and
 # compared with the gap of two straight letters (нн / НН / nn). FACTOR of the
 # difference is applied, but the two shapes are never brought closer than
-# MIN_GAP units at any height (accents and descenders included). Values are
+# MIN_GAP units at any height (accents and descenders included; more for the
+# glyphs in MIN_GAP_GLYPH). Values are
 # rounded to 5 units and adjustments below KEEP units are dropped.
 #
 # The result is stored as kerning classes plus exceptions: base letters are
@@ -45,6 +46,9 @@ Y0, Y1 = -300, 1000
 CLIP = 300
 FACTOR = 0.6
 MIN_GAP = 40
+# glyphs whose thin stroke sticks out from the letter (the long bar of ł Ł)
+# keep a larger distance, so the stroke does not run into its neighbour
+MIN_GAP_GLYPH = {0x0141: 90, 0x0142: 90}
 MIN_KERN = 10
 KEEP = 20           # adjustments below this are not kept
 CLASS_TOL = 10      # base letters within this of each other share a class
@@ -129,14 +133,14 @@ def profiles(path, unis):
     return prof
 
 
-def pair_kern(right_of_first, left_of_second, ref):
+def pair_kern(right_of_first, left_of_second, ref, min_gap=MIN_GAP):
     gap = right_of_first + left_of_second - 2 * TRACKING
     both = ~np.isnan(gap)
     if not both.any():
         return 0
     avg = np.minimum(gap[both], CLIP).mean()
     k = FACTOR * (ref - avg)
-    k = max(k, MIN_GAP - gap[both].min())     # never closer than MIN_GAP
+    k = max(k, min_gap - gap[both].min())     # never closer than min_gap
     k = 5 * round(k / 5)
     return k if abs(k) >= MIN_KERN else 0
 
@@ -184,7 +188,8 @@ def measure(font_path, out_path):
             sa, sb = glyphs[a], glyphs[b]
             if ("punct" not in (sa, sb) and sa != sb) or sa == sb == "punct":
                 continue
-            k = pair_kern(prof[a][1], prof[b][0], ref)
+            gap = max(MIN_GAP_GLYPH.get(a, MIN_GAP), MIN_GAP_GLYPH.get(b, MIN_GAP))
+            k = pair_kern(prof[a][1], prof[b][0], ref, gap)
             if abs(k) >= KEEP:
                 M[idx[a], idx[b]] = k
 
