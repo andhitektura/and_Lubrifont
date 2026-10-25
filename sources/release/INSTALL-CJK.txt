@@ -1,0 +1,32 @@
+and_Lubrifont CJK {version}
+{underline}
+
+The and_Lubrifont Latin, Cyrillic and Greek letters plus about 18,000 Chinese and
+Japanese characters (Regular weight only). Install the ONE version that matches
+your text:
+    andLubrifontSC-Regular.ttf   -> and_Lubrifont SC   (Simplified Chinese)
+    andLubrifontTC-Regular.ttf   -> and_Lubrifont TC   (Traditional Chinese)
+    andLubrifontJPS-Regular.ttf  -> and_Lubrifont JP S (Japanese, JIS90 forms)
+    andLubrifontJPN-Regular.ttf  -> and_Lubrifont JP N (Japanese, JIS2004 forms)
+    andLubrifont.ttc             -> all four in one smaller file
+
+otf/ has the same four fonts in OpenType-CFF format, and the .ttc has those
+four in one file. Install only one of the .ttf, .otf or .ttc versions.
+
+For Macedonian, English and other European text only, the smaller
+and_Lubrifont download (Light, Regular, Bold and their italics) is all you need.
+
+Installing on Windows
+1. Uninstall any older "WD-XL Lubrifont" or "and_Lubrifont" fonts first.
+2. Right-click the font files -> "Install for all users".
+3. Restart the application.
+
+Kerning is applied automatically by most applications; where it is not, look
+for a kerning option in the font or character settings.
+Tabular figures, fractions, super/subscripts: switch them on in the
+application's OpenType or typography settings; where there are none, type
+the ready-made characters (½ ⅜ ² ₂) directly.
+
+License: SIL Open Font License 1.1 (OFL.txt).
+Based on WD-XL Lubrifont by NightFurySL2001 and ZCOOL QingKe HuangYou.
+https://github.com/andhitektura/and_Lubrifont

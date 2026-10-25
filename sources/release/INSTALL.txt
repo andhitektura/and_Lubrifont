@@ -1,0 +1,32 @@
+and_Lubrifont {version}
+{underline}
+
+Install all six:
+    andLubrifont-Regular.ttf      -> appears as "and_Lubrifont"
+    andLubrifont-Italic.ttf       -> the Italic of "and_Lubrifont" (the I button uses it)
+    andLubrifont-Bold.ttf         -> the Bold of "and_Lubrifont" (the B button uses it)
+    andLubrifont-BoldItalic.ttf   -> the Bold Italic of "and_Lubrifont"
+    andLubrifont-Light.ttf        -> appears as "and_Lubrifont Light"
+    andLubrifont-LightItalic.ttf  -> the Italic of "and_Lubrifont Light"
+
+otf/ has the same six fonts as OpenType-CFF. They look identical: install
+either the .ttf or the .otf files, not both. The .ttf works everywhere,
+including applications that accept only TrueType fonts.
+woff2/ is for websites (see the README on GitHub), not for installing.
+
+Only need Chinese or Japanese as well? Download and_Lubrifont-CJK instead.
+
+Installing on Windows
+1. Uninstall any older "WD-XL Lubrifont" or "and_Lubrifont" fonts first.
+2. Right-click the font files -> "Install for all users".
+3. Restart the application.
+
+Kerning is applied automatically by most applications; where it is not, look
+for a kerning option in the font or character settings.
+Tabular figures, fractions, super/subscripts: switch them on in the
+application's OpenType or typography settings; where there are none, type
+the ready-made characters (½ ⅜ ² ₂) directly.
+
+License: SIL Open Font License 1.1 (OFL.txt).
+Based on WD-XL Lubrifont by NightFurySL2001 and ZCOOL QingKe HuangYou.
+https://github.com/andhitektura/and_Lubrifont

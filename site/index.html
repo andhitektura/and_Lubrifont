@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>and_Lubrifont</title>
+<meta name="description" content="and_Lubrifont: a free geometric typeface for architectural and technical documents. Latin, Cyrillic and Greek, six styles, technical and GD&amp;T symbols.">
+<link rel="preload" href="fonts/andLubrifont-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/andLubrifont-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sheet">
+
+<header class="top">
+  <a class="brand" href="#">and_Lubrifont</a>
+  <nav>
+    <a href="#tester">Try it</a>
+    <a href="#styles">Styles</a>
+    <a href="#characters">Characters</a>
+    <a href="#use">Use</a>
+    <a href="https://github.com/andhitektura/and_Lubrifont">GitHub</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <p class="eyebrow">Typeface for technical documents · Latin · Cyrillic · Greek</p>
+  <h1 class="metrics">
+    <span class="word">Технички опис</span>
+    <span class="line asc" aria-hidden="true"><i>ascender 945</i></span>
+    <span class="line cap" aria-hidden="true"><i>cap height</i></span>
+    <span class="line x" aria-hidden="true"><i>x-height</i></span>
+    <span class="line base" aria-hidden="true"><i>baseline 0</i></span>
+  </h1>
+  <p class="lead">A geometric, rounded-square typeface for drawings, schedules and technical descriptions in Macedonian and other European languages. Letters that cannot be confused, all the symbols of a drawing, three weights with italics. Free and open source.</p>
+  <div class="actions">
+    <a class="button primary" href="https://github.com/andhitektura/and_Lubrifont/releases/latest">Download {{version}}</a>
+    <a class="button" href="https://github.com/andhitektura/and_Lubrifont">Source on GitHub</a>
+  </div>
+  <p class="small">SIL Open Font License 1.1 · free for any use, including commercial work and embedding in documents.</p>
+</section>
+
+<section class="legible">
+  <h2>Made not to be misread</h2>
+  <div class="pairs">
+    <figure><span>0 O</span><figcaption>zero with a dot, letter O</figcaption></figure>
+    <figure><span>l I 1</span><figcaption>l with a foot, capital I, one</figcaption></figure>
+    <figure><span>1 7</span><figcaption>7 with a straight diagonal</figcaption></figure>
+    <figure><span>rn m</span><figcaption>long arm on the r</figcaption></figure>
+    <figure><span>i j</span><figcaption>tall dot, seen at small sizes</figcaption></figure>
+    <figure><span>ł Ł</span><figcaption>clear diagonal bar</figcaption></figure>
+  </div>
+</section>
+
+<section id="tester" class="tester">
+  <h2>Try it</h2>
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Weight">
+      <button data-weight="300">Light</button><button data-weight="400" class="on">Regular</button><button data-weight="700">Bold</button>
+    </div>
+    <label class="check"><input type="checkbox" id="italic"> Italic</label>
+    <label class="range">Size <input type="range" id="size" min="12" max="160" value="56"><output id="sizeOut">56 px</output></label>
+    <div class="seg" role="group" aria-label="Sample">
+      <button data-sample="mk" class="on">Македонски</button><button data-sample="en">English</button><button data-sample="num">Numbers</button><button data-sample="sym">Symbols</button>
+    </div>
+    <div class="features" role="group" aria-label="OpenType features">
+      <label class="check" title="kerning"><input type="checkbox" data-feat="kern" checked> kern</label>
+      <label class="check" title="tabular figures: all digits one width"><input type="checkbox" data-feat="tnum"> tnum</label>
+      <label class="check" title="fractions from 3/8"><input type="checkbox" data-feat="frac"> frac</label>
+      <label class="check" title="alternate X"><input type="checkbox" data-feat="ss01"> ss01</label>
+    </div>
+  </div>
+  <div id="sample" class="sample" contenteditable="true" spellcheck="false"></div>
+  <p class="small">Type or paste your own text. The features are switched on in applications through their OpenType settings, and on the web with <code>font-feature-settings</code>.</p>
+</section>
+
+<section id="styles" class="styles">
+  <h2>Six styles</h2>
+  <div class="style-list">
+    <div style="font-weight:300">Light <span>ФАЗА А — АРХИТЕКТУРА · Ground floor plan 1:100</span></div>
+    <div style="font-weight:300;font-style:italic">Light Italic <span>ФАЗА А — АРХИТЕКТУРА · Ground floor plan 1:100</span></div>
+    <div style="font-weight:400">Regular <span>ФАЗА А — АРХИТЕКТУРА · Ground floor plan 1:100</span></div>
+    <div style="font-weight:400;font-style:italic">Italic <span>ФАЗА А — АРХИТЕКТУРА · Ground floor plan 1:100</span></div>
+    <div style="font-weight:700">Bold <span>ФАЗА А — АРХИТЕКТУРА · Ground floor plan 1:100</span></div>
+    <div style="font-weight:700;font-style:italic">Bold Italic <span>ФАЗА А — АРХИТЕКТУРА · Ground floor plan 1:100</span></div>
+  </div>
+  <p class="small">The italic is slanted 9° and keeps the upright letter shapes, in Latin and in Cyrillic.</p>
+</section>
+
+<section class="drawing">
+  <h2>On the drawing</h2>
+  <div class="drawing-grid">
+    <svg class="plan" viewBox="0 0 520 300" role="img" aria-label="Plan detail with dimensions, levels and notes set in and_Lubrifont">
+      <g class="wall"><path d="M40 60 H480 V250 H40 Z"/><path d="M60 80 H460 V230 H60 Z"/></g>
+      <g class="dim">
+        <path d="M40 30 H480 M40 22 V38 M480 22 V38 M36 34 L44 26 M476 34 L484 26"/>
+        <text x="260" y="24" text-anchor="middle">8,80</text>
+        <path d="M505 60 V250 M497 60 H513 M497 250 H513 M501 64 L509 56 M501 254 L509 246"/>
+        <text x="500" y="160" text-anchor="middle" transform="rotate(-90 500 160)">3,80</text>
+      </g>
+      <text class="room" x="260" y="140" text-anchor="middle">ДНЕВНА СОБА</text>
+      <text class="note" x="260" y="164" text-anchor="middle">P = 28,56 m²</text>
+      <text class="note" x="260" y="186" text-anchor="middle">▽ ±0,00 = 612,45 м н.в.</text>
+      <text class="note" x="90" y="215">⌀ 110 · i = 2 %</text>
+      <text class="note" x="340" y="215">⚠ ↻ 90°</text>
+    </svg>
+    <table class="titleblock">
+      <tr><th>Инвеститор</th><td>—</td></tr>
+      <tr><th>Градба</th><td>Индивидуален станбен објект</td></tr>
+      <tr><th>Фаза</th><td>А — Архитектура</td></tr>
+      <tr><th>Цртеж</th><td>Основа приземје</td></tr>
+      <tr><th>Размер</th><td>1:50</td></tr>
+      <tr><th>Лист</th><td class="num">03 / 17</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="characters" class="characters">
+  <h2>Characters</h2>
+  <div class="char-tools">
+    <input type="search" id="charSearch" placeholder="Search, e.g. diameter, degree, arrow, ѓ" aria-label="Search characters">
+    <span id="charCount" class="small"></span>
+  </div>
+  <p class="small">Click a character to copy it.</p>
+  <div id="charGroups"></div>
+</section>
+
+<section id="use" class="use">
+  <h2>Install and use</h2>
+  <div class="cols">
+    <div>
+      <h3>On your computer</h3>
+      <p>Download <b>and_Lubrifont</b> from the <a href="https://github.com/andhitektura/and_Lubrifont/releases/latest">Releases page</a> and install all six <code>.ttf</code> files. Uninstall any older WD-XL Lubrifont or and_Lubrifont first.</p>
+      <p>Bold and Italic are linked to the Regular, so the bold and italic buttons of your application use the real styles. Light appears as its own entry, <i>and_Lubrifont Light</i>.</p>
+      <p>Writing Chinese or Japanese as well? Take the <b>and_Lubrifont-CJK</b> download instead.</p>
+    </div>
+    <div>
+      <h3>On a website</h3>
+      <p>The download has WOFF2 web fonts in <code>woff2/</code>. One rule per style:</p>
+<pre><code>@font-face {
+  font-family: "and_Lubrifont";
+  src: url("andLubrifont-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Light 300, Bold 700; the Italic files
+   with font-style: italic */</code></pre>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <table class="titleblock wide">
+    <tr><th>Typeface</th><td>and_Lubrifont {{version}}</td><th>License</th><td><a href="https://github.com/andhitektura/and_Lubrifont/blob/main/OFL.txt">SIL Open Font License 1.1</a></td></tr>
+    <tr><th>Edition</th><td>Studio ANDhitektura</td><th>Based on</th><td><a href="https://github.com/NightFurySL2001/WD-XL-font">WD-XL Lubrifont</a> by NightFurySL2001 and <a href="https://github.com/googlefonts/zcool-qingke-huangyou">ZCOOL QingKe HuangYou</a></td></tr>
+    <tr><th>Feedback</th><td colspan="3"><a href="https://github.com/andhitektura/and_Lubrifont/issues/new/choose">Request a character or report a problem</a></td></tr>
+  </table>
+</footer>
+
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="chars.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

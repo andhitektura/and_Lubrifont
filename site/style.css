@@ -1,0 +1,174 @@
+/* and_Lubrifont website: a drawing sheet in light mode, a blueprint in dark */
+
+@font-face { font-family: "and_Lubrifont"; src: url("fonts/andLubrifont-Light.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "and_Lubrifont"; src: url("fonts/andLubrifont-LightItalic.woff2") format("woff2"); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: "and_Lubrifont"; src: url("fonts/andLubrifont-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "and_Lubrifont"; src: url("fonts/andLubrifont-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "and_Lubrifont"; src: url("fonts/andLubrifont-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "and_Lubrifont"; src: url("fonts/andLubrifont-BoldItalic.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
+
+:root {
+  --paper: #f6f4ef;
+  --ink: #16181b;
+  --muted: #5f646b;
+  --line: #c9c5bb;
+  --fine: #e2ded4;
+  --accent: #c8102e;
+  --panel: #fffdf8;
+  --code: #ece8de;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0e2238;
+    --ink: #e8eef5;
+    --muted: #9fb2c6;
+    --line: #3d5a78;
+    --fine: #1d3754;
+    --accent: #ff8a6b;
+    --panel: #12293f;
+    --code: #17324d;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 18px/1.5 "and_Lubrifont", system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+code, pre { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 0.85em; }
+code { background: var(--code); padding: 0.05em 0.3em; border-radius: 3px; }
+pre { background: var(--code); padding: 14px 16px; border-radius: 4px; overflow-x: auto; line-height: 1.45; }
+pre code { background: none; padding: 0; }
+h2 { font-weight: 700; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px; color: var(--muted); }
+h2::before { content: ""; display: inline-block; width: 22px; height: 2px; background: var(--accent); vertical-align: middle; margin-right: 10px; }
+h3 { font-size: 20px; margin: 0 0 8px; }
+.small { font-size: 14px; color: var(--muted); }
+
+/* the sheet: a frame like a drawing border */
+.sheet {
+  max-width: 1180px;
+  margin: 20px auto;
+  border: 2px solid var(--ink);
+  outline: 1px solid var(--line);
+  outline-offset: 6px;
+  background:
+    linear-gradient(var(--fine) 1px, transparent 1px) 0 0 / 100% 40px,
+    linear-gradient(90deg, var(--fine) 1px, transparent 1px) 0 0 / 40px 100%,
+    var(--paper);
+}
+section, .top, .foot { padding: 40px 48px; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--paper) 88%, transparent); }
+.foot { border-bottom: 0; }
+
+.top { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-top: 20px; padding-bottom: 20px; flex-wrap: wrap; }
+.brand { font-weight: 700; font-size: 22px; text-decoration: none; }
+.top nav { display: flex; gap: 22px; flex-wrap: wrap; font-size: 16px; }
+.top nav a { text-decoration: none; }
+
+/* hero with the vertical metrics drawn as dimension lines */
+.eyebrow { font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.metrics { position: relative; margin: 0 0 28px; font-weight: 400; font-size: clamp(48px, 11vw, 132px); line-height: 1.2; padding: 0; }
+.metrics .word { position: relative; z-index: 1; white-space: nowrap; }
+.metrics .line { position: absolute; left: 0; right: 0; height: 0; border-top: 1px dashed var(--accent); opacity: 0.75; }
+.metrics .line i { position: absolute; right: 0; top: -1.3em; font: 400 12px/1 "and_Lubrifont", sans-serif; color: var(--accent); letter-spacing: 0.04em; }
+.lead { font-size: 22px; max-width: 760px; margin: 0 0 26px; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.button { display: inline-block; padding: 12px 22px; border: 2px solid var(--ink); text-decoration: none; font-weight: 700; border-radius: 2px; background: var(--panel); }
+.button.primary { background: var(--ink); color: var(--paper); }
+.button.primary:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* legibility pairs */
+.pairs { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.pairs figure { margin: 0; padding: 18px 16px 14px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--panel); }
+.pairs span { display: block; font-size: 52px; line-height: 1.1; }
+.pairs figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+/* type tester */
+.controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin-bottom: 18px; font-size: 15px; }
+.seg { display: inline-flex; border: 1px solid var(--ink); border-radius: 2px; overflow: hidden; }
+.seg button { font: inherit; background: var(--panel); color: var(--ink); border: 0; border-right: 1px solid var(--line); padding: 7px 12px; cursor: pointer; }
+.seg button:last-child { border-right: 0; }
+.seg button.on { background: var(--ink); color: var(--paper); }
+.check { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.check input { accent-color: var(--accent); width: 16px; height: 16px; }
+.features { display: inline-flex; gap: 14px; flex-wrap: wrap; }
+.range { display: inline-flex; align-items: center; gap: 8px; }
+.range input { accent-color: var(--accent); width: 160px; }
+.range output { min-width: 52px; font-variant-numeric: tabular-nums; }
+.sample {
+  min-height: 220px; padding: 24px; background: var(--panel); border: 1px solid var(--line);
+  font-size: 56px; line-height: 1.25; outline: none; overflow-wrap: anywhere; white-space: pre-wrap;
+}
+.sample:focus { border-color: var(--accent); }
+
+/* styles */
+.style-list div { display: flex; gap: 24px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--muted); min-width: 0; }
+.style-list div span { font-size: clamp(22px, 3.4vw, 38px); color: var(--ink); min-width: 0; }
+
+/* drawing sample */
+.drawing-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 28px; align-items: end; }
+.plan { width: 100%; height: auto; background: var(--panel); border: 1px solid var(--line); font-family: "and_Lubrifont", sans-serif; }
+.plan .wall path { fill: none; stroke: var(--ink); stroke-width: 2; }
+.plan .wall path:first-child { fill: var(--fine); }
+.plan .wall path:last-child { fill: var(--panel); }
+.plan .dim path { stroke: var(--accent); stroke-width: 1; fill: none; }
+.plan .dim text { fill: var(--accent); font-size: 15px; }
+.plan .room { fill: var(--ink); font-size: 20px; font-weight: 700; }
+.plan .note { fill: var(--ink); font-size: 15px; }
+.titleblock { border-collapse: collapse; width: 100%; background: var(--panel); font-size: 15px; }
+.titleblock th, .titleblock td { border: 1px solid var(--ink); padding: 7px 10px; text-align: left; vertical-align: top; }
+.titleblock th { font-weight: 400; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); width: 1%; white-space: nowrap; }
+.titleblock td { font-weight: 700; }
+.titleblock td.num { font-variant-numeric: tabular-nums; }
+.titleblock.wide td { font-weight: 400; }
+
+/* character map */
+.char-tools { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 4px; }
+.char-tools input { font: inherit; font-size: 16px; padding: 9px 12px; width: min(420px, 100%); border: 1px solid var(--ink); background: var(--panel); color: var(--ink); border-radius: 2px; }
+.char-tools input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.group h3 { font-size: 14px; font-weight: 700; margin: 26px 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(54px, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.grid button {
+  font: inherit; font-size: 28px; line-height: 1; height: 62px; padding: 0; cursor: pointer;
+  background: var(--panel); color: var(--ink); border: 0; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.grid button:hover, .grid button:focus-visible { background: var(--ink); color: var(--paper); outline: none; }
+
+.cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; }
+.cols p { margin: 0 0 12px; }
+
+#toast {
+  position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0; pointer-events: none;
+  background: var(--ink); color: var(--paper); padding: 10px 18px; border-radius: 3px; font-size: 15px;
+  transition: opacity 0.2s, transform 0.2s; max-width: calc(100vw - 32px);
+}
+#toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+@media (max-width: 760px) {
+  .sheet { margin: 0; border-width: 0; outline: 0; }
+  section, .top, .foot { padding: 28px 16px; }
+  .lead { font-size: 19px; }
+  .drawing-grid, .cols { grid-template-columns: minmax(0, 1fr); }
+  .sample { font-size: 32px; }
+  .range input { width: 120px; }
+  .sample { padding: 16px; }
+  .style-list div { flex-direction: column; gap: 2px; }
+  .metrics .line i { display: none; }
+  .titleblock.wide th, .titleblock.wide td { display: block; width: auto; border-top: 0; }
+  .titleblock.wide tr:first-child th:first-child { border-top: 1px solid var(--ink); }
+}
+
+/* metric lines of the hero word, in em of its font size: line-height 1.2
+   over ascender 945 + descender 235 leaves 0.01em above the ascender, so the
+   baseline is at 0.955em; cap height 710, x-height 485 */
+.metrics .asc { top: 0.01em; }
+.metrics .cap { top: 0.245em; }
+.metrics .x { top: 0.47em; }
+.metrics .base { top: 0.955em; }
