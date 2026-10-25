@@ -1,0 +1,53 @@
+# Builds the two release downloads and puts them on a draft release, so a
+# release is: Actions > Release > Run workflow, then edit and publish the
+# draft. The version comes from the fonts (they must all carry the same one)
+# and the release text from that version's section of UPDATES.md.
+#
+# Also runs when a v* tag is pushed (the tag must match the fonts' version).
+# If the release already exists, the zips on it are replaced; a published
+# release stays published.
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install fonttools "fontbakery==1.1.0"
+      - name: fontbakery (no FAIL allowed)
+        # the CJK fonts take about 5 minutes each; fontbakery.yml checks them
+        # on every change, so only the six styles are checked again here
+        run: |
+          fontbakery check-universal -x fontdata_namecheck -l FAIL --succinct fonts/and_Lubrifont/*.ttf
+          fontbakery check-universal -x fontdata_namecheck -l FAIL --succinct fonts/and_Lubrifont/otf/*.otf
+      - name: Build the downloads
+        run: python sources/scripts/make_release.py dist "${{ github.ref_type == 'tag' && github.ref_name || '' }}"
+      - name: Draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          V=$(cat dist/version.txt)
+          if gh release view "v$V" > /dev/null 2>&1; then
+            gh release upload "v$V" dist/*.zip --clobber
+            echo "Replaced the downloads on the existing release v$V." >> "$GITHUB_STEP_SUMMARY"
+          else
+            gh release create "v$V" dist/*.zip --draft --target "$GITHUB_SHA" \
+              --title "and_Lubrifont $V" --notes-file dist/notes.md
+            echo "Draft release v$V created: edit its text if needed and publish it." >> "$GITHUB_STEP_SUMMARY"
+          fi
+          { echo '```'; (cd dist && sha256sum *.zip); echo '```'; } >> "$GITHUB_STEP_SUMMARY"

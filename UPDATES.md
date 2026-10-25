@@ -2,6 +2,17 @@
 
 # Updates
 
+## Ver 2.603; 20261025
+
+- Kerning re-measured for the letters changed in 2.601 (all styles and the CJK fonts):
+  - `r` moves closer to `. , - ;` and slightly closer to the next letter, now that its arm is longer
+  - `l` with its foot: `lT lY lV` closer; `lZ lJ lX` are no longer pulled in under the foot
+  - `ł Ł`: letters move into the space left beside the stem by the long bar, but stay clear of the bar (`cło tło słowo złoto`)
+  - `i j і ј`: no longer tucked under `T Y V Г`, where the tall dot would touch the bar
+- Light, Bold and the italics carry exactly the same kerning as the Regular
+- Releases are built automatically (`.github/workflows/release.yml`, `sources/scripts/make_release.py`): the two downloads are made from the fonts in the repository, checked with fontbakery and put on a draft release with this text
+- Website with a type tester and the full character set: https://andhitektura.github.io/and_Lubrifont/ (`site/`, `.github/workflows/pages.yml`)
+
 ## Ver 2.602; 20261024
 
 - 57 new symbols for technical documents (`sources/scripts/add_technical_symbols.py`), in all styles and the CJK fonts:

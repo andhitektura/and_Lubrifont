@@ -229,6 +229,8 @@ fonts/
     otf/                  the same four as OpenType-CFF; the patch scripts work on these
 sources/                  the inherited WD-XL Lubrifont build (AFDKO), writes fonts/and_Lubrifont-CJK/
   scripts/                this edition's patch scripts (below) and kerning.txt
+  release/                the INSTALL.txt of the two downloads ({version} is filled in)
+site/                     the website (GitHub Pages); make_site.py adds the web fonts and character list
 ```
 
 File names are the PostScript names (`andLubrifont-Bold`, no underscore); the names in font menus are "and_Lubrifont", "and_Lubrifont Light", "and_Lubrifont SC" etc.
@@ -262,6 +264,8 @@ Run them in this order (requires `fonttools` and `skia-pathops`):
 18. `make_woff2.py` — WOFF2 web fonts of the six hinted `.ttf` in `fonts/and_Lubrifont/woff2/`.
 19. `set_version.py` — sets the version (head, name IDs 3 and 5, CFF) before a release: `py set_version.py 2.501 <fonts>`; then rebuild the `.ttc` and run `make_woff2.py`.
 20. `make_specimen.py` — draws `documentation/specimen.png` (the README image) from the `.ttf` fonts; it shows no version number, so it only needs redrawing when the design changes.
+21. `make_release.py` — builds the two downloads, `and_Lubrifont-<version>.zip` and `and_Lubrifont-CJK-<version>.zip`, with `OFL.txt` and an `INSTALL.txt` from `sources/release/`, and `notes.md`, the version's section of `UPDATES.md`. It stops if the fonts carry different versions. The zips are reproducible (fixed file order and date). `py make_release.py <outdir>`; normally run by the Release workflow (below).
+22. `make_site.py` — builds the website into a folder: `site/`, the six WOFF2 fonts, the version and the character list read from the Regular. `py make_site.py <outdir>`; normally run by the Website workflow.
 
 ```
 cd sources/scripts
@@ -271,12 +275,24 @@ cd ../../fonts/and_Lubrifont-CJK
 otf2otc -t "CFF =0" -o andLubrifont.ttc otf/andLubrifontSC-Regular.otf otf/andLubrifontTC-Regular.otf otf/andLubrifontJPS-Regular.otf otf/andLubrifontJPN-Regular.otf
 ```
 
+**After changing letter shapes**, re-measure the kerning: `py autokern.py measure ../../fonts/and_Lubrifont-CJK/otf/andLubrifontTC-Regular.otf kerning.txt`, then `py autokern.py replace kerning.txt` on the CJK fonts and `andLubrifont-Regular.ttf`/`.otf` only, and rebuild the weights and italics from the Regular (`make_weights.py`, `make_italics.py`, `autohint.py`, `make_woff2.py`). Do not run `replace` on the Light, Bold or italics: their punctuation widths differ from the measured ones, so those pairs would be left out.
+
+### Releasing
+
+1. Set the version (`set_version.py`, then `make_woff2.py` and the `.ttc`), add its section `## Ver X.XXX; YYYYMMDD` to `UPDATES.md`, and merge to `main`.
+2. **Actions → Release → Run workflow** (on `main`). It checks the six styles with fontbakery, builds the two zips and creates a draft release `vX.XXX` with the `UPDATES.md` section as its text; the run summary lists the zips' SHA-256.
+3. Open the draft on the Releases page, edit the text if needed, and publish it. Publishing creates the tag.
+
+Pushing a `vX.XXX` tag runs the same workflow; if the release already exists, its zips are replaced.
+
+The website is published by the **Website** workflow whenever `site/` or the fonts change on `main`. It needs GitHub Pages set once to Settings → Pages → Source: **GitHub Actions**.
+
 ### How the spacing and kerning were measured
 
 Each glyph is rendered at 1 unit = 1 pixel, and its left and right profiles (the distance from the edge of the advance box to the ink) are taken every few units of height.
 
 * **Spacing (`respace.py`):** the average white space at each side over the letter body is compared with the straight letters (н п и, Н П И H N U); 70% of the difference is applied, open sides are not taken below 10 units, and differences under 5 units are ignored.
-* **Kerning (`autokern.py`):** for each pair, the white gap over the heights where both glyphs have ink is compared with that of нн; 60% of the difference is applied, but no two shapes come closer than 40 units at any height, accents included. Values below 20 units are dropped. Base letters with similar kerning share a class, accented letters join their base letter's class, and pairs that differ from their class (usually an accent that would clash) get exceptions.
+* **Kerning (`autokern.py`):** for each pair, the white gap over the heights where both glyphs have ink is compared with that of нн; 60% of the difference is applied, but no two shapes come closer than 40 units at any height, accents included (90 units for `ł Ł`, so their long bar stays clear of the neighbouring letter). Values below 20 units are dropped. Base letters with similar kerning share a class, accented letters join their base letter's class, and pairs that differ from their class (usually an accent that would clash) get exceptions.
 
 > After a full rebuild with the merge process, run `autokern.py apply`/`replace`, `number_features.py` and `release_fixes.py` on the built fonts again: the kerning and the number features are added to the finished fonts, not to the feature files.
 

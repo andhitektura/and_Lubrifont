@@ -6,6 +6,8 @@
 
 The font is free and open source under the [SIL Open Font License 1.1](./OFL.txt).
 
+**[Try it on the website](https://andhitektura.github.io/and_Lubrifont/)**: type your own text in any style, switch the OpenType features on and off, and copy any of its characters.
+
 ## What this edition adds
 
 Compared with the original WD-XL Lubrifont (v2.100):
@@ -56,7 +58,7 @@ The `otf` subfolder of the download has the same four fonts in OpenType-CFF form
 
 The regional codes (SC, TC, JP) exist because Chinese and Japanese draw some of the same characters differently.
 
-**Versions.** The version number (e.g. 2.602) only tells you which release you have; there is always just one current version. Install the newest one and uninstall the older one first.
+**Versions.** The version number (e.g. 2.603) only tells you which release you have; there is always just one current version. Install the newest one and uninstall the older one first.
 
 ### Installing on Windows
 
@@ -144,7 +146,7 @@ The build scripts `build_mergeFont.bat` / `build_mergeFont.sh` (inherited from W
 
 ## Web fonts
 
-The original WD-XL Lubrifont is available as a web font from [Google Fonts](https://fonts.google.com/specimen/WDXL+Lubrifont+SC) and [ZeoSeven Fonts](https://fonts.zeoseven.com/items/138/). These do not include the additions of this edition. For a website, use the WOFF2 files of and_Lubrifont in [`fonts/and_Lubrifont/woff2`](./fonts/and_Lubrifont/woff2) (about 65 KB each), as one family with three weights and their italics:
+The original WD-XL Lubrifont is available as a web font from [Google Fonts](https://fonts.google.com/specimen/WDXL+Lubrifont+SC) and [ZeoSeven Fonts](https://fonts.zeoseven.com/items/138/). These do not include the additions of this edition. The [and_Lubrifont website](https://andhitektura.github.io/and_Lubrifont/) uses them. For a website, use the WOFF2 files of and_Lubrifont in [`fonts/and_Lubrifont/woff2`](./fonts/and_Lubrifont/woff2) (about 65 KB each), as one family with three weights and their italics:
 
 ```css
 @font-face { font-family: "and_Lubrifont"; src: url("andLubrifont-Light.woff2") format("woff2"); font-weight: 300; }
@@ -172,7 +174,7 @@ Copyright 2026 Studio ANDhitektura for the and_Lubrifont additions, licensed und
 ## Credits
 
 **and_Lubrifont edition**
-- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.602. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero, new 7, refined r, l, i and ł; respacing and kerning; technical, drawing and GD&T symbols and number features; light Latin/Cyrillic edition with Light and Bold weights and italics; hinting and web fonts; English documentation.
+- Studio ANDhitektura ([@andhitektura](https://github.com/andhitektura)): v2.200–v2.603. Macedonian, Serbian, Croatian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish letters; dotted zero, new 7, refined r, l, i and ł; respacing and kerning; technical, drawing and GD&T symbols and number features; light Latin/Cyrillic edition with Light and Bold weights and italics; hinting and web fonts; English documentation.
 
 **WD-XL Lubrifont (original project)**
 - NightFurySL2001 ([@NightFurySL2001](https://github.com/NightFurySL2001)): WD-XL Lubrifont, expansion for Traditional Chinese, symbols and OpenType features
