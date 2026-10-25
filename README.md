@@ -13,7 +13,7 @@ The font is free and open source under the [SIL Open Font License 1.1](./OFL.txt
 Compared with the original WD-XL Lubrifont (v2.100):
 
 - **Languages:** Macedonian, Serbian, Croatian, Bosnian, Slovenian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish
-- **Legibility:** letters that can't be confused in drawings and tables: a zero with a centre dot (`0` vs `O`), a 7 with a diagonal stem, an `l` with a foot and `i j` with a tall dot (`l` vs `I` vs `1`), a longer arm on the `r` (`rn` vs `m`), and a diagonal bar on `ł Ł`
+- **Legibility:** letters that can't be confused in drawings and tables: a zero with a centre dot (`0` vs `O`), a 7 with a diagonal stem, an `l` with a foot and `i j` with a tall dot (`l` vs `I` vs `1`), a longer arm on the `r` (`rn` vs `m`), a diagonal bar on `ł Ł`, the same square dot throughout, and `%` with rings clear of the slash
 - **Spacing:** corrected and evened-out letter spacing, slightly more open overall, and kerning for Latin, Cyrillic and punctuation
 - **Accents:** combining stress accents (`е́ о́ и́`) sit correctly on Cyrillic letters, and accented capitals are no longer clipped at the top
 - **Numbers and symbols:** tabular figures, fractions, superscripts and subscripts, and the symbols of technical drawings: `⌀ ∅ ∆ ⋅ ∡ ≅`, arrows, plan and electrical symbols, checkboxes, `⚠ ♿ ℓ` and the GD&T tolerance symbols, with all math signs at one width

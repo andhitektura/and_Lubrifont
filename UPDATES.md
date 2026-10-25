@@ -4,6 +4,9 @@
 
 ## Ver 2.603; 20261025
 
+- All dots are now the rounded square of the period: the dots of `! ? ¡ ¿`, the diaeresis and dot accents (`ä ö ü ë ï ÿ ё ї ė ż İ` and the rest), `÷ ∴ ∵ ∶ ∷ ※ • ˙` were round (`sources/scripts/dots_percent_diameter.py`)
+- `%`, `‰` and `‱`: the rings no longer touch the slash; they are separate, with a clear gap in every weight. The signs are wider accordingly
+- `Ø`, `∅` and `⌀` have more space at both sides; the slash of `Ø` reached into the next character (`Ø1` touched)
 - Kerning re-measured for the letters changed in 2.601 (all styles and the CJK fonts):
   - `r` moves closer to `. , - ;` and slightly closer to the next letter, now that its arm is longer
   - `l` with its foot: `lT lY lV` closer; `lZ lJ lX` are no longer pulled in under the foot
