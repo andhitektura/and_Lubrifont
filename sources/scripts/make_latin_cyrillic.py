@@ -36,12 +36,13 @@ UNICODES = [
     (0x2190, 0x21FF),   # arrows
     (0x2200, 0x22FF),   # math operators
     (0x2300, 0x23FF),   # technical (⌀)
+    (0x2500, 0x259F),   # box drawing, block elements
     (0x25A0, 0x25FF),   # geometric shapes (▲ ▼)
     (0x2600, 0x26FF),   # miscellaneous symbols (☐ ☑ ⚠ ♿)
     (0x2700, 0x27BF),   # dingbats (✓ ✗)
 ]
 # CJK-only features are left out
-FEATURES = ["aalt", "ccmp", "dlig", "liga", "salt", "ss01", "ss18", "sups", "subs",
+FEATURES = ["aalt", "ccmp", "dlig", "liga", "locl", "salt", "ss01", "ss18", "sups", "subs",
             "sinf", "numr", "dnom", "frac", "tnum", "kern", "mark", "mkmk"]
 
 FAMILY = "and_Lubrifont"
