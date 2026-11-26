@@ -12,11 +12,11 @@ The font is free and open source under the [SIL Open Font License 1.1](./OFL.txt
 
 Compared with the original WD-XL Lubrifont (v2.100):
 
-- **Languages:** Macedonian, Serbian, Croatian, Bosnian, Slovenian, Ukrainian, Belarusian, Polish, Czech, Slovak, Romanian and Turkish
+- **Languages:** Macedonian, Serbian, Croatian, Bosnian, Slovenian, Ukrainian, Belarusian, Bulgarian (with the modern Bulgarian letter forms), Polish, Czech, Slovak, Romanian (comma below), Turkish and German (`ẞ`)
 - **Legibility:** letters that can't be confused in drawings and tables: a zero with a centre dot (`0` vs `O`), a 7 with a diagonal stem, an `l` with a foot and `i j` with a tall dot (`l` vs `I` vs `1`), a longer arm on the `r` (`rn` vs `m`), a diagonal bar on `ł Ł`, the same square dot throughout, and `%` with rings clear of the slash
 - **Spacing:** corrected and evened-out letter spacing, slightly more open overall, and kerning for Latin, Cyrillic and punctuation
 - **Accents:** combining stress accents (`е́ о́ и́`) sit correctly on Cyrillic letters, and accented capitals are no longer clipped at the top
-- **Numbers and symbols:** tabular figures, fractions, superscripts and subscripts, and the symbols of technical drawings: `⌀ ∅ ∆ ⋅ ∡ ≅`, arrows, plan and electrical symbols, checkboxes, `⚠ ♿ ℓ` and the GD&T tolerance symbols, with all math signs at one width
+- **Numbers and symbols:** tabular figures, fractions, superscripts and subscripts, and the symbols of technical drawings: `⌀ ∅ ∆ ⋅ ∡ ≅`, arrows, plan and electrical symbols, checkboxes, `⚠ ♿ ℓ`, the GD&T tolerance symbols and box drawing for plain-text tables, with all math signs at one width
 - **A light Latin / Cyrillic / Greek edition:** about 300 KB instead of 6–12 MB, in three weights, **Light**, Regular and **Bold**, each with an *italic*
 - **Screen and web:** hinted `.ttf` for sharp text at small sizes, and WOFF2 web fonts
 - **Quality:** every change is checked automatically with [fontbakery](https://github.com/fonttools/fontbakery)
@@ -87,8 +87,10 @@ See [OpenType features](./FEATURES.md) for every feature and how to switch it on
 - [Adobe Latin 1](http://adobe-type-tools.github.io/adobe-latin-charsets/adobe-latin-1.html) and [GF Latin Core](https://github.com/googlefonts/gftools/blob/main/Lib/gftools/encodings/GF%20Glyph%20Sets/GF-latin-core_unique-glyphs.nam)
 - Croatian, Bosnian, Serbian Latin: `ĆćČčĐđ`
 - Polish, Czech, Slovak, Romanian, Turkish: `ĄąĘęŚśŹźŻż ĎďŘřŤťŮů ĹĺĽľŔŕ ȘșȚțŞşŢţ ĞğİĖė`
+- German capital sharp s: `ẞ`
+- Romanian: text marked as Romanian shows `Ş ş Ţ ţ` with the comma below (`Ș ș Ț ț`)
 
-**Cyrillic:** Russian, Ukrainian, Belarusian, Macedonian, Serbian: `А–я Ёё ЂђЃѓЄєЅѕІіЇїЈјЉљЊњЋћЌќЎўЏџ ҐґЀѐЍѝ`
+**Cyrillic:** Russian, Ukrainian, Belarusian, Macedonian, Serbian, Bulgarian: `А–я Ёё ЂђЃѓЄєЅѕІіЇїЈјЉљЊњЋћЌќЎўЏџ ҐґЀѐЍѝ`. Text marked as Bulgarian gets the modern Bulgarian lowercase (`в д ж и й к л п т ъ ь ю`); see [`locl`](./FEATURES.md#locl--localized-forms)
 
 **Greek:** the full monotonic alphabet with accents.
 
@@ -97,7 +99,9 @@ See [OpenType features](./FEATURES.md) for every feature and how to switch it on
 - Drawing and plan symbols: `⌀ ∅ ⌒ ⌖ ⌂ ⊕ ⊗ ○ ◯ ● □ ■ ▪ ◇ ◊ △ ▲ ▼`
 - GD&T tolerances: `⏤ ⏥ ⌓ ⌭ ⌯ ⌰ ⌱ ⌲ ⌳ ⌴ ⌵`
 - Arrows: `← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙ ⇐ ⇑ ⇒ ⇓ ⇔ ⇕ ↺ ↻ ➔`
-- Notes and units: `✓ ✗ ✕ ☐ ☑ ☒ ⚠ ♿ № ℓ ℃ ℉ ℮ € © ® §`
+- Notes and units: `✓ ✗ ✕ ☐ ☑ ☒ ⚠ ♿ № ℓ ℃ ℉ ℮ © ® §`
+- Currency: `€ £ ¥ ₽ ₴ ₸ ₺ ₿ ₹`
+- Box drawing and blocks (all of U+2500–259F): `┌─┬─┐ ╔═╦═╗ ╭─╮ ▀ ▄ █ ▌ ▐ ░ ▒ ▓`; they fill their cell, so lines join up in every weight and stay upright in the italics
 - Fractions, superscripts and subscripts: `½ ⅓ ⅔ ¼ ¾ ⅕ ⅖ ⅗ ⅘ ⅙ ⅚ ⅛ ⅜ ⅝ ⅞ ⁰–⁹ ⁺⁻⁼⁽⁾ ₀–₉ ₊₋₌₍₎`
 
 <details>

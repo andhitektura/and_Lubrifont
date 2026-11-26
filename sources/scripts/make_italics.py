@@ -50,9 +50,15 @@ def slant(x, y):
     return x + SLANT * y + SHIFT, y
 
 
+# box drawings and block elements stay upright, so they still join up from
+# line to line
+UPRIGHT = range(0x2500, 0x25A0)
+
+
 def slant_outlines(font):
     gs = font.getGlyphSet()
-    matrix = (1, 0, SLANT, 1, SHIFT, 0)
+    slanted = (1, 0, SLANT, 1, SHIFT, 0)
+    upright = {name for u, name in font.getBestCmap().items() if u in UPRIGHT}
     if "CFF " in font:
         cff = font["CFF "].cff
         cs = cff.topDictIndex[0].CharStrings
@@ -64,6 +70,7 @@ def slant_outlines(font):
             adv = font["hmtx"][name][0]
             width = None if adv == private.defaultWidthX else adv - private.nominalWidthX
             pen = T2CharStringPen(width, None)
+            matrix = (1, 0, 0, 1, 0, 0) if name in upright else slanted
             rec.replay(TransformPen(pen, matrix))
             new[name] = pen.getCharString(private=private, globalSubrs=cff.GlobalSubrs)
         for name, charstring in new.items():
@@ -78,6 +85,7 @@ def slant_outlines(font):
             rec = DecomposingRecordingPen(gs)
             gs[name].draw(rec)
             pen = TTGlyphPen(None)
+            matrix = (1, 0, 0, 1, 0, 0) if name in upright else slanted
             rec.replay(TransformPen(pen, matrix))
             new[name] = pen.glyph()
         for name, glyph in new.items():

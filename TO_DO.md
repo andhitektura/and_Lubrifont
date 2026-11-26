@@ -11,4 +11,7 @@
 - [x] Automatic quality check with fontbakery on GitHub (v2.501)
 - [ ] Editable design source (UFO) and a variable font with a weight axis
 - [x] Italic (v2.600)
-- [ ] Bulgarian letter forms (`locl`)
+- [x] Bulgarian letter forms (`locl`) (v2.604; `г` and `з` still standard)
+- [ ] Serbian / Macedonian italic forms (`б г д п т`) as an option
+- [ ] Kerning for `ẞ`, the currency signs and the Bulgarian forms
+- [ ] Monospaced edition (and_Lubrifont Mono) for coordinate lists and plain-text tables

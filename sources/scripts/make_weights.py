@@ -36,6 +36,10 @@ from fontTools.pens.cu2quPen import Cu2QuPen
 from fontTools.pens.boundsPen import BoundsPen
 from fontTools.ttLib.tables import otTables
 from autohint import dehint
+import box_drawing
+
+BOX = range(0x2500, 0x2580)       # box drawing: redrawn with the weight's lines
+BLOCKS = range(0x2580, 0x25A0)    # block elements: kept as they are
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DIR = os.path.join(HERE, "..", "..", "fonts", "and_Lubrifont")
@@ -162,30 +166,44 @@ def build(src, dst, style, offset, space, weight):
     knots = zones(offset)
     cff = font["CFF "].cff if "CFF " in font else None
     shifts = {}
+    # box drawings and blocks fill their cell edge to edge so that they join
+    # up: they keep the Regular's width and are not offset or stretched (the
+    # box drawings are redrawn with lines 2 x offset thicker or thinner)
+    cells = {name: u for u, name in font.getBestCmap().items() if u in BOX or u in BLOCKS}
+    box_drawing.set_weight(offset)
+    identity = [(-3000, -3000), (3000, 3000)]
     for name in font.getGlyphOrder():
         adv = font["hmtx"][name][0]
         dx = space if adv else 0        # combining marks keep zero width
+        if name in cells:
+            dx = 0
         new_adv = adv + 2 * dx
         shifts[name] = dx
-        path = offset_path(gs[name], offset, clockwise=cff is None)   # TrueType: outer contours clockwise
+        if name in cells:
+            u = cells[name]
+            parts = box_drawing.box_glyph(u)[0] if u in BOX else box_drawing.block_glyph(u)[0]
+            path = pathops.simplify(box_drawing.union(parts), clockwise=cff is None)
+        else:
+            path = offset_path(gs[name], offset, clockwise=cff is None)   # TrueType: outer contours clockwise
         if cff:
             cs = cff.topDictIndex[0].CharStrings
             private = cs[name].private
             width = None if new_adv == private.defaultWidthX else new_adv - private.nominalWidthX
             pen = T2CharStringPen(width, None)
             if path is not None:
-                path.draw(ZonePen(pen, knots, dx))
+                path.draw(ZonePen(pen, identity if name in cells else knots, dx))
             cs.charStringsIndex[cs.charStrings[name]] = pen.getCharString(
                 private=private, globalSubrs=cff.GlobalSubrs)
             b = BoundsPen(None)
             if path is not None:
-                path.draw(ZonePen(b, knots, dx))
+                path.draw(ZonePen(b, identity if name in cells else knots, dx))
             font["hmtx"][name] = (new_adv, round(b.bounds[0]) if b.bounds else 0)
         else:
             glyf = font["glyf"]
             if path is not None:
                 pen = TTGlyphPen(None)
-                path.draw(ZonePen(Cu2QuPen(pen, 1.0, reverse_direction=False), knots, dx))
+                path.draw(ZonePen(Cu2QuPen(pen, 1.0, reverse_direction=False),
+                                  identity if name in cells else knots, dx))
                 glyf[name] = pen.glyph()
                 glyf[name].recalcBounds(glyf)
             glyph = glyf[name]

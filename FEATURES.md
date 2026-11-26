@@ -173,9 +173,11 @@ Most software does not support this feature; browsers can set it through CSS.
 
 ## `locl` — Localized Forms
 
-This font includes a feature for testing: localized forms based on region. The SC, TC and JP versions are merged into one font file, which allows character glyphs to be switched from one region's form to another's. This feature is mainly used to change glyphs that differ between SC, TC and JP, such as the top of “骨”.
+Applied automatically when the application knows the language of the text: set the language of the paragraph or style (Word, LibreOffice, InDesign), or the `lang` attribute on a web page. Text in other languages is unchanged.
 
-Currently some software supports this feature: if the software can tag the language of the text, the feature is likely available and is applied automatically when changing languages. In browsers, adding the language attribute `lang="zh-cn"`, `lang="zh-tw"` or `lang="ja"` to the elements turns on this feature.
+* **Bulgarian** (`lang="bg"`, since v2.604): the modern Bulgarian lowercase. `в` has a closed ascender, `д` looks like g, `ж` and `к` have ascenders, `и й ѝ` look like u ŭ ù, `л` like an upside-down v, `п` like n, `т` like m, and `ъ ь ю` have ascenders. `ц ш щ` already have this shape in this design; `г` and `з` keep the standard forms. Combining stress accents (`и́`) still sit correctly. Text in Russian, Macedonian, Serbian and the other Cyrillic languages keeps the standard forms.
+* **Romanian** (`lang="ro"`, also Moldovan, since v2.604): `Ş ş Ţ ţ` typed with a cedilla appear with the comma below, `Ș ș Ț ț`, as Romanian spelling requires. Typing the comma-below letters directly works in any language.
+* **Chinese and Japanese** (full versions only): the SC, TC and JP versions are merged into one font file, which allows characters to switch from one region's form to another's, e.g. the top of “骨”. In browsers, `lang="zh-cn"`, `lang="zh-tw"` or `lang="ja"` turns it on.
 
 ## `aalt` — Access All Alternates
 

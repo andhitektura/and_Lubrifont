@@ -2,6 +2,16 @@
 
 # Updates
 
+## Ver 2.604; 20261126
+
+- Language-specific letter forms (`locl`), applied automatically when the application knows the language of the text (Word, InDesign, LibreOffice, a web page with `lang="bg"` or `lang="ro"`); text in other languages is unchanged (`sources/scripts/language_forms.py`):
+  - **Bulgarian:** the modern Bulgarian lowercase: `в` with a closed ascender, `д` like g, `ж` and `к` with ascenders, `и й ѝ` like u ŭ ù, `л` like an upside-down v, `п` like n, `т` like m, `ъ ь ю` with ascenders. `ц ш щ` already have this shape; `г` and `з` keep the standard forms
+  - **Romanian:** `Ş ş Ţ ţ` typed with a cedilla appear with the comma below (`Ș ș Ț ț`)
+- `ẞ`, the capital sharp s, for German in capitals (`STRAẞE`)
+- Currency signs `₽ ₴ ₸ ₺ ₿ ₹` (rouble, hryvnia, tenge, Turkish lira, bitcoin, rupee)
+- Box drawing (`┌─┬─┐ ╔═╦═╗ ╭─╮`, U+2500–257F, all 128) and block elements (`▀ ▄ █ ▌ ▐ ░ ▒ ▓`, U+2580–259F) for plain-text tables and reports: the box drawings the CJK fonts already had are now also in the Latin / Cyrillic / Greek edition, and the 36 that were missing (double lines, arcs, diagonals) are drawn on the same grid. They fill their cell edge to edge in every weight, so lines join up, and stay upright in the italics (`sources/scripts/add_box_currency.py`, `box_drawing.py`)
+- These additions apply to all styles and the CJK fonts. The new letters are not kerned yet
+
 ## Ver 2.603; 20261025
 
 - All dots are now the rounded square of the period: the dots of `! ? ¡ ¿`, the diaeresis and dot accents (`ä ö ü ë ï ÿ ё ї ė ż İ` and the rest), `÷ ∴ ∵ ∶ ∷ ※ • ˙` were round (`sources/scripts/dots_percent_diameter.py`)
