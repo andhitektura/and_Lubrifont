@@ -66,6 +66,8 @@ The regional codes (SC, TC, JP) exist because Chinese and Japanese draw some of 
 2. Right-click the font file and choose **Install for all users**.
 3. Restart the application.
 
+**A document asks for a replacement font on another PC?** Then the two PCs don't have the same and_Lubrifont installed: an older version (WD-XL Lubrifont, or 2.401), the CJK edition (and_Lubrifont SC) on one and the main one on the other, or `.ttf` and `.otf` both installed. Run [`check_installed_fonts.ps1`](./sources/scripts/check_installed_fonts.ps1) on each PC (`powershell -ExecutionPolicy Bypass -File check_installed_fonts.ps1`): it lists what is installed and what is wrong. Then uninstall everything it lists and install the same six `.ttf` files on both PCs.
+
 ### Installing on macOS and Linux
 
 - **macOS:** double-click each font file and click **Install Font** (Font Book), or select all six in Font Book.
